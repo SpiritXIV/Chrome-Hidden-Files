@@ -1,0 +1,8 @@
+{
+  "name": "new-project",
+  "author": "SpiritXIV",
+  "publish": false,
+  "dependencies": {
+    "lib": "latest"
+  }
+}
