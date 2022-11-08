@@ -1,0 +1,512 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chrome | Commands and Scripts</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/style1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <head>
+    <link rel="icon" href="chromelogo.png" type="imageX" sizes="16x16">
+    <dialog></dialog>
+  </head>
+  <head>
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+  </head>
+  <style>
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+       .navbar {
+         margin-bottom: 0;
+         border-radius: 0;
+       }
+       
+       /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+       .row.content {height: 450px}
+       
+       /* Set gray background color and 100% height */
+       .sidenav {
+         padding-top: 20px;
+         background-color: #ffffff;
+         height: 100%;
+       }
+       
+       /* Set black background color, white text and some padding */
+       footer {
+         background-color: #555;
+         color: white;
+         padding: 15px;
+       }
+       
+       /* On small screens, set height to 'auto' for sidenav and grid */
+       @media screen and (max-width: 767px) {
+         .sidenav {
+           height: auto;
+           padding: 15px;
+         }
+         .row.content {height:auto;} 
+       }
+   
+   h5 {
+     color: #7a0000;
+   }
+   p1 {
+     color: #e30000;
+   }
+   .dropbtn {
+     background-color: #222222;
+     color: gray;
+     padding: 16px;
+     font-size: 16px;
+     border: none;
+     cursor: pointer;
+   }
+   
+   .dropdown {
+     position: relative;
+     display: inline-block;
+   }
+   
+   .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 1;
+   }
+   
+   .dropdown-content a {
+     color: black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+   }
+   
+   .dropdown-content a:hover {background-color: #f1f1f1}
+   
+   .dropdown:hover .dropdown-content {
+     display: block;
+   }
+   
+   .dropdown:hover .dropbtn {
+     background-color: #222;
+   }
+  
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src="image.png" alt="" style="width:140px;height:45px;">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#"></a></li>
+        <li><a href="index.html">chrome://</a></li>
+        <li><a href="aitest.html">AI Browser Test</a></li>
+        <li><a href="code.html">Binary Code</a></li>
+        <li><a href="search.html">Search Browser</a></li>
+                <div class="dropdown">
+        <button class="dropbtn">Others</button>
+  <div class="dropdown-content">
+  <hr>
+  <li><h5 class="dropdown-header">System Info</h5></li>
+  <li><a class="dropdown-item" href="ks.html">Keyboard Shortcuts</a></li>
+  <li><a class="dropdown-item" href="cs.html">Character Sets</a></li>
+  <li><a class="dropdown-item" href="errorcodes.html">Error Codes</a></li>
+  <li><a class="dropdown-item" href="chromeplugins.html">Plug-ins</a></li>
+  <li><a class="dropdown-item" href="#">-</a></li>
+  <hr>
+  <li><h5 class="dropdown-header">Other</h5></li>
+  <li><a class="dropdown-item" href="server.html">Server</a></li>
+  <li><a class="dropdown-item" href="ceditor.html">Code Editor</a></li>
+  <li><a class="dropdown-item" href="buglist.html">CC/S Bug List</a></li>
+  <hr>
+  <li><h5 class="dropdown-header">Miscellaneous</h5></li>
+  <li><a class="dropdown-item" href="pixelart.html">Pixel Art</a></li>
+  <li><a class="dropdown-item" href="paint.html">Canvas</a></li>
+  <hr>
+  </div>
+</div>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="sl.html" id="lang" data-toggle="tooltip" data-placement="bottom" title="System Lang"></a></li>
+<li><a href="wc.html" id="code" data-toggle="tooltip" data-placement="bottom" title="Web Code"></a></li>
+
+<script>
+document.getElementById("code").innerHTML = 
+"" + navigator.appCodeName;
+</script>
+
+<li><a href="na.html" id="app" data-toggle="tooltip" data-placement="bottom" title="Nav App"></a></li>
+<script>
+document.getElementById("app").innerHTML = 
+"" + navigator.appName;
+</script>
+
+<script>
+document.getElementById("lang").innerHTML =
+"" + navigator.language;
+</script></li></a>
+</a></li>
+
+<li><a href="nb.html" id="browser" data-toggle="tooltip" data-placement="bottom" title="Nav Browser "></a></li>
+<script>
+document.getElementById("browser").innerHTML =
+"" + navigator.product;
+</script>
+<li><a href="ud.html" id="device" data-toggle="tooltip" data-placement="bottom" title="User Device"></a></li>
+<script>
+document.getElementById("device").innerHTML = 
+"" + navigator.platform;
+</script>
+<li><a href="tz.html" id="clock" data-toggle="tooltip" data-placement="bottom" title="System Clock">JavaScript Is Not Enabled</a></li>
+        <div id="clock"></div>
+<script type="text/javascript">
+function updateclock(){
+    ourDate = new Date();
+    document.getElementById("clock").innerHTML = ourDate.toLocaleString();
+}
+
+function startclock() {
+    updateclock();
+    setInterval(updateclock, 1000); 
+}
+startclock();
+    </script></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</ul>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+</head>
+      <ul class="nav navbar-nav navbar-right">
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    </div>
+    <div class="col-sm-8 text-left">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: middle;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h1><b>Chrome Commands/Scripts:</b></h1>
+<input type="button" value="<" onclick="openWin()" class="btn">
+<script>
+
+function goBack() {
+  window.history.back()
+}
+</script>
+<body>
+
+<input type="button" value="Back" onclick="goBack()" class="btn">
+<script>
+function goForward() {
+  window.history.forward()
+}
+</script>
+</head>
+<input class="btn" type="button" value="Reload" onclick="newDoc()">
+
+<script>
+function newDoc() {
+  window.location.assign("https://dev--chromehiddenfiles.spiritnova0014.autocode.gg/errorcodes.html")
+}
+</script>
+<body>
+
+<input type="button" value="Forward" onclick="goForward()"class="btn">
+<hr>
+<h2>HTML Error Messages</h2>
+<p>When a browser requests a service from a web server, an error might occur,
+  and the server might return an error code like "404 Not Found".</p>
+<p>It is common to name these errors HTML error messages.</p>
+<p>But these messages are something called HTTP status messages.
+  In fact, the server always returns a message for every request.
+  The most common message is 200 OK.</p>
+
+<p>Below is a list of HTTP status messages that might be returned:</p>
+
+<h2>1xx: Information</h2>
+<table class="ws-table-all notranslate">
+  <tbody>
+    <tr>
+      <th style="width:40%">Message:</th>
+      <th style="width:60%">Description:</th>
+    </tr>
+    <tr>
+      <td>100 Continue</td>
+      <td> The server has received the request headers, and the client should proceed to send the request body</td>
+    </tr>
+    <tr>
+      <td>101 Switching Protocols</td>
+      <td>The requester has asked the server to switch protocols</td>
+    </tr>
+    <tr>
+      <td>103 Early Hints</td>
+      <td>Used with the Link header to allow the browser to start preloading
+        resources while the server prepares a response</td>
+</tr>
+  </tbody>
+</table>
+
+<h2>2xx: Successful</h2>
+<table class="ws-table-all notranslate">
+  <tbody>
+    <tr>
+      <th style="width:40%">Message:</th>
+      <th style="width:60%">Description:</th>
+    </tr>
+    <tr>
+      <td>200 OK</td>
+      <td>The request is OK (this is the standard response for successful HTTP requests)</td>
+    </tr>
+    <tr>
+      <td>201 Created</td>
+      <td>The request has been fulfilled, and a new resource is
+        created&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>202 Accepted</td>
+      <td>The request has been accepted for processing, but the processing
+        has not been completed
+      </td>
+    </tr>
+    <tr>
+      <td>203 Non-Authoritative Information</td>
+      <td>The request has been successfully processed, but is returning information that may be from another source</td>
+    </tr>
+    <tr>
+      <td>204 No Content</td>
+      <td>The request has been successfully processed, but is not returning any content</td>
+    </tr>
+    <tr>
+      <td>205 Reset Content</td>
+      <td>The request has been successfully processed, but is not returning any content, and requires that the requester reset the document view</td>
+    </tr>
+    <tr>
+      <td>206 Partial Content</td>
+      <td>The server is delivering only part of the resource due to a range header sent by the client</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3xx: Redirection</h2>
+<table class="ws-table-all notranslate">
+  <tbody>
+    <tr>
+      <th style="width:40%">Message:</th>
+      <th>Description:</th>
+    </tr>
+    <tr>
+      <td>300 Multiple Choices</td>
+      <td>A link list. The user can select a link and go to that
+        location. Maximum five addresses &nbsp;</td>
+    </tr>
+    <tr>
+      <td>301 Moved Permanently</td>
+      <td>The requested page has moved to a new URL&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>302 Found</td>
+      <td>The requested page has moved temporarily to a new URL&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>303 See Other</td>
+      <td>The requested page can be found under a different URL</td>
+    </tr>
+    <tr>
+      <td>304 Not Modified</td>
+      <td>Indicates the requested page has not been modified since last requested</td>
+    </tr>
+    <tr>
+      <td>307 Temporary Redirect</td>
+      <td>The requested page has moved temporarily to a new URL</td>
+    </tr>
+    <tr>
+      <td>308 Permanent Redirect</td>
+      <td>The requested page has moved permanently to a new URL</td>
+    </tr>
+  </tbody>
+</table>
+<h2>4xx: Client Error</h2>
+<table class="ws-table-all notranslate">
+  <tbody>
+    <tr>
+      <th style="width:40%">Message:</th>
+      <th>Description:</th>
+    </tr>
+    <tr>
+      <td>400&nbsp;Bad Request</td>
+      <td>The request cannot be fulfilled due to bad syntax</td>
+    </tr>
+    <tr>
+      <td>401 Unauthorized</td>
+      <td>The request was a legal request, but the server is refusing to respond to it. For use when authentication is possible but has failed or not yet been provided</td>
+    </tr>
+    <tr>
+      <td>402 Payment Required</td>
+      <td><i>Reserved for future use</i>
+      </td>
+    </tr>
+    <tr>
+      <td>403 Forbidden</td>
+      <td>The request was a legal request, but the server is refusing to respond to it</td>
+    </tr>
+    <tr>
+      <td>404 Not Found</td>
+      <td>The requested page could not be found but may be available again in the future</td>
+    </tr>
+    <tr>
+      <td>405 Method Not Allowed</td>
+      <td>A request was made of a page using a request method not supported by that page</td>
+    </tr>
+    <tr>
+      <td>406 Not Acceptable</td>
+      <td>The server can only generate a response that is not
+        accepted by the client
+      </td>
+    </tr>
+    <tr>
+      <td>407 Proxy Authentication Required</td>
+      <td>The client must first authenticate itself with the proxy
+      </td>
+    </tr>
+    <tr>
+      <td>408 Request Timeout</td>
+      <td>The server timed out waiting for the request
+      </td>
+    </tr>
+    <tr>
+      <td>409 Conflict</td>
+      <td>The request could not be completed because of a conflict
+        in the request</td>
+    </tr>
+    <tr>
+      <td>410 Gone</td>
+      <td>The requested page is no longer available</td>
+    </tr>
+    <tr>
+      <td>411 Length Required</td>
+      <td>The "Content-Length" is not defined. The server
+        will not accept the request without it&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>412 Precondition Failed</td>
+      <td>The precondition given in the request evaluated to false by
+        the server
+      </td>
+    </tr>
+    <tr>
+      <td>413 Request Too Large</td>
+      <td>The server will not accept the request, because the request entity is
+        too large
+      </td>
+    </tr>
+    <tr>
+      <td>414 Request-URI Too Long</td>
+      <td>The server will not accept the request, because the URI is
+        too long. Occurs when you convert a POST request to a GET request with
+        a long query information&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>415 Unsupported Media Type</td>
+      <td>The server will not accept the request, because the media
+        type is not supported&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>416&nbsp;Range Not Satisfiable</td>
+      <td>The client has asked for a portion of the file, but the server cannot supply that portion</td>
+    </tr>
+    <tr>
+      <td>417 Expectation Failed</td>
+      <td>The server cannot meet the requirements of the Expect request-header field</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>5xx: Server Error</h2>
+<table class="ws-table-all notranslate">
+  <tbody>
+    <tr>
+      <th style="width:40%">Message:</th>
+      <th>Description:</th>
+    </tr>
+    <tr>
+      <td>500&nbsp;Internal Server Error</td>
+      <td>A generic error message, given when no more specific message is suitable</td>
+    </tr>
+    <tr>
+      <td>501 Not Implemented</td>
+      <td>The server either does not recognize the request method, or it lacks the ability to fulfill the request</td>
+    </tr>
+    <tr>
+      <td>502 Bad Gateway</td>
+      <td>The server was acting as a gateway or proxy and received an invalid response from the upstream server</td>
+    </tr>
+    <tr>
+      <td>503 Service Unavailable</td>
+      <td>The server is currently unavailable (overloaded or down)
+      </td>
+    </tr>
+    <tr>
+      <td>504 Gateway Timeout</td>
+      <td>The server was acting as a gateway or proxy and did not receive a timely response from the upstream server</td>
+    </tr>
+    <tr>
+      <td>505 HTTP Version Not Supported</td>
+      <td>The server does not support the HTTP protocol version used in the request
+      </td>
+    </tr>
+    <tr>
+      <td>511 Network Authentication Required</td>
+      <td>The client needs to authenticate to gain network access</td>
+    </tr>
+  </tbody>
+</table>
+<hr>

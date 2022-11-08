@@ -1,0 +1,7922 @@
+
+
+ 
+
+<html lang="en">
+<head>
+  <title>Chrome | Commands and Scripts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <head>
+  <link rel="icon" href="chromelogo.png" type="imageX" sizes="16x16">
+  <dialog></dialog>
+</head>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+</head>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #ffffff;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+h5 {
+  color: #7a0000;
+}
+p {
+  color: #00c40a;
+}
+p1 {
+  color: #e30000;
+}
+.dropbtn {
+  background-color: #222222;
+  color: gray;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #222;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src="image.png" alt="" style="width:140px;height:45px;">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#"></a></li>
+        <li><a href="index.html">chrome://</a></li>
+        <li><a href="aitest.html">AI Browser Test</a></li>
+        <li><a href="code.html">Binary Code</a></li>
+        <li><a href="search.html">Search Browser</a></li>
+                <div class="dropdown">
+        <button class="dropbtn">Others</button>
+  <div class="dropdown-content">
+  <hr>
+  <li><h5 class="dropdown-header">System Info</h5></li>
+  <li><a class="dropdown-item" href="ks.html">Keyboard Shortcuts</a></li>
+  <li><a class="dropdown-item" href="cs.html">Character Sets</a></li>
+  <li><a class="dropdown-item" href="errorcodes.html">Error Codes</a></li>
+  <li><a class="dropdown-item" href="chromeplugins.html">Plug-ins</a></li>
+  <li><a class="dropdown-item" href="#">-</a></li>
+  <hr>
+  <li><h5 class="dropdown-header">Other</h5></li>
+  <li><a class="dropdown-item" href="server.html">Server</a></li>
+  <li><a class="dropdown-item" href="ceditor.html">Code Editor</a></li>
+  <li><a class="dropdown-item" href="buglist.html">CC/S Bug List</a></li>
+  <hr>
+  <li><h5 class="dropdown-header">Miscellaneous</h5></li>
+  <li><a class="dropdown-item" href="pixelart.html">Pixel Art</a></li>
+  <li><a class="dropdown-item" href="paint.html">Canvas</a></li>
+  <hr>
+  </div>
+</div>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="sl.html" id="lang" data-toggle="tooltip" data-placement="bottom" title="System Lang"></a></li>
+<li><a href="wc.html" id="code" data-toggle="tooltip" data-placement="bottom" title="Web Code"></a></li>
+
+<script>
+document.getElementById("code").innerHTML = 
+"" + navigator.appCodeName;
+</script>
+
+<li class="active"><a href="na.html" id="app" data-toggle="tooltip" data-placement="bottom" title="Nav App"></a></li>
+<script>
+document.getElementById("app").innerHTML = 
+"" + navigator.appName;
+</script>
+
+<script>
+document.getElementById("lang").innerHTML =
+"" + navigator.language;
+</script></li></a>
+</a></li>
+
+<li><a href="nb.html" id="browser" data-toggle="tooltip" data-placement="bottom" title="Nav Browser "></a></li>
+<script>
+document.getElementById("browser").innerHTML =
+"" + navigator.product;
+</script>
+<li><a href="ud.html" id="device" data-toggle="tooltip" data-placement="bottom" title="User Device"></a></li>
+<script>
+document.getElementById("device").innerHTML = 
+"" + navigator.platform;
+</script>
+<li><a href="tz.html" id="clock" data-toggle="tooltip" data-placement="bottom" title="System Clock">JavaScript Is Not Enabled</a></li>
+        <div id="clock"></div>
+<script type="text/javascript">
+function updateclock(){
+    ourDate = new Date();
+    document.getElementById("clock").innerHTML = ourDate.toLocaleString();
+}
+
+function startclock() {
+    updateclock();
+    setInterval(updateclock, 1000); 
+}
+startclock();
+    </script></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    </div>
+    <div class="col-sm-8 text-left">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: middle;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<h1><b>Chrome Commands/Scripts:</b></h1>
+<input type="button" value="<" onclick="openWin()" class="btn">
+<script>
+
+function goBack() {
+  window.history.back()
+}
+</script>
+<body>
+
+<input type="button" value="Back" onclick="goBack()" class="btn">
+<script>
+function goForward() {
+  window.history.forward()
+}
+</script>
+</head>
+<input class="btn" type="button" value="Reload" onclick="newDoc()">
+
+<script>
+function newDoc() {
+  window.location.assign("https://spiritxiv.autocode.dev/chromehiddenfiles@xiv-websites/index.html")
+}
+</script>
+<body>
+
+<input type="button" value="Forward" onclick="goForward()"class="btn">
+<hr>
+<body>
+<h2>Navagator Apps</h2>
+<hr>
+<a href="#" class="image">
+    <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Timeline_of_web_browsers.svg/3560px-Timeline_of_web_browsers.svg.png" decoding="async" width="890" height="615" data-file-width="3965" data-file-height="2740"/>
+</a>
+<hr>
+<h3>1990s</h3>
+<table class="wikitable" style="font-size:90%; text-align:center; table-layout:fixed; width:49em">
+<tbody><tr>
+<th>1990
+</th>
+<th>WorldWideWeb (Nexus)
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th></tr>
+<tr>
+<th>1993
+</th>
+<th>Lynx</a>
+</th>
+<th colspan="5">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td rowspan="2">
+</td>
+<td rowspan="12" colspan="5">
+</td></tr>
+<tr>
+<td>Feb
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">2.0*
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">2.0.10
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">2.0.11
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">2.0.12
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">2.1
+</td></tr>
+<tr>
+<th>1994
+</th>
+<th>Lynx</a>
+</th>
+<th>Mosaic Netscape</a>
+</th>
+<th>Opera</a>
+</th>
+<th colspan="3">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td rowspan="9">
+</td>
+<td rowspan="10">
+</td>
+<td rowspan="12" colspan="3">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">2.2
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">2.3
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">0.9*
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">1.0β*
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">1.0
+</td>
+<td style="background:#fa4251">
+</td></tr>
+<tr>
+<th>1995
+</th>
+<th>Lynx</a>
+</th>
+<th>Netscape</a>
+</th>
+<th>Opera</a>
+</th>
+<th>IE</a>
+</th>
+<th colspan="2">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td rowspan="7">
+</td>
+<td rowspan="12" colspan="2">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">1.1
+</td>
+<td style="background:#fa4251">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">1.0
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">2.4
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">1.22
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">1.0*
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td>2.0</a>
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td></tr>
+<tr>
+<th>1996
+</th>
+<th>Lynx</a>
+</th>
+<th>Netscape</a>
+</th>
+<th>Opera</a>
+</th>
+<th>IE</a>
+</th>
+<th>Mac IE</a>
+</th>
+<th colspan="1">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">2.0B*
+</td>
+<td rowspan="12" colspan="1">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">2.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">2.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">2.0
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">2.5
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">3.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td>3.0</a>
+</td>
+<td style="background:#6698ff">2.1
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">2.6
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">2.10
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<th>1997
+</th>
+<th>Lynx</a>
+</th>
+<th>Netscape</a>
+</th>
+<th>Opera</a>
+</th>
+<th>IE</a>
+</th>
+<th>Mac IE</a>
+</th>
+<th colspan="1">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">3.0
+</td>
+<td rowspan="12" colspan="1">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">2.7
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">4.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td>4.0</a>
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">3.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<th>1998
+</th>
+<th>Lynx</a>
+</th>
+<th>Netscape</a>
+</th>
+<th>Opera</a>
+</th>
+<th>IE</a>
+</th>
+<th>Mac IE</a>
+</th>
+<th colspan="1">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">4.0
+</td>
+<td rowspan="12" colspan="1">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">2.8
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">2.8.1
+</td>
+<td style="background:#00adba">4.5
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">3.5
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<th>1999
+</th>
+<th>Lynx</a>
+</th>
+<th>Netscape</a>
+</th>
+<th>Opera</a>
+</th>
+<th>IE</a>
+</th>
+<th>Mac IE</a>
+</th>
+<th>Mozilla</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">4.5
+</td>
+<td rowspan="2">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td>5.0</a>
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">M3*
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">2.8.2
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td></tr></tbody></table>
+<h3>2000s</h3>
+
+<table class="wikitable" style="font-size:90%; text-align:center; table-layout:fixed; width:84em">
+
+<tbody><tr>
+<th>2000
+</th>
+<th>Lynx</a>
+</th>
+<th>Netscape</a>
+</th>
+<th>Opera</a>
+</th>
+<th>IE</a>
+</th>
+<th>Mac IE</a>
+</th>
+<th>Mozilla</a>
+</th>
+<th colspan="5">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td>
+<td rowspan="12" colspan="5">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#6698ff">5.0†<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">2.8.3
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td rowspan="9">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">4.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">5.5
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">5.6
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">6.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">5.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">0.6
+</td></tr>
+<tr>
+<th>2001
+</th>
+<th>Lynx</a>
+</th>
+<th>Netscape</a>
+</th>
+<th>Opera</a>
+</th>
+<th>IE</a>
+</th>
+<th>
+</th>
+<th>Mozilla</a>
+</th>
+<th colspan="5">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td rowspan="12">
+</td>
+<td style="background:#1160fc">0.7
+</td>
+<td rowspan="12" colspan="5">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">0.8
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">0.9
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">2.8.4
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">6.1
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">6.2
+</td>
+<td style="background:#fa4251">
+</td>
+<td>6.0</a>
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">6.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<th>2002
+</th>
+<th>Lynx</a>
+</th>
+<th>Netscape</a>
+</th>
+<th>Opera</a>
+</th>
+<th>IE</a>
+</th>
+<th>Chimera</a>
+</th>
+<th>Mozilla</a>
+</th>
+<th>Phoenix</a>
+</th>
+<th colspan="4">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td>
+</td>
+<td style="background:#1160fc">
+</td>
+<td rowspan="8">
+</td>
+<td rowspan="12" colspan="4">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">0.1*
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">0.2
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">1.0
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">0.4
+</td>
+<td style="background:#1160fc">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">7.0 (&amp; 4.8)
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">1.1
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">6.0 SP1
+</td>
+<td style="background:#4994d8">0.5
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">0.1*
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">0.4
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">0.6
+</td>
+<td style="background:#1160fc">1.2
+</td>
+<td style="background:#f36a04">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">0.5
+</td></tr>
+<tr>
+<th>2003
+</th>
+<th>Lynx</a>
+</th>
+<th>Netscape</a>
+</th>
+<th>Opera</a>
+</th>
+<th>IE</a>
+</th>
+<th>Camino</a>
+</th>
+<th>Mozilla</a>
+</th>
+<th>Firebird</a>
+</th>
+<th>Safari</a>
+</th>
+<th>Maxthon</a>
+</th>
+<th colspan="2">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">7.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td rowspan="5">
+</td>
+<td rowspan="11">
+</td>
+<td rowspan="25" colspan="2">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">0.7
+</td>
+<td style="background:#1160fc">1.3
+</td>
+<td style="background:#f36a04">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">7.1
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">0.6
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">7.1
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">1.4
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">1.0
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">7.2
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">1.5
+</td>
+<td style="background:#f36a04">0.7
+</td>
+<td style="background:#989898">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">.9*
+</td></tr>
+<tr>
+<th>2004
+</th>
+<th> Lynx</a>
+</th>
+<th> Netscape</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Camino</a>
+</th>
+<th> Mozilla</a>
+</th>
+<th> Firefox</a>
+</th>
+<th>Safari</a>
+</th>
+<th>Maxthon</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">1.6
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">2.8.5
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">0.8
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">7.5
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">0.8
+</td>
+<td style="background:#1160fc">1.7
+</td>
+<td style="background:#f36a04">0.9
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">7.2
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">6.0 SP2
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">0.10 (PR)
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">1.0*
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">1.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<th>2005
+</th>
+<th> Lynx</a>
+</th>
+<th>Netscape</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th>Camino</a>
+</th>
+<th> Mozilla</a><br /> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th colspan="1">
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td rowspan="7">
+</td>
+<td rowspan="25" colspan="1">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">8.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">2.0
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">8.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">8.5
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">SM 1.0α*
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">1.5
+</td>
+<td style="background:#c2c2c2">3.0*
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">1.5
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<th>2006
+</th>
+<th> Lynx</a>
+</th>
+<th> Netscape</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Camino</a>
+</th>
+<th> Mozilla</a><br /> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">8.1
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">SM 1.0
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">1.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">M. 1.7.13†<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">9.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">2.8.6
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee"><a href="/wiki/Internet_Explorer_7" title="Internet Explorer 7">7.0</a>
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04"><a href="/wiki/Mozilla_Firefox_2" class="mw-redirect" title="Mozilla Firefox 2">2.0</a>
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">4.0
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">9.1
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<th>2007
+</th>
+<th> Lynx</a>
+</th>
+<th> Netscape</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Camino</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">1.1
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td rowspan="4">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">9.2
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">1.6
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">1.0*<sup id="cite_ref-netsurf-news_3-0" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">1.5
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">3.0
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">2.0
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">1.1<sup id="cite_ref-netsurf-news_3-1" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">9.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2008
+</th>
+<th> Lynx</a>
+</th>
+<th> Netscape</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Camino</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#00adba">9.0.0.6†<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td rowspan="6">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">3.1
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">1.2<sup id="cite_ref-netsurf-news_3-2" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">1.6
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#fa4251">9.5
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04"><a href="/wiki/Mozilla_Firefox_3" class="mw-redirect" title="Mozilla Firefox 3">3.0</a>
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">0.2.149.27*
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">9.6
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">1.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">2.5
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2009
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Camino</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee"><a href="/wiki/Internet_Explorer_8" title="Internet Explorer 8">8.0</a>
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">2.0<sup id="cite_ref-netsurf-news_3-3" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">2.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">2.1<sup id="cite_ref-netsurf-news_3-4" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04"><a href="/wiki/Mozilla_Firefox_3.5" class="mw-redirect" title="Mozilla Firefox 3.5">3.5</a>
+</td>
+<td style="background:#989898">4.0
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">2.8.7
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">3.0
+</td>
+<td style="background:#fa4251"><a href="/wiki/Opera_10" class="mw-redirect" title="Opera 10">10.0</a>
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">5.1
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">2.0
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">10.10
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">2.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.0
+</td>
+<td style="background:#5ec7ff">
+</td></tr></tbody></table>
+<h3>2010s</h3>
+<table class="wikitable" style="font-size:90%; text-align:center; table-layout:fixed; width:84em">
+
+<tbody><tr>
+<th>2010
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Camino</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">4.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">3.6
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">10.50
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.1
+</td>
+<td style="background:#5ec7ff">2.5<sup id="cite_ref-netsurf-news_3-5" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">5.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">4.1, 5.0
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">10.60
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.2
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.3
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">6.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">3.0<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">2.6<sup id="cite_ref-netsurf-news_3-6" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">7.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">8.0
+</td>
+<td style="background:#fa4251">11.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2011
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Camino</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.4
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">9.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">10.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee"><a href="/wiki/Internet_Explorer_9" title="Internet Explorer 9">9.0</a>
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04"><a href="/wiki/Mozilla_Firefox_4.0" class="mw-redirect" title="Mozilla Firefox 4.0">4.0</a>
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">11.0
+</td>
+<td style="background:#fa4251">11.10
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">2.7<sup id="cite_ref-netsurf-news_3-7" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.5
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">12.0
+</td>
+<td style="background:#fa4251">11.50
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">2.1
+</td>
+<td style="background:#f36a04"><a href="/wiki/Mozilla_Firefox_5.0" class="mw-redirect" title="Mozilla Firefox 5.0">5.0</a>
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">3.1<sup id="cite_ref-maxthon3-changelog_6-0" class="reference"><a href="#cite_note-maxthon3-changelog-6">&#91;6&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">2.2
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">5.1
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">13.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">6.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">14.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">2.4
+</td>
+<td style="background:#f36a04">7.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">2.8<sup id="cite_ref-netsurf-news_3-8" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">15.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">3.2<sup id="cite_ref-maxthon3-changelog_6-1" class="reference"><a href="#cite_note-maxthon3-changelog-6">&#91;6&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">2.1
+</td>
+<td style="background:#1160fc">2.5
+</td>
+<td style="background:#f36a04">8.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">16.0
+</td>
+<td style="background:#fa4251">11.60
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">2.6
+</td>
+<td style="background:#f36a04">9.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">3.3<sup id="cite_ref-maxthon3-changelog_6-2" class="reference"><a href="#cite_note-maxthon3-changelog-6">&#91;6&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2012
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Camino</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">2.7
+</td>
+<td style="background:#f36a04">10.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">17.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">18.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#4994d8">2.1.2†<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</td>
+<td style="background:#1160fc">2.8
+</td>
+<td style="background:#f36a04">11.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td rowspan="9">
+</td>
+<td style="background:#1160fc">2.9
+</td>
+<td style="background:#f36a04">12.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.7
+</td>
+<td style="background:#5ec7ff">2.9<sup id="cite_ref-netsurf-news_3-9" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">19.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">12.00
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.10
+</td>
+<td style="background:#f36a04">13.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">3.4<sup id="cite_ref-maxthon3-changelog_6-3" class="reference"><a href="#cite_note-maxthon3-changelog-6">&#91;6&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">20.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.11
+</td>
+<td style="background:#f36a04">14.0
+</td>
+<td style="background:#989898">6.0
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">21.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.12
+</td>
+<td style="background:#f36a04">15.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">22.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.8
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee"><a href="/wiki/Internet_Explorer_10" title="Internet Explorer 10">10.0</a>
+</td>
+<td style="background:#1160fc">2.13
+</td>
+<td style="background:#f36a04">16.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">23.0
+</td>
+<td style="background:#fa4251">12.10
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.14
+</td>
+<td style="background:#f36a04">17.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">3.5<sup id="cite_ref-maxthon3-changelog_6-4" class="reference"><a href="#cite_note-maxthon3-changelog-6">&#91;6&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">4.0<sup id="cite_ref-maxthon4-changelog_9-0" class="reference"><a href="#cite_note-maxthon4-changelog-9">&#91;9&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2013
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<td rowspan="26">
+</td>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">24.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.15
+</td>
+<td style="background:#f36a04">18.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">25.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.16
+</td>
+<td style="background:#f36a04">19.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">26.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">12.15
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.17
+</td>
+<td style="background:#f36a04">20.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">3.0<sup id="cite_ref-netsurf-news_3-10" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">27.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">21.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">22.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">4.1<sup id="cite_ref-maxthon4-changelog_9-1" class="reference"><a href="#cite_note-maxthon4-changelog-9">&#91;9&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">28.0
+</td>
+<td style="background:#fa4251">15.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.19
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">29.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.20
+</td>
+<td style="background:#f36a04">23.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">16.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.21
+</td>
+<td style="background:#f36a04">24.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">30.0
+</td>
+<td style="background:#fa4251">17.0
+</td>
+<td style="background:#1ebbee"><a href="/wiki/Internet_Explorer_11" title="Internet Explorer 11">11.0</a>
+</td>
+<td style="background:#1160fc">2.22
+</td>
+<td style="background:#f36a04">25.0
+</td>
+<td style="background:#989898">7.0
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">31.0
+</td>
+<td style="background:#fa4251">18.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">4.2<sup id="cite_ref-maxthon4-changelog_9-2" class="reference"><a href="#cite_note-maxthon4-changelog-9">&#91;9&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.23
+</td>
+<td style="background:#f36a04">26.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2014
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">32.0
+</td>
+<td style="background:#fa4251">19.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">2.8.8
+</td>
+<td style="background:#11b831">33.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.24
+</td>
+<td style="background:#f36a04">27.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">4.3<sup id="cite_ref-maxthon4-changelog_9-3" class="reference"><a href="#cite_note-maxthon4-changelog-9">&#91;9&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">20.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.25
+</td>
+<td style="background:#f36a04">28.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">34.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">29.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">4.4<sup id="cite_ref-maxthon4-changelog_9-4" class="reference"><a href="#cite_note-maxthon4-changelog-9">&#91;9&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">3.1<sup id="cite_ref-netsurf-news_3-11" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">35.0
+</td>
+<td style="background:#fa4251">21.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.26
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">22.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">30.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">36.0
+</td>
+<td style="background:#fa4251">23.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">31.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.9
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">37.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">3.2<sup id="cite_ref-netsurf-news_3-12" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">24.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">32.0
+</td>
+<td style="background:#989898">7.1
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">38.0
+</td>
+<td style="background:#fa4251">25.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">2.30
+</td>
+<td style="background:#f36a04">33.0
+</td>
+<td style="background:#989898">8.0
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">39.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">26.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">34.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2015
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Edge</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">40.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td rowspan="2">
+</td>
+<td style="background:#1160fc">2.32
+</td>
+<td style="background:#f36a04">35.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">27.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">36.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">41.0
+</td>
+<td style="background:#fa4251">28.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.33<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</td>
+<td style="background:#f36a04">37.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">3.3<sup id="cite_ref-netsurf-news_3-13" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">42.0
+</td>
+<td style="background:#fa4251">29.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">43.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">38.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">30.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">44.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">20.10240<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">39.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">31.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">40.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.10
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">45.0
+</td>
+<td style="background:#fa4251">32.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.38<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>
+</td>
+<td style="background:#f36a04">41.0
+</td>
+<td style="background:#989898">9.0<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.11
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">46.0<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup>
+</td>
+<td style="background:#fa4251">33.0<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">4.4.8<sup id="cite_ref-maxthon4-changelog_9-5" class="reference"><a href="#cite_note-maxthon4-changelog-9">&#91;9&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">25.10586<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup>
+</td>
+<td style="background:#1160fc">2.39<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup>
+</td>
+<td style="background:#f36a04">42.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">47.0  <sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup>
+</td>
+<td style="background:#fa4251">34.0<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup>
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">43.0<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup>
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2016
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Edge</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">48.0
+</td>
+<td style="background:#fa4251">35.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">44.0
+</td>
+<td style="background:#989898">9.0.3
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.12
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">4.9<sup id="cite_ref-maxthon4-changelog_9-6" class="reference"><a href="#cite_note-maxthon4-changelog-9">&#91;9&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">3.4<sup id="cite_ref-netsurf-news_3-14" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">49.0
+</td>
+<td style="background:#fa4251">36.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.40<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup>
+</td>
+<td style="background:#f36a04">45.0
+</td>
+<td style="background:#989898">9.1
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">50.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">46.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.13
+</td>
+<td style="background:#5ec7ff">3.5<sup id="cite_ref-netsurf-news_3-15" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">51.0
+</td>
+<td style="background:#fa4251">37.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.14
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">38.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">47.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">52.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">53.0
+</td>
+<td style="background:#fa4251">39.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">38.14393
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">48.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">40.0<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup>
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">49.0<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;23&#93;</a></sup>
+</td>
+<td style="background:#989898">10.0<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup>
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">54.0<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;25&#93;</a></sup>
+</td>
+<td style="background:#fa4251">41.0<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;26&#93;</a></sup>
+</td>
+<td style="background:#1ebbee">11.0.36<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;27&#93;</a></sup>
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">4.9.4<sup id="cite_ref-maxthon4-changelog_9-7" class="reference"><a href="#cite_note-maxthon4-changelog-9">&#91;9&#93;</a></sup>
+<p>5.0<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;28&#93;</a></sup>
+</p>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">50.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.15.0<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;29&#93;</a></sup>
+</td>
+<td style="background:#5ec7ff">3.6<sup id="cite_ref-netsurf-news_3-16" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">55.0
+</td>
+<td style="background:#fa4251">42.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.46
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2017
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Edge</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">56.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">51.0
+</td>
+<td style="background:#989898">10.1
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">43.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">57.0
+</td>
+<td style="background:#fa4251">44.0
+</td>
+<td style="background:#1ebbee">11.0.40
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">52.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">58.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">40.15063
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">53.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">45.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">59.0
+</td>
+<td style="background:#fa4251">46.0
+</td>
+<td style="background:#1ebbee">11.0.43
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">54.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">60.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.48
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">5.1<sup id="cite_ref-mx5-changelog_30-0" class="reference"><a href="#cite_note-mx5-changelog-30">&#91;30&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">47.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">55.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">61.0
+</td>
+<td style="background:#fa4251">48.0
+</td>
+<td style="background:#1ebbee">11.0.46
+</td>
+<td style="background:#3177bc">41.16299
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">56.0
+</td>
+<td style="background:#989898">11.0
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">62.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">3.7<sup id="cite_ref-netsurf-news_3-17" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">49.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.49
+</td>
+<td style="background:#f36a04">57.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">63.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2018
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Edge</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">64.0
+</td>
+<td style="background:#fa4251">50.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">58.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">51.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">6.15.2<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;31&#93;</a></sup>
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">65.0
+</td>
+<td style="background:#fa4251">52.0
+</td>
+<td style="background:#1ebbee">11.0.56
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">59.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">5.2<sup id="cite_ref-mx5-changelog_30-1" class="reference"><a href="#cite_note-mx5-changelog-30">&#91;30&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">66.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">42.17134
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">67.0
+</td>
+<td style="background:#fa4251">53.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.49.3
+</td>
+<td style="background:#f36a04">60.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">54.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">61.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">2.8.9<sup id="cite_ref-32" class="reference"><a href="#cite_note-32">&#91;32&#93;</a></sup>
+</td>
+<td style="background:#11b831">68.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.49.4
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">55.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">3.8<sup id="cite_ref-netsurf-news_3-18" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">69.0
+</td>
+<td style="background:#fa4251">56.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">62.0
+</td>
+<td style="background:#989898">12.0<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">&#91;33&#93;</a></sup>
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">70.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">44.17763
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">63.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">57.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">71.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">64.0
+</td>
+<td style="background:#989898">12.0.2<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">&#91;34&#93;</a></sup>
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2019
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Edge</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">72.0
+</td>
+<td style="background:#fa4251">58.0
+</td>
+<td style="background:#1ebbee">11.0.105<sup id="cite_ref-35" class="reference"><a href="#cite_note-35">&#91;35&#93;</a></sup>
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">65.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">73.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">66.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">5.2.7<sup id="cite_ref-mx5-changelog_30-2" class="reference"><a href="#cite_note-mx5-changelog-30">&#91;30&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">74.0
+</td>
+<td style="background:#fa4251">60.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">44.18362
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">67.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">75.0
+</td>
+<td style="background:#fa4251">62.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">76.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">68.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">3.9<sup id="cite_ref-netsurf-news_3-19" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">63.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">77.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">44.18362.387.0
+</td>
+<td style="background:#1160fc">2.49.5
+</td>
+<td style="background:#f36a04">69.0
+</td>
+<td style="background:#989898">13.0
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">78.0
+</td>
+<td style="background:#fa4251">64.0
+</td>
+<td style="background:#1ebbee">11.0.155<sup id="cite_ref-36" class="reference"><a href="#cite_note-36">&#91;36&#93;</a></sup>
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">70.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">5.3.8<sup id="cite_ref-mx5-changelog_30-3" class="reference"><a href="#cite_note-mx5-changelog-30">&#91;30&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">65.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">79.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">71.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr></tbody></table>
+<h3>2020s</h3>
+
+<table class="wikitable" style="font-size:90%; text-align:center; table-layout:fixed; width:84em">
+
+<tbody><tr>
+<th>2020
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Edge</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">66.0
+</td>
+<td style="background:#1ebbee">11.0.170
+</td>
+<td style="background:#3177bc">79.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">72.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">80.0
+</td>
+<td style="background:#fa4251">67.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">80.0
+</td>
+<td style="background:#1160fc">2.53.1
+</td>
+<td style="background:#f36a04">73.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">74.0
+</td>
+<td style="background:#989898">13.1
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">81.0
+</td>
+<td style="background:#fa4251">68.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">81.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">75.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">83.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">83.0
+</td>
+<td style="background:#1160fc">2.53.2
+</td>
+<td style="background:#f36a04">76.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">3.10<sup id="cite_ref-netsurf-news_3-20" class="reference"><a href="#cite_note-netsurf-news-3">&#91;3&#93;</a></sup>
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">69.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">77.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">84.0
+</td>
+<td style="background:#fa4251">70.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">84.0
+</td>
+<td style="background:#1160fc">2.53.3
+</td>
+<td style="background:#f36a04">79.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">85.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">85.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">80.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">2.9.0dev.6<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">&#91;37&#93;</a></sup>
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">71.0
+</td>
+<td style="background:#1ebbee">11.0.210
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.53.4
+</td>
+<td style="background:#f36a04">81.0
+</td>
+<td style="background:#989898">14.0
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">86.0
+</td>
+<td style="background:#fa4251">72.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">86.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">82.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">87.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">87.0
+</td>
+<td style="background:#1160fc">2.53.5
+</td>
+<td style="background:#f36a04">83.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">6.1.0<sup id="cite_ref-38" class="reference"><a href="#cite_note-38">&#91;38&#93;</a></sup>
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">73.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">84.0
+</td>
+<td style="background:#989898">14.0.2<sup id="cite_ref-39" class="reference"><a href="#cite_note-39">&#91;39&#93;</a></sup>
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2021
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th> IE</a>
+</th>
+<th> Edge</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">88.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">88.0
+</td>
+<td style="background:#1160fc">2.53.6
+</td>
+<td style="background:#f36a04">85.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">74.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">86.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">89.0
+</td>
+<td style="background:#fa4251">75.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">89.0
+</td>
+<td style="background:#1160fc">2.53.7
+</td>
+<td style="background:#f36a04">87.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">90.0
+</td>
+<td style="background:#fa4251">76.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">90.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">88.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>May
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">91.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">91.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jun
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">77.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.53.8
+</td>
+<td style="background:#f36a04">89.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Jul
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">92.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">92.0
+</td>
+<td style="background:#1160fc">2.53.8.1
+</td>
+<td style="background:#f36a04">90.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Aug
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">93.0
+</td>
+<td style="background:#fa4251">78.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">93.0
+</td>
+<td style="background:#1160fc">2.53.9
+</td>
+<td style="background:#f36a04">91.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Sep
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">94.0
+</td>
+<td style="background:#fa4251">79.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">94.0
+</td>
+<td style="background:#1160fc">2.53.9.1
+</td>
+<td style="background:#f36a04">92.0
+</td>
+<td style="background:#989898">15.0
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Oct
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">95.0
+</td>
+<td style="background:#fa4251">80.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">95.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">93.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Nov
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">96.0
+</td>
+<td style="background:#fa4251">81.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">96.0
+</td>
+<td style="background:#1160fc">2.53.10
+</td>
+<td style="background:#f36a04">94.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Dec
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">
+</td>
+<td style="background:#fa4251">82.0
+</td>
+<td style="background:#1ebbee">
+</td>
+<td style="background:#3177bc">
+</td>
+<td style="background:#1160fc">2.53.10.2
+</td>
+<td style="background:#f36a04">95.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<th>2022
+</th>
+<th> Lynx</a>
+</th>
+<th> Chrome</a>
+</th>
+<th> Opera</a>
+</th>
+<th>
+</th>
+<th> Edge</a>
+</th>
+<th> SeaMonkey</a>
+</th>
+<th> Firefox</a>
+</th>
+<th> Safari</a>
+</th>
+<th> Maxthon</a>
+</th>
+<th> Lunascape</a>
+</th>
+<th> NetSurf</a>
+</th></tr>
+<tr>
+<td>Jan
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">97.0
+</td>
+<td style="background:#fa4251">83.0
+</td>
+<td>
+</td>
+<td style="background:#3177bc">97.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">96.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td>Feb
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">98.0
+</td>
+<td style="background:#fa4251">84.0
+</td>
+<td>
+</td>
+<td style="background:#3177bc">98.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">97.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+<tr>
+</th></tr>
+<tr>
+<td style="background:#DDDDDD">Mar
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">99.0
+</td>
+<td style="background:#fa4251">85.0
+</td>
+<td style="background:#DDDDDD">
+</td>
+<td style="background:#3177bc">99.0
+</td>
+<td style="background:#1160fc">2.53.11
+</td>
+<td style="background:#f36a04">98.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+<td style="background:#fcfcfc">Apr
+</td>
+<td style="background:#6d7b8d">
+</td>
+<td style="background:#11b831">100.0
+</td>
+<td style="background:#fa4251">
+</td>
+<td style="background:#fcfcfc">
+</td>
+<td style="background:#3177bc">100.0
+</td>
+<td style="background:#1160fc">
+</td>
+<td style="background:#f36a04">99.0
+</td>
+<td style="background:#989898">
+</td>
+<td style="background:#a6d3fc">
+</td>
+<td style="background:#c2c2c2">
+</td>
+<td style="background:#5ec7ff">
+</td></tr>
+<tr>
+    <td>May
+    </td>
+    <td style="background:#6d7b8d"></td>
+    </td>
+    <td style="background:#11b831">101.0</td>
+    </td>
+    <td style="background:#fa4251"></td>
+    </td>
+    <td style="background:#DDDDDD">
+    </td>
+    <td style="background:#3177bc">101.0</td>
+    </td>
+    <td style="background:#1160fc">2.53.12
+    </td>
+    <td style="background:#f36a04">100.0
+    </td>
+    <td style="background:#989898"></td>
+    </td>
+    <td style="background:#a6d3fc"></td>
+    </td>
+    <td style="background:#c2c2c2"></td>
+    </td>
+    <td style="background:#5ec7ff"></td>
+</tr></td>
+</tbody></table>
+
+</body>
+</html>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<hr>
+<hr>
+

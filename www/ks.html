@@ -1,0 +1,929 @@
+
+
+<html lang="en">
+<head>
+  <title>Chrome | Commands and Scripts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <head>
+  <link rel="icon" href="chromelogo.png" type="imageX" sizes="16x16">
+  <dialog></dialog>
+</head>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+</head>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #ffffff;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+h5 {
+  color: #7a0000;
+}
+p1 {
+  color: #e30000;
+}
+.dropbtn {
+  background-color: #222222;
+  color: gray;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #222;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src="image.png" alt="" style="width:140px;height:45px;">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#"></a></li>
+        <li><a href="index.html">chrome://</a></li>
+        <li><a href="aitest1.html">AI Browser Test</a></li>
+        <li><a href="code.html">Binary Code</a></li>
+        <li><a href="search.html">Search Browser</a></li>
+                <div class="dropdown">
+        <button class="dropbtn">Others</button>
+  <div class="dropdown-content">
+  <hr>
+  <li><h5 class="dropdown-header">System Info</h5></li>
+  <li><a class="dropdown-item" href="ks.html">Keyboard Shortcuts</a></li>
+  <li><a class="dropdown-item" href="cs.html">Character Sets</a></li>
+  <li><a class="dropdown-item" href="errorcodes.html">Error Codes</a></li>
+  <li><a class="dropdown-item" href="chromeplugins.html">Plug-ins</a></li>
+  <li><a class="dropdown-item" href="#">-</a></li>
+  <hr>
+  <li><h5 class="dropdown-header">Other</h5></li>
+  <li><a class="dropdown-item" href="server.html">Server</a></li>
+  <li><a class="dropdown-item" href="ceditor.html">Code Editor</a></li>
+  <li><a class="dropdown-item" href="buglist.html">CC/S Bug List</a></li>
+  <hr>
+  <li><h5 class="dropdown-header">Miscellaneous</h5></li>
+  <li><a class="dropdown-item" href="pixelart.html">Pixel Art</a></li>
+  <li><a class="dropdown-item" href="paint.html">Canvas</a></li>
+  <hr>
+  </div>
+</div>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="sl.html" id="lang" data-toggle="tooltip" data-placement="bottom" title="System Lang"></a></li>
+<li><a href="wc.html" id="code" data-toggle="tooltip" data-placement="bottom" title="Web Code"></a></li>
+
+<script>
+document.getElementById("code").innerHTML = 
+"" + navigator.appCodeName;
+</script>
+
+<li><a href="na.html" id="app" data-toggle="tooltip" data-placement="bottom" title="Nav App"></a></li>
+<script>
+document.getElementById("app").innerHTML = 
+"" + navigator.appName;
+</script>
+
+<script>
+document.getElementById("lang").innerHTML =
+"" + navigator.language;
+</script></li></a>
+</a></li>
+
+<li><a href="nb.html" id="browser" data-toggle="tooltip" data-placement="bottom" title="Nav Browser "></a></li>
+<script>
+document.getElementById("browser").innerHTML =
+"" + navigator.product;
+</script>
+<li><a href="ud.html" id="device" data-toggle="tooltip" data-placement="bottom" title="User Device"></a></li>
+<script>
+document.getElementById("device").innerHTML = 
+"" + navigator.platform;
+</script>
+<li><a href="tz.html" id="clock" data-toggle="tooltip" data-placement="bottom" title="System Clock">JavaScript Is Not Enabled</a></li>
+        <div id="clock"></div>
+<script type="text/javascript">
+function updateclock(){
+    ourDate = new Date();
+    document.getElementById("clock").innerHTML = ourDate.toLocaleString();
+}
+
+function startclock() {
+    updateclock();
+    setInterval(updateclock, 1000); 
+}
+startclock();
+    </script></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    </div>
+    <div class="col-sm-8 text-left">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: middle;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h1><b>Chrome Commands/Scripts:</b></h1>
+<input type="button" value="<" onclick="openWin()" class="btn">
+<script>
+
+function goBack() {
+  window.history.back()
+}
+</script>
+<body>
+
+<input type="button" value="Back" onclick="goBack()" class="btn">
+<script>
+function goForward() {
+  window.history.forward()
+}
+</script>
+</head>
+<input class="btn" type="button" value="Reload" onclick="newDoc()">
+
+<script>
+function newDoc() {
+  window.location.assign("https://spiritxiv.autocode.dev/chromehiddenfiles@xiv-websites/index.html")
+}
+</script>
+<body>
+
+<input type="button" value="Forward" onclick="goForward()"class="btn">
+<hr>
+<h2>Keyboard Shortcuts For Windows and Mac</h2>
+<p>Keyboard shortcuts are often used in modern operating systems and computer software programs.</p>
+<p>Learning and using keyboard shortcuts can save you a lot of time.</p>
+<hr>
+
+<h2>Basic Shortcuts</h2>
+<table class="ws-table-all notranslate">
+<tr>
+<th style="width:44%">Description</th>
+<th style="width:28%">Windows</th>
+<th style="width:28%">Mac OS</th>
+</tr>
+<tr>
+<td>Edit menu</td>
+<td>Alt + E</td>
+<td>Ctrl + F2 + F</td>
+</tr>
+<tr>
+<td>File menu</td>
+<td>Alt + F</td>
+<td>Ctrl + F2 + E</td>
+</tr>
+<tr>
+<td>View menu</td>
+<td>Alt + V</td>
+<td>Ctrl + F2 + V</td>
+</tr>     
+<tr>
+<td>Select all text</td>
+<td>Ctrl + A</td>
+<td>Cmd + A</td>
+</tr>
+<tr>
+<td>Copy text</td>
+<td>Ctrl + C</td>
+<td>Cmd + C</td>
+</tr>
+<tr>
+<td>Find text</td>
+<td>Ctrl + F</td>
+<td>Cmd + F</td>
+</tr>  
+<tr>
+<td>Find and replace text</td>
+<td>Ctrl + H</td>
+<td>Cmd + F</td>
+</tr>     
+<tr>
+<td>New Document</td>
+<td>Ctrl + N</td>
+<td>Cmd + N</td>
+</tr>
+<tr>
+<td>Open a file</td>
+<td>Ctrl + O</td>
+<td>Cmd + O</td>
+</tr>
+<tr>
+<td>Print options</td>
+<td>Ctrl + P</td>
+<td>Cmd + P</td>
+</tr>
+<tr>
+<td>Save file</td>
+<td>Ctrl + S</td>
+<td>Cmd + S</td>
+</tr>  
+<tr>
+<td>Paste text</td>
+<td>Ctrl + V</td>
+<td>Cmd + V</td>
+</tr>
+<tr>
+<td>Cut text</td>
+<td>Ctrl + X</td>
+<td>Cmd + X</td>
+</tr>
+<tr>
+<td>Redo text</td>
+<td>Ctrl + Y</td>
+<td>Shift + Cmd + Z </td>
+</tr>
+<tr>
+<td>Undo text</td>
+<td>Ctrl + Z</td>
+<td>Cmd + Z</td>
+</tr>
+</table>
+
+<h2>Text Editing</h2>
+<table class="ws-table-all notranslate">
+<tr>
+<th style="width:52%">Description</th>
+<th style="width:24%">Windows</th>
+<th style="width:24%">Mac OS</th>
+</tr>
+<tr>
+<td style="height:25px"><strong>Cursor Movement</strong></td>
+<td style="height:25px"></td>
+<td style="height:25px"></td>
+</tr>
+<tr>
+<td>Go to the right or to the beginning of next line break</td>
+<td>Right Arrow</td>
+<td>Right Arrow</td>
+</tr>
+<tr>
+<td>Go to the left or to the end of previous line break</td>
+<td>Left Arrow</td>
+<td>Left Arrow</td>
+</tr>
+<tr>
+<td>Go up one row</td>
+<td>Up Arrow</td>
+<td>Up Arrow</td>
+</tr>
+<tr>
+<td>Go down one row</td>
+<td>Down Arrow</td>
+<td>Down Arrow</td>
+</tr>   
+<tr>
+<td>Go to the beginning of the current line</td>
+<td>Home</td>
+<td>Cmd + Left Arrow</td>
+</tr>  
+<tr>
+<td>Go to the end of the current line</td>
+<td>End</td>
+<td>Cmd + Right Arrow</td>
+</tr>   
+<tr>
+<td>Go to the beginning of the document</td>
+<td>Ctrl + Home</td>
+<td>Cmd + Up Arrow</td>
+</tr>  
+<tr>
+<td>Go to the end of the document</td>
+<td>Ctrl + End</td>
+<td>Cmd + Down Arrow</td>
+</tr>   
+<tr>
+<td>Move up one frame</td>
+<td>Page Up</td>
+<td>Fn + Up Arrow</td>
+</tr>
+<tr>
+<td>Move down one frame</td>
+<td>Page Down</td>
+<td>Fn + Down Arrow</td>
+</tr>   
+<tr>
+<td>Go to beginning of previous word</td>
+<td>Ctrl + Left Arrow</td>
+<td>Option + Left Arrow </td>
+</tr>
+<tr>
+<td>Go to beginning of next word</td>
+<td>Ctrl + Right Arrow</td>
+<td>Option + Right Arrow</td>
+</tr>
+<tr>
+<td>Go to beginning of line break</td>
+<td>Ctrl + Up Arrow</td>
+<td>Cmd + Left Arrow</td>
+</tr>
+<tr>
+<td>Go to end of line break</td>
+<td>Ctrl + Down Arrow</td>
+<td>Cmd + Right Arrow</td>   
+</tr>    
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Text Selection</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Select characters to the left</td>
+<td>Shift + Left Arrow</td>
+<td>Shift + Left Arrow</td>
+</tr>
+<tr>
+<td>Select characters to the right</td>
+<td>Shift + Right Arrow</td>
+<td>Shift + Right Arrow</td>
+</tr>
+<tr>
+<td>Select lines upwards</td>
+<td>Shift + Up Arrow</td>
+<td>Shift + Up Arrow</td>
+</tr>
+<tr>
+<td>Select lines downwards</td>
+<td>Shift + Down Arrow</td>
+<td>Shift + Down Arrow</td>
+</tr>
+<tr>
+<td>Select words to the left</td>
+<td>Shift + Ctrl + Left</td>
+<td>Shift + Opt + Left</td>
+</tr>
+<tr>
+<td>Select words to the right</td>
+<td>Shift + Ctrl + Right</td>
+<td>Shift + Opt + Right</td>
+</tr>
+<tr>
+<td>Select paragraphs to the left</td>
+<td>Shift + Ctrl + Up</td>
+<td>Shift + Opt + Up</td>
+</tr>
+<tr>
+<td>Select paragraphs to the right</td>
+<td>Shift + Ctrl + Down</td>
+<td>Shift + Opt + Down</td>
+</tr>
+<tr>
+<td>Select text between the cursor and the beginning of the current line </td>
+<td>Shift + Home</td>
+<td>Cmd + Shift + Left Arrow</td>
+</tr>
+<tr>
+<td>Select text between the cursor and the end of the current line</td>
+<td>Shift + End</td>
+<td>Cmd + Shift + Right Arrow</td>
+</tr>
+<tr>
+<td>Select text between the cursor and the beginning of the document</td>
+<td>Shift + Ctrl + Home</td>
+<td>Cmd + Shift + Up Arrow or Cmd + Shift + Fn + Left Arrow</td>
+</tr>
+<tr>
+<td>Select text between the cursor and the end of the document</td>
+<td>Shift + Ctrl + End</td>
+<td>Cmd + Shift + Down Arrow or Cmd + Shift + Fn + Right Arrow</td>
+</tr>
+<tr>
+<td>Select one frame at a time of text above the cursor</td>
+<td>Shift + Page Up</td>
+<td>Shift + Fn + Up Arrow</td>
+</tr>
+<tr>
+<td>Select one frame at a time of text below the cursor</td>
+<td>Shift + Page Down</td>
+<td>Shift + Fn + Down Arrow</td>
+</tr>
+<tr>
+<td>Select all text</td>
+<td>Ctrl + A</td>
+<td>Cmd + A</td>
+</tr>
+<tr>
+<td>Find text</td>
+<td>Ctrl + F</td>
+<td>Cmd + F</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Text Formatting</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Make selected text bold</td>
+<td>Ctrl + B</td>
+<td>Cmd + B</td>
+</tr>
+<tr>
+<td>Make selected text italic</td>
+<td>Ctrl + I</td>
+<td>Cmd + I</td>
+</tr>
+<tr>
+<td>Underline selected text</td>
+<td>Ctrl + U</td>
+<td>Cmd + U</td>
+</tr>
+<tr>
+<td>Make selected text superscript</td>
+<td>Ctrl + Shift + =</td>
+<td>Cmd + Shift + =</td>
+</tr>
+<tr>
+<td>Make selected text subscript</td>
+<td>Ctrl + =</td>
+<td>Cmd + =</td>
+</tr> 
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Text Editing</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Delete characters to the left</td>
+<td>Backspace</td>
+<td>Backspace</td>
+</tr>
+<tr>
+<td>Delete characters to the right</td>
+<td>Delete</td>
+<td>Fn + Backspace</td>
+</tr>
+<tr>
+<td>Delete words to the right</td>
+<td>Ctrl + Del</td>
+<td>Cmd + Backspace</td>
+</tr>  
+<tr>
+<td>Delete words to the left</td>
+<td>Ctrl + Backspace</td>
+<td>Cmd + Fn + Backspace</td>
+</tr>
+<tr>
+<td>Indent</td>
+<td>Tab</td>
+<td>Tab</td>
+</tr>
+<tr>
+<td>Outdent</td>
+<td>Shift + Tab</td>
+<td>Shift + Tab</td>
+</tr>
+<tr>
+<td>Copy text</td>
+<td>Ctrl + C</td>
+<td>Cmd + C</td>
+</tr>
+<tr>
+<td>Find and replace text</td>
+<td>Ctrl + H</td>
+<td>Cmd + F</td>
+</tr> 
+<tr>
+<td>Paste text</td>
+<td>Ctrl + V</td>
+<td>Cmd + V</td>
+</tr>
+<tr>
+<td>Cut text</td>
+<td>Ctrl + X</td>
+<td>Cmd + X</td>
+</tr>
+<tr>
+<td>Redo text</td>
+<td>Ctrl + Y</td>
+<td>Shift + Cmd + Z </td>
+</tr>
+<tr>
+<td>Undo text</td>
+<td>Ctrl + Z</td>
+<td>Cmd + Z</td>
+</tr>
+</table>
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+  <div id="adngin-mid_content-0"></div>
+  
+</div>
+<hr>
+
+<h2>Web Browsers</h2>
+<table class="ws-table-all notranslate">
+<tr>
+<th style="width:52%">Description</th>
+<th style="width:24%">Windows</th>
+<th style="width:24%">Mac OS</th>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Navigation</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>   
+<tr>
+<td>Scroll down a frame</td>
+<td>Space or Page Down</td>
+<td>Space or Fn + Down Arrow</td>
+</tr>
+<tr>
+<td>Scroll up a frame</td>
+<td>Shift + Space or Page Up</td>
+<td>Shift + Space or Fn + Up Arrow</td>
+</tr>
+<tr>
+<td>Go to bottom of the page</td>
+<td>End</td>
+<td>Cmd + Down Arrow</td>
+</tr>
+<tr>
+<td>Go to top of the page </td>
+<td>Home</td>
+<td>Cmd + Up Arrow</td>
+</tr>
+<tr>
+<td>Go back</td>
+<td>Alt + Left Arrow or Backspace</td>
+<td>Cmd + Left Arrow</td>
+</tr>
+<tr>
+<td>Go forward</td>
+<td>Alt + Right Arrow or Shift + Backspace</td>
+<td>Cmd + Right Arrow</td>
+</tr>
+<tr>
+<td>Refresh a webpage</td>
+<td>F5</td>
+<td>Cmd + R</td>
+</tr>
+<tr>
+<td>Refresh a webpage (no cache)</td>
+<td>Ctrl + F5</td>
+<td>Cmd + Shift + R</td>
+</tr>
+<tr>
+<td>Stop</td>
+<td>Esc</td>
+<td>Esc</td>
+</tr>
+<tr>
+<td>Toggle full-screen</td>
+<td>F11</td>
+<td>Cmd + Shift + F</td>
+</tr>
+<tr>
+<td>Zoom in</td>
+<td>Ctrl + +</td>
+<td>Cmd + +</td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td>Ctrl + -</td>
+<td>Cmd + -</td>
+</tr>
+<tr>
+<td>Zoom 100% (default)</td>
+<td>Ctrl + 0</td>
+<td>Cmd + 0</td>
+</tr>
+<tr>
+<td>Open homepage</td>
+<td>Alt + Home</td>
+<td>Option + Home or Option + Fn + Left Arrow</td>
+</tr>
+<tr>
+<td>Find text</td>
+<td>Ctrl + F</td>
+<td>Cmd + F </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Tab / Window Management</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Open a new tab</td>
+<td>Ctrl + T</td>
+<td>Cmd + T</td>
+</tr>
+<tr>
+<td>Close current tab</td>
+<td>Ctrl + W</td>
+<td>Cmd + W</td>
+</tr>
+<tr>
+<td>Close all tabs</td>
+<td>Ctrl + Shift + W</td>
+<td>Cmd + Q</td>
+</tr>
+<tr>
+<td>Close all tabs except the current tab</td>
+<td>Ctrl + Alt + F4 </td>
+<td>Cmd + Opt + W</td>
+</tr>
+<tr>
+<td>Go to next tab</td>
+<td>Ctrl + Tab</td>
+<td>Control + Tab or Cmd + Shift + Right Arrow</td>
+</tr>
+<tr>
+<td>Go to previous tab </td>
+<td>Ctrl + Shift + Tab</td>
+<td>Shift + Control + Tab or Cmd + Shift + Left Arrow</td>
+</tr>
+<tr>
+<td>Go to a specific tab number </td>
+<td>Ctrl + 1-8</td>
+<td>Cmd + 1-8 </td>
+</tr>
+<tr>
+<td>Go to the last tab</td>
+<td>Ctrl + 9</td>
+<td>Cmd + 9</td>
+</tr>
+<tr>
+<td>Reopen the last closed tab</td>
+<td>Ctrl + Shift + T</td>
+<td>Cmd + Shift + T </td>
+</tr>
+<tr>
+<td>Open a new window</td>  
+<td>Ctrl + N</td>
+<td>Cmd + N</td>
+</tr>
+<tr>
+<td>Close current window</td>  
+<td>Alt + F4</td>
+<td>Cmd + W</td>
+</tr>
+<tr>
+<td>Go to next window</td>
+<td>Alt + Tab</td>
+<td>Cmd + Tab</td>
+</tr>
+<tr>
+<td>Go to previous window </td>
+<td>Alt + Shift + Tab</td>
+<td>Cmd + Shift + Tab</td>
+</tr>
+<tr>
+<td>Reopen the last closed window</td>
+<td>Ctrl + Shift + N</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Open links in a new tab in the background</td>
+<td>Ctrl + Click</td>
+<td>Cmd + Click</td>
+</tr>
+<tr>
+<td>Open links in a new tab in the foreground</td>
+<td>Ctrl + Shift + Click</td>
+<td>Cmd + Shift + Click</td>
+</tr>
+ <tr>
+<td>Print current webpage</td>
+<td>Ctrl + P</td>
+<td>Cmd + P</td>
+</tr>
+<tr>
+<td>Save current webpage</td>
+<td>Ctrl + S</td>
+<td>Cmd + S</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Address Bar</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Cycle between toolbar, search bar, and page elements</td>
+<td>Tab</td>
+<td>Tab</td>
+</tr>
+<tr>
+<td>Go to browser's address bar</td>
+<td>Ctrl + L or Alt + D</td>
+<td>Cmd + L</td>
+</tr>
+<tr>
+<td>Focus and select the browser's search bar</td>
+<td>Ctrl + E</td>
+<td>Cmd + E / Cmd + K</td>
+</tr>
+<tr>
+<td>Open the address bar location in a new tab</td>
+<td>Alt + Enter</td>
+<td>Opt + Enter</td>
+</tr>
+<tr>
+<td>Display a list of previously typed addresses</td>
+<td>F4</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Add "www." to the beginning and ".com" to the end of the text typed in the 
+address bar (e.g., type "w3schools" and press Ctrl + Enter to open "www.w3schools.com")</td>
+<td>Ctrl + Enter</td>
+<td>Cmd + Enter or Control + Enter</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Bookmarks</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Open the bookmarks menu</td>
+<td>Ctrl + B</td>
+<td>Cmd + B </td>
+</tr>
+<tr>
+<td>Add bookmark for current page </td>
+<td>Ctrl + D</td>
+<td>Cmd + Opt + B or Cmd + Shift + B</td>
+</tr>
+<tr>
+<td>Open browsing history</td>
+<td>Ctrl + H</td>
+<td>Cmd + Shift + H or Cmd + Y</td>
+</tr>
+<tr>
+<td>Open download history</td>
+<td>Ctrl + J</td>
+<td>Cmd + J or Cmd + Shift + J </td>
+</tr>
+</table>
+
+<h2>Screenshots</h2>
+<table class="ws-table-all notranslate">
+<tr>
+<th style="width:52%">Description</th>
+<th style="width:24%">Windows</th>
+<th style="width:24%">Mac OS</th>
+</tr>
+<tr>
+<td>Save screenshot of the whole screen as file</td>
+<td>&nbsp;</td>
+<td>Cmd + Shift + 3</td>
+</tr>
+<tr>
+<td>Copy screenshot of the whole screen to the clipboard</td>
+<td>PrtScr (Print Screen) or Ctrl + PrtScr</td>
+<td>Cmd + Ctrl + Shift + 3</td>
+</tr>
+<tr>
+<td>Save screenshot of window as file</td>
+<td>&nbsp;</td>
+<td>Cmd + Shift + 4, then Space</td>
+</tr>
+<tr>
+<td>Copy screenshot of window to the clipboard</td>
+<td>Alt + PrtScr</td>
+<td>Cmd + Ctrl + Shift + 4, then Space</td>
+</tr>
+<tr>
+<td style="height: 31px">Copy screenshot of wanted area to the clipboard</td>
+<td style="height: 31px"></td>
+<td style="height: 31px">Cmd + Ctrl + Shift + 4</td>
+</tr>
+<tr>
+<td>Save screenshot of wanted area as file</td>
+<td>&nbsp;</td>
+<td>Cmd + Shift + 4</td>
+</tr>
+</table>
+
+</body>
+</html>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<hr>
+<hr>
+
