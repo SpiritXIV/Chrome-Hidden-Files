@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+canvas{
+  /*width: 90%;*/
+  height: 100vh;
+  border: 2px solid black;
+  cursor: crosshair;
+  top:20%;
+}
+
+.controls{
+  width: 10%;
+  height: 100vh;
+  position:absolute;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border: 2px solid #cacaca;
+  border-radius: 5px;
+}
