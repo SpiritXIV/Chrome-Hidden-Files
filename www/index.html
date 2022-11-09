@@ -144,8 +144,8 @@ new {
 
 #snackbar.show {
   visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 5.8s;
+  animation: fadein 0.5s, fadeout 0.5s 5.8s;
 }
 
 @-webkit-keyframes fadein {
@@ -676,10 +676,14 @@ function focusWin() {
 function noti() {
   var x = document.getElementById("snackbar");
   x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 6000);
 }
 </script>
 <body>
-<div id="snackbar"><h4>Chrome C/S</h4><h6>Version: 38m.42w.64a</h6>
+<div data-toggle="modal" data-target="#myModal"  id="snackbar"><h4>Chrome C/S</h4><h6>Version: 3.1w.4a</h6>
+<h6><i style='font-size:14px' class='fas'>&#xf188;</i>       CC/S: web - 20</h6>
+<h6>Most pages have the text set to a link</h6>
+<h6><i style='font-size:14px' class='fas'>&#xf188;</i>      CC/S: web - 21</h6>
+<h6>Most pages have version number incorrect</h6>
 </div>
 </body>
