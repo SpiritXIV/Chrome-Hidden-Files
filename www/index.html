@@ -8,10 +8,13 @@
   <link rel="stylesheet" href="./style/style1.css">
   <link rel="shortcut icon" href="chromelogo.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="dist/style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/38a479c8d7.js" crossorigin="anonymous"></script>
+    <script src="dist/index.var.js"></script>
   </head>
   <link rel="icon" href="chromelogo.png" type="imageX" sizes="16x16">
   <dialog></dialog>
@@ -116,6 +119,82 @@ better {
 .dropdown:hover .dropbtn {
   background-color: #222;
 }
+maxNotifications: 10,
+animationDuration: 300,
+position: "bottom-right",
+labels: {
+  tip: "Tip",
+  info: "Info",
+  success: "Success",
+  warning: "Attention",
+  alert: "Error",
+  async: "Loading",
+  confirm: "Confirmation required",
+  confirmOk: "OK",
+  confirmCancel: "Cancel"
+},
+icons: {
+  tip: "question-circle",
+  info: "info-circle",
+  success: "check-circle",
+  warning: "exclamation-circle",
+  alert: "exclamation-triangle",
+  async: "cog fa-spin",
+  confirm: "exclamation-triangle",
+  prefix: "<i class='fa fas fa-fw fa-",
+  suffix: "'></i>",
+  enabled: true
+},
+replacements: {
+  tip: null,
+  info: null,
+  success: null,
+  warning: null,
+  alert: null,
+  async: null,
+  "async-block": null,
+  modal: null,
+  confirm: null,
+  general: {
+    "<script>": "",
+    "</script>": ""
+  }
+},
+messages: {
+  tip: "",
+  info: "",
+  success: "Action has been succeeded",
+  warning: "",
+  alert: "Action has been failed",
+  confirm: "This action can't be undone. Continue?",
+  async: "Please, wait...",
+  "async-block": "Loading"
+},
+formatError(err) {
+  if (err.response) {
+    if (!err.response.data) return '500 API Server Error'
+    if (err.response.data.errors) {
+      return err.response.data.errors.map(o => o.detail).join('<br>')
+    }
+    if (err.response.statusText) {
+      return `${err.response.status} ${err.response.statusText}: ${err.response.data}`
+    }
+  }
+  if (err.message) return err.message
+  return err
+},
+durations: {
+  global: 5000,
+  success: null,
+  info: null,
+  tip: null,
+  warning: null,
+  alert: null
+},
+minDurations: {
+  async: 1000,
+  "async-block": 1000
+},
   </style>
 </head>
 <body>
@@ -615,28 +694,25 @@ function focusWin() {
 </head>
 <body>
 <script>
-  /* JS comes here */
-  askForApproval(); 
-  
-        function askForApproval() {
-            if(Notification.permission === "granted") {
-                createNotification('Chrome C/S\nVersion: 38m.42w.64a', 'Added: A page that lists cool bookmarklets\n', 'https://spiritxiv.autocode.dev/chromehiddenfiles@xiv-websites/chromelogo.png');
-            }
-            else {
-                Notification.requestPermission(permission => {
-                    if(permission === 'granted') {
-                        createNotification('Chrome C/S\nVersion: 38m.42w.64a', 'Added: A page that lists cool bookmarklets\n', 'https://spiritxiv.autocode.dev/chromehiddenfiles@xiv-websites/chromelogo.png');
-                    }
-                });
-            }
-        }
-        
-        function createNotification(title, text, icon) {
-            const noti = new Notification(title, {
-                body: text,
-                icon
-            });
-        }
+var notifier = new AWN();
+
+// basic 
+notifier.tip('Message here');
+// info message
+notifier.info('Message here');
+// success message
+notifier.success('Message here');
+// warning messageZ
+notifier.warning('Message here');
+// alert messages
+notifier.alert('Message here');
+// confirm dialog
+notifier.confirm('Are you sure?', okFunc, cancelFunc);
+// modal window with custom css class
+notifier.modal('<h2>Your custom title</h2><p>Your custom text</p>', 'custom-class-name')
+// async toast
+notifier.async(promise, onResolve, onReject, html)
+// shows loader and blocks the screen
+notifier.asyncBlock(promise, onResolve, onReject, html)
 </script>
 </body>
-<hr>
