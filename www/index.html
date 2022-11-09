@@ -715,4 +715,11 @@ notifier.async(promise, onResolve, onReject, html)
 // shows loader and blocks the screen
 notifier.asyncBlock(promise, onResolve, onReject, html)
 </script>
+  <button onclick="notifier.tip('Message here');">Tip</button>
+  <button onclick="notifier.info('Message here');">Info</button>
+  <button onclick="notifier.success('Message here');">success</button>
+  <button onclick="notifier.warning('Message here');">warning</button>
+  <button onclick="notifier.alert('Message here');">alert</button>
+  <button onclick="notifier.confirm('Are you sure?')">confirm dialog</button>
+  <button onclick="notifier.modal('<h2>Your custom title</h2><p>Your custom text</p>', 'custom-class-name')">Modal</button>
 </body>
