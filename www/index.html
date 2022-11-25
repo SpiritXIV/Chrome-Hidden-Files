@@ -85,7 +85,7 @@ better {
   color: #4f73d6;
 }
 new {
-  color: #f02626;
+  color: #75ff78;
 }
 .dropbtn {
   background-color: #222222;
@@ -167,6 +167,15 @@ new {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
+   
+    .blink {
+        animation: blinker 0.6s linear infinite;
+        color: #75ff78;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
   </style>
 </head>
 <body>
@@ -185,7 +194,7 @@ new {
       <ul class="nav navbar-nav">
         <li><a></a></li>
         <li class="active"><a href="chromeurls.html">chrome://</a></li>
-        <li><a href="search.html">Search Browser</a></li>
+        <li class="blink"><a href="search.html"><new>Search Browser</new></a></li>
         <div class="dropdown">
         <li><a><button class="dropbtn">Others</button></a></li>
         
