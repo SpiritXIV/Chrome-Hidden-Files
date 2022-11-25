@@ -259,7 +259,27 @@ startclock();
     </div>
   </div>
 </nav>
-  
+    <div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Chrome C/S Server Selection Menu</h4>
+        </div>
+        <div class="modal-body">
+                    <p><good style='font-size:14px' class='fas'>&#xf06a;</good><norm><a class="btn" href="https://spiritxiv.github.io/Chrome-Hidden-Files/www/servers/runner1.html">Server 1</a></norm> - Runs slower but is a back-up</p>
+                    <p><good style='font-size:14px' class='fas'>&#xf06a;</good><norm><a class="btn" href="https://spiritxiv.github.io/Chrome-Hidden-Files/www/servers/runner2.html">Server 2</a></norm> - Runs faster</p>
+                    <p><bad style='font-size:14px' class='fas'>&#xf06a;</bad><norm><a class="btn" href="https://spiritxiv.github.io/Chrome-Hidden-Files/www/servers/runner3.html">Server 3</a></norm> -  Also runs faster [maintenance]</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
@@ -293,7 +313,7 @@ startclock();
 <p></p>
 <p>So you know how just about all the some schools have the stupid restrictions that prevent you from doing stuff even if it's good or bad, and I've done enough with coding to help you bypass the school restrictions and make three different kinds of browsers just in case one of them gets blocked, meaning..... I guess you can play Fortnite but I swear if this gets blocked because you guys are not being smart with it I am going to cry, I spend days on this and I hope you guys enjoy it.</p>
 <hr>
-<p>here lemme update the rest of the website then ill finish this page</p>
+<button data-toggle="modal" data-target="#myModal" class="btn">Continue to Browser</button>
 <script>
 function noti() {
   var x = document.getElementById("snackbar");
