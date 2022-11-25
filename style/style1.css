@@ -39,3 +39,10 @@ input.custom {
 p.custom {
   caret-color: #ffa1a1;
 }
+.dropbtn {
+  background-color: #222222;
+  color: gray;
+  padding: 18px;
+  border: none;
+  cursor: pointer;
+}
