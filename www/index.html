@@ -277,7 +277,7 @@ startclock();
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" id="demo" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Chrome C/S</h4>
                     <h6>Version: 3.7w.2a</h6>
                     <h6>Update Name: The Better Browser</h6>
@@ -308,9 +308,6 @@ startclock();
       </div>
       </div>
 </div>
-<div class="container-fluid text-center">    
-  <div class="alert alert-success">
-    <p  ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget" id="demo">The <b>Advert Browser</b> now has more security to, only people who have the password can get through</p>
     <script>
 function dragStart(event) {
   event.dataTransfer.setData("Text", event.target.id);
