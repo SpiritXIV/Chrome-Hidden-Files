@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="A custom, clean, and smart newtab page.">
+	<meta name="keywords" content="new tab, newtab, start page, startpage, search, home">
+	<meta name="author" content="Despair Elite">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+	<link rel="manifest" href="Images/site.webmanifest">
+
+	<title>New Tab (Beta)</title>
+
+	<link href="https://fonts.cdnfonts.com/css/segoe-ui-variable-static-display" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+	 crossorigin="anonymous" referrerpolicy="no-referrer">
+
+	</script>
+
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/js/uikit.min.js">
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/js/uikit-icons.min.js">
+
+	</script>
+
+</head>
+
+<body>  
+	<style>
+		.fa {
+			color: white;
+		}
+
+		main {
+			height: 100%;
+			font-family: 'Segoe UI Variable Static Display', 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif !important;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		section {
+			font-family: 'Segoe UI Variable Static Display', 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif !important;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-size: 3em;
+			width: 40%;
+		}
+
+		.blur {
+			backdrop-filter: blur(5px) brightness(80%);
+			border-radius: 10px;
+			margin: 10px;
+			transition: backdrop-filter 0.2s;
+		}
+
+		section>* {
+			margin: 10px;
+		}
+
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+			background: url('Images/newtab_wallpaper.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			color: white;
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			font-family: 'Segoe UI Variable Static Display', 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif !important;
+		}
+
+		body>* {
+			font-family: 'Segoe UI Variable Static Display', 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif !important;
+			color: white !important;
+		}
+
+		blockquote {
+			color: white !important;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Segoe UI Variable Static Display', 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif !important;
+			font-weight: 600;
+			color: white;
+		}
+
+		h1 {
+			font-size: 5em;
+		}
+
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-color: whitesmoke;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background-color: white;
+			cursor: pointer;
+		}
+
+		::-webkit-scrollbar-track {
+			position: absolute;
+			background: #B0C1D1;
+		}
+
+		::-webkit-calendar-picker-indicator {
+			display: none;
+		}
+
+		.search-box {
+			position: relative;
+			width: 100%;
+			max-width: 360px;
+			height: 60px;
+			border-radius: 25px;
+			margin: 0 auto;
+		}
+
+		.search-icon,
+		.go-icon {
+			position: absolute;
+			top: 0;
+			height: 60px;
+			width: 86px;
+			line-height: 61px;
+			text-align: center;
+		}
+
+		.search-icon {
+			font-size: 1.22em;
+		}
+
+		.si-rotate {
+			transform: rotate(0deg);
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+		}
+
+		.go-icon {
+			right: 0;
+			pointer-events: none;
+			font-size: 1.38em;
+			will-change: opacity;
+			cursor: default;
+			opacity: 0;
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+			-webkit-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+			-moz-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+			-o-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+		}
+
+		.go-in {
+			opacity: 1;
+			pointer-events: all;
+			transform: rotate(0);
+			-webkit-transform: rotate(0);
+			-moz-transform: rotate(0);
+			-o-transform: rotate(0);
+			transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+			-webkit-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+			-moz-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+			-o-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+		}
+
+		.search-border {
+			display: block;
+			width: 100%;
+			max-width: 360px;
+			height: 60px;
+		}
+
+		.border {
+			fill: none;
+			stroke: #FFFFFF;
+			stroke-width: 5;
+			stroke-miterlimit: 10;
+		}
+
+		.border {
+			stroke-dasharray: 740;
+			stroke-dashoffset: 0;
+			transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
+			-webkit-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
+			-moz-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
+			-o-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
+		}
+
+		.border-searching .border {
+			stroke-dasharray: 740;
+			stroke-dashoffset: 459;
+			transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
+			-webkit-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
+			-moz-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
+			-o-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
+		}
+
+		#search {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 120px;
+			border: none;
+			background: rgba(255, 255, 255, 0);
+			padding: 0 68px 0 68px;
+			color: #FFFFFF;
+			font-size: 1.32em;
+			font-weight: 400;
+			letter-spacing: -0.015em;
+			outline: none;
+			font-family: inherit;
+		}
+
+		#search::-webkit-input-placeholder {
+			color: #FFFFFF;
+		}
+
+		#search::-moz-placeholder {
+			color: #FFFFFF;
+		}
+
+		#search:-ms-input-placeholder {
+			color: #FFFFFF;
+		}
+
+		#search:-moz-placeholder {
+			color: #FFFFFF;
+		}
+
+		*::-moz-selection {
+			color: #FFFFFF;
+			background: rgba(0, 0, 0, 0.25);
+		}
+
+		*::selection {
+			color: #FFFFFF;
+			background: rgba(0, 0, 0, 0.25);
+		}
+
+		.thin {
+			font-weight: 400;
+		}
+
+		.customize {
+			position: fixed;
+			top: 0;
+			right: 0;
+			font-size: 2em;
+			transform: translateX(-50%);
+		}
+
+		.always-black {
+			color: black !important;
+		}
+
+		#date {
+			font-size: 1.5em;
+			font-weight: 600;
+		}
+
+		#more {
+			width: 65%;
+			margin-left: 50%;
+			transform: translate(-50%, 0);
+			backdrop-filter: blur(5px) brightness(80%);
+			border-radius: 10px;
+			transition: 0.2s;
+		}
+	</style>
+
+	<script src="Scripts/newtab.js">
+
+	</script>
+
+	<div class="customize">
+		<i class="fa fa-pencil customize-icon" aria-label="Customize" uk-toggle="#customize-panel"></i>
+    </div>
+
+    <div class="uk-position-absolute" style="width: 30%; left: 1%; top: 1%;" id="weather">
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <div class="elfsight-app-3e4831ee-6ff4-4a17-811f-3091c056fb20"></div>
+    </div>
+
+    <div id="customize-panel" class="always-black" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <button class="uk-modal-close-default" class="always-black" type="button" uk-close></button>
+            <h2 class="always-black">Customize</h2>
+            <div class="uk-margin">
+                <label>Background (URL):</label>
+                <div style="display: flex;">
+                    <input class="uk-input" type="url" id="background-input"
+                        placeholder="Enter any https:// or file:/// URL">
+                    <button class="uk-button uk-button-muted uk-flex-1"
+                        onclick="customize('default-bg')">Default</button>
+                    <button class="uk-button uk-button-primary uk-flex-1" onclick="customize('background')">Set</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="uk-margin">
+                <label>Page Title:</label>
+                <div style="display: flex;">
+                    <input class="uk-input" id="title-input" placeholder="Enter your title for this page">
+                    <button class="uk-button uk-button-primary" onclick="customize('title')">Set</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="uk-margin">
+                <div style="display: flex;">
+                    <button class="uk-button uk-button-primary uk-flex-1"
+                        onclick="$('#wrapper, #cookie').toggleClass('blur')">Toggle Blur</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="uk-margin">
+                <div style="display: flex;">
+                    <button class="uk-button uk-button-primary uk-flex-1" onclick="imgSrc()">Image Source</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="uk-margin">
+                <div style="display: flex;">
+                    <p class="uk-flex-1" style="text-align: center;">©2022 Despair Elite</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div id="wrapper"
+            style="width: 40%; height: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column;"
+            class="blur blur-e">
+            <h1 class="uk-margin-remove" style="text-align: center;" id="heading" uk-tooltip="Pacific Standard Time">
+                OASIS BROWSER</h1>
+            <p id="date" class="uk-margin-remove-top" style="text-align: center;">Created by Despair Elite</p>
+        </div>
+    </main>
+
+    <script>
+        $(document).ready(function () {
+            $("#search").focus(function () {
+                $(".search-box").addClass("border-searching");
+                $(".search-icon").addClass("si-rotate");
+            });
+            $("#search").blur(function () {
+                $(".search-box").removeClass("border-searching");
+                $(".search-icon").removeClass("si-rotate");
+            });
+            $("#search").keyup(function () {
+                if ($(this).val().length > 0) {
+                    $(".go-icon").addClass("go-in");
+                }
+                else {
+                    $(".go-icon").removeClass("go-in");
+                }
+            });
+            $(".go-icon").click(function () {
+                $(".search-form").submit();
+            });
+        });
+
+
+        timer();
+    </script>
+</body>
+
+</html>
