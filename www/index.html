@@ -194,9 +194,9 @@ new {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a></a></li>
         <li class="active"><a href="chromeurls.html">chrome://</a></li>
-        <li><a href="search.html"><notgood>Search Browser</notgood></a></li>
+        <li class="blink"><a href="search.html"><new><i style='font-size:14px' class='fas'>&#xf3ed;</i>
+   Search Browser</new></a></li>
         <div class="dropdown">
         <li><a><button class="dropbtn">Others</button></a></li>
         
@@ -309,8 +309,17 @@ startclock();
       </div>
 </div>
 <div class="container-fluid text-center">    
-  <div class="alert alert-danger">
-    <p><b></b>Search Browser shut down too add more security to it, so it stays longer. Sorry yall.</p>
+  <div class="alert alert-success">
+    <p  ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget" id="demo">The <b>Advert Browser</b> now has more security to, only people who have the password can get through</p>
+    <script>
+function dragStart(event) {
+  event.dataTransfer.setData("Text", event.target.id);
+}
+
+function dragging(event) {
+  document.getElementById("demo").innerHTML = "Chr0meAn0nym0usGatePad";
+}
+</script>
   </div>
   </div>
   </nav>
@@ -661,7 +670,7 @@ function changeValue() {
 
 </script>
 <hr>
-<h4><b>Cookies:</b></h4>
+<h4><b  id="demo" >Cookies:</b></h4>
 
 <p id="cook"></p>
 
