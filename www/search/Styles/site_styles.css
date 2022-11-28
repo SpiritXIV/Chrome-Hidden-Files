@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Segoe UI Variable Static Display";
+    src: url("/Other/Segoe UI Variable Display/Segoe-UI-Variable-Static-Display.ttf");
+}
+
+html, body {
+    margin: 0;
+    transition: 0.2s;
+    -webkit-font-smoothing: antialiased;
+}
+
+.uk-logo {
+    font-family: 'Segoe UI Variable Static Display', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+#top {
+    height: 50px;
+}
+
+.main-content {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    height: calc(100% - 50px);
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3B444B;
+    border-radius: 10rem;
+}
+
+::-webkit-scrollbar-track {
+    position: absolute;
+    background: transparent;
+}
+
+::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.always-black {
+    color: black !important;
+}
+
+*::-moz-selection {
+    background: rgba(0, 0, 0, 0.719) !important;
+}
+
+*::selection {
+    background: rgba(0, 0, 0, 0.719) !important;
+}
+
+.modal-heading {
+    font-weight: 600;
+}
