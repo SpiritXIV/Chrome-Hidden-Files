@@ -1,7 +1,6 @@
   /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
-      background-color: #f0f0f0;
       border-radius: 0;
     }
     
@@ -164,9 +163,6 @@ new {
 
 [data-theme="dark"] .bg-white {
   background-color: #000 !important;
-}
-[data-theme="dark"] .navbar {
-  background-color: #222222 !important;
 }
 [data-theme="dark"] .sidenav {
   background-color: #101010 !important;
