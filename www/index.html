@@ -751,8 +751,7 @@ function kay(event) {
 <h3><b>Web Info:</b></h3>
 <h4><b>Storage Management (Web)</b></h4>
 
-<button class="btn btn-dark" onclick="changeValue()">Change a Storage Item</button>
-
+<a onclick="changeValue()" class="btn"><norm>Change a Storage Item</norm></a>
 <p id="store"></p>
 
 <script>
@@ -779,7 +778,7 @@ function changeValue() {
 
 <p id="cook"></p>
 
-<button class="btn btn-dark" onclick="cookies()">Veiw Current Cookies</button>
+<a onclick="cookies()"class="btn"><norm>Veiw Current Cookies</norm></a>
 
 <script>
 function cookies() {
@@ -803,7 +802,7 @@ function focusWin() {
 
 </script>
 <script>
-function noti() {
+function oti() {
   var x = document.getElementById("snackbar");
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 6000);
