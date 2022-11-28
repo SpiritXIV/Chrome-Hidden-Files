@@ -3,7 +3,7 @@
 <head>
   <title>Chrome | Commands and Scripts</title>
   <meta charset="utf-8">
-  <meta name="description" img src="image.png" content="Chrome Features and Info [BETA]"> 
+  <meta name="description" img src="image.png" content="Chrome C/S Official Website"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./style/style1.css">
   <link rel="shortcut icon" href="chromelogo.png">
@@ -24,7 +24,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-  <style>
+ <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
@@ -89,9 +89,9 @@ new {
 }
 .dropbtn {
   background-color: #222222;
-  color: gray;
-  padding: 16px;
-  font-size: 16px;
+  color: #8c8c8c;
+  padding: 18px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
 }
@@ -177,7 +177,7 @@ new {
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span> 
       </button>
       <img src="image.png" alt="" style="width:140px;height:45px;">
     </div>
@@ -186,9 +186,10 @@ new {
         <li><a href="index.html">chrome://</a></li>
         <li><a href="search.html">Search Browser</a></li>
         <div class="dropdown">
-        <li><a><button class="dropbtn">Others</button></a></li>
-        
+        <body onload="otherfunc()">
+        <li><a><button  id="others" class="dropbtn">Others</button></a></li>
   <div class="dropdown-content">
+            <li><a><norm  class="dropdown-item">Dark Mode   </norm><input type="checkbox" class="form-check-input" id="darkSwitch"></a></li>
   <hr>
   <li><h5 class="dropdown-header">Chrome C/S</h5></li>
   <li><a class="dropdown-item" href="server.html">CC/S Server</a></li>
@@ -301,7 +302,6 @@ startclock();
     </div>
     <div class="col-sm-8 text-left"> 
       <h1><b>Chrome Commands/Scripts:</b></h1>
-      <input type="checkbox" class="form-check-input" id="darkSwitch">
       <style>
  /*!
  * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
