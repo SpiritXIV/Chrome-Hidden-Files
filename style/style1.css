@@ -1,33 +1,4 @@
-/*!
- * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
- * Copyright 2021 C.Oliff
- * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
- */
-
-[data-theme="dark"] {
-  background-color: #111 !important;
-  color: #909090;
-}
-
-[data-theme="dark"] .bg-black {
-  background-color: #fff !important;
-}
-
-[data-theme="dark"] .bg-dark {
-  background-color: #eee !important;
-}
-
-[data-theme="dark"] .bg-light {
-  background-color: #222 !important;
-}
-
-[data-theme="dark"] .bg-white {
-  background-color: #000 !important;
-}
-[data-theme="dark"] .sidenav {
-  background-color: #101010 !important;
-}
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
+  /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -91,9 +62,9 @@ new {
 }
 .dropbtn {
   background-color: #222222;
-  color: gray;
-  padding: 16px;
-  font-size: 16px;
+  color: #8c8c8c;
+  padding: 18px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
 }
@@ -169,3 +140,59 @@ new {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
+/*!
+ * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
+ * Copyright 2021 C.Oliff
+ * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
+ */
+
+[data-theme="dark"] {
+  background-color: #111 !important;
+  color: #909090;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #fff !important;
+}
+
+[data-theme="dark"] .bg-dark {
+  background-color: #eee !important;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #222 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #000 !important;
+}
+[data-theme="dark"] .sidenav {
+  background-color: #101010 !important;
+}
+[data-theme="dark"] .dropdown-content {
+  background-color: #202020 !important;
+}
+[data-theme="dark"] .dropdown-content a:hover {
+  background-color: #696969 !important;
+}
+
+[data-theme="dark"] .dropdown-content a {
+  color: #909090 !important;
+}
+ [data-theme="dark"] #dialogWrap {
+  background-color: #333333 !important;
+}
+ [data-theme="dark"]  #mainDialog {
+      border: solid #101010 1px  !important;
+      box-shadow: 4px 4px 6px 4px #101010  !important;
+      background-color: #101010  !important;
+}
+ [data-theme="dark"] #passArea {
+      padding: 20px 30px;
+      background-color: #222222 !important;
+}
+ [data-theme="dark"] #submitPass {
+      color: white;
+      background-color: #333333 !important;
+      border: solid black 1px;
+    }
