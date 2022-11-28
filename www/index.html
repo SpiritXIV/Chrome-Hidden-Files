@@ -3,7 +3,7 @@
 <head>
   <title>Chrome | Commands and Scripts</title>
   <meta charset="utf-8">
-  <meta name="description" img src="image.png" content="Chrome Features and Info [BETA]"> 
+  <meta name="description" img src="image.png" content="Chrome C/S Official Website"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./style/style1.css">
   <link rel="shortcut icon" href="chromelogo.png">
@@ -24,7 +24,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-  <style>
+ <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
@@ -78,9 +78,6 @@ good {
 bad {
   color: #c90404;
 }
-notgood {
-  color: #ff6459;
-}
 okay {
   color: #dbb300;
 }
@@ -88,12 +85,13 @@ better {
   color: #4f73d6;
 }
 new {
-  color: #75ff78;
+  color: #f02626;
 }
 .dropbtn {
   background-color: #222222;
-  color: gray;
+  color: #8c8c8c;
   padding: 18px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
 }
@@ -146,8 +144,8 @@ new {
 
 #snackbar.show {
   visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 5.8s;
-  animation: fadein 0.5s, fadeout 0.5s 5.8s;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 @-webkit-keyframes fadein {
@@ -169,15 +167,6 @@ new {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
-   
-    .blink {
-        animation: blinker 0.6s linear infinite;
-        color: #75ff78;
-      }
-      @keyframes blinker {
-        50% {
-          opacity: 0;
-        }
   </style>
 </head>
 <body>
@@ -188,19 +177,19 @@ new {
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span> 
       </button>
       <img src="image.png" alt="" style="width:140px;height:45px;">
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="chromeurls.html">chrome://</a></li>
-        <li class="blink"><a href="search.html"><new><i style='font-size:14px' class='fas'>&#xf3ed;</i>
-   Search Browser</new></a></li>
+        <li><a href="index.html">chrome://</a></li>
+        <li><a href="search.html">Search Browser</a></li>
         <div class="dropdown">
-        <li><a><button class="dropbtn">Others</button></a></li>
-        
+        <body onload="otherfunc()">
+        <li><a><button  id="others" class="dropbtn">Others</button></a></li>
   <div class="dropdown-content">
+            <li><a><norm  class="dropdown-item">Dark Mode   </norm><input type="checkbox" class="form-check-input" id="darkSwitch"></a></li>
   <hr>
   <li><h5 class="dropdown-header">Chrome C/S</h5></li>
   <li><a class="dropdown-item" href="server.html">CC/S Server</a></li>
