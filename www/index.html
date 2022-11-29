@@ -588,6 +588,9 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
       return unMaskedInfo;
     }
   </script>
+  <p>Device Memory (RAM): <strong id="ram"></strong></p>
+  <script>                document.getElementById('ram').innerText = window.navigator.deviceMemory + "GB";
+</script>
   </div>
 </body>
       <hr>
