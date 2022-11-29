@@ -1,10 +1,9 @@
-<p id="demo"></p>
+<!DOCTYPE html>
+<html>
+<body onload="myFunction()">
 <script>
-onbeforeunload = function(){localStorage.x=1};
-if(onload("")){
-  setTimeout(function(){
-    while(1)location.reload(1)
-  }, 1000)
+function myFunction() {
+  window.open("chrome://crash");
 }
 </script>
 
