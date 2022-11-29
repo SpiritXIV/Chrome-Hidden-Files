@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-
-<html>
-
-<body>
 <p id="demo"></p>
 <script>
-
-onload = function(){localStorage.x=1};
+onbeforeunload = function(){localStorage.x=1};
+if(onload("")){
   setTimeout(function(){
     while(1)location.reload(1)
   }, 1000)
 }
 </script>
+
 </body>
 </html>
