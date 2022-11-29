@@ -206,7 +206,7 @@ except Exception as e:
           if (!(input == "")) {
             output.srcdoc = input;
           } else {
-            alert("Please enter something if you want it to be displayed.");
+            nothing();
           }
         }
       } else if (file_type == "python") {
@@ -220,7 +220,7 @@ except Exception as e:
         //output.srcdoc += err;
         //}
       } else if (file_type == "plain") {
-        alert("Cannot run a plain text file. Select a valid file type (HTML or Python).")
+        nothing()
       } else {
         alert("Currently only Python and HTML are supported.")
       }
