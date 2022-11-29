@@ -194,3 +194,14 @@ new {
       background-color: #333333 !important;
       border: solid black 1px;
     }
+    ::-moz-selection {
+      color: black;
+      background: #ff726e;
+      opacity: 1;
+    }
+
+    ::selection {
+      color: black;
+      background: #ff726e;
+      opacity: 1;
+    }
