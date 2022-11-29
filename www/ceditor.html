@@ -1076,7 +1076,7 @@ Change Textarea to Output ratio:
       }
       var file_name_selector_val = document.getElementById("file_name_selector");
       reader.onload = function () {
-        document.title = input.files[0].name + " - " + "Code Editor";
+        document.title = "Editing:" + input.files[0].name + " | " + "Chrome C/S";
         textarea.value = reader.result;
         line_numbers_open_file(reader.result);
         if (((reader.result).split("\n")).length > 300) {
