@@ -11,11 +11,8 @@
 function display_access_denied_error() {
     document.body.innerHTML
         = '<div id="access-denied-error">'
-        + '<div class="middle-center">'
-        + '<span class="pulsate-bck">'
-        + '<i class="bi bi-exclamation-diamond-fill"></i>'
-        + 'Access Denied'
-        + '</span>'
+        + '<div class="iframeWrapper noselect">'
+        + '<iframe src="https://spiritxiv.github.io/Chrome-Hidden-Files/www/denied.html" id="iframe" width="100%" height="720" frameborder="0"></iframe>'
         + '</div>'
         + '</div>'
 }
@@ -27,7 +24,7 @@ function block_blacklist_countries() {
     // Blacklist countries
     const blacklist_countries = [
         "DE", // Germany
-
+        "US", // United States
         "GB", // United Kingdom
         "UA", // Ukraine
         "AR", // Argentina
