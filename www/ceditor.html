@@ -1,443 +1,1258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Chrome | Commands and Scripts</title>
   <meta charset="utf-8">
-  <meta name="description" img src="image.png" content="Chrome C/S Official Website"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./style/style1.css">
-  <link rel="shortcut icon" href="chromelogo.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Chrome | Commands and Scripts</title>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/38a479c8d7.js" crossorigin="anonymous"></script>
-  </head>
-  <link rel="icon" href="chromelogo.png" type="imageX" sizes="16x16">
-  <dialog></dialog>
-</head>
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
- <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #fff;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://kit.fontawesome.com/38a479c8d7.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.4/brython.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.4/brython_stdlib.js"></script>
+  <link rel="icon" href="chromelogo.png" type="imageX" sizes="16x16">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
-h5 {
-  color: #7a0000;
-}
-norm {
-  color: #8c8c8c;
-}
-a {
-  color: #2e2e2e;
-}
-p1 {
-  color: #e30000;
-}
-h6 {
-  color: #8c8c8c;
-}
-good {
-  color: #20ad03;
-}
-bad {
-  color: #c90404;
-}
-okay {
-  color: #dbb300;
-}
-better {
-  color: #4f73d6;
-}
-new {
-  color: #f02626;
-}
-.dropbtn {
-  background-color: #222222;
-  color: #8c8c8c;
-  padding: 18px;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-}
+    #textArea {
+      font-family: monospace;
+      background-color: #222222;
+      border: none;
+      outline: none;
+      resize: none;
+      transition: margin-top .5s;
+      padding: 16px;
+      white-space: pre;
+      overflow-wrap: normal;
+      overflow-x: scroll;
+      /*line-height: 30px;*/
+    }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+    #textArea ::-webkit-scrollbar-thumb :hover {
+      cursor: pointer;
+            background-color: #222222;
+    }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+    ::-moz-selection {
+      color: black;
+      background: #ff726e;
+      opacity: 1;
+    }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+    ::selection {
+      color: black;
+      background: #ff726e;
+      opacity: 1;
+    }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+    #line_numbers ::-webkit-scrollbar {
+      width: 0px;
+    }
 
-.dropdown:hover .dropbtn {
-  background-color: #222;
-}
-#snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: left;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 13%;
-  bottom: 30px;
-  font-size: 17px;
-}
+    #line_numbers ::-webkit-scrollbar-track {
+      background-color: #404040;
+      width: 0px;
+    }
 
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
+    #line_numbers ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px;
+      width: 1px;
+    }
 
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
-}
+    #line_numbers ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
 
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
-}
+    #line_numbers ::-webkit-scrollbar-track {
+      background-color: #404040;
+      width: 0px;
+    }
 
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
-}
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px;
+    }
 
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    .unselectable {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
   </style>
+  <script>
+    var snippets_list = new Map();
+    //HTML Snippets
+    snippets_list.set("html", `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style></style>
+    <script><\/script>
+  </head>
+  <body>
+
+  </body>
+</html>`);
+    snippets_list.set("w3css", "<link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>");
+    snippets_list.set("style_tag", "<style></style>");
+    snippets_list.set("div_tag", "<div style=\"\" class=\"\"></div>");
+    snippets_list.set("span_tag", "<span style=\"\" class=\"\"></span>");
+    snippets_list.set("button_tag", "<button style=\"\" class=\"\"></button>")
+    snippets_list.set("p_tag", "<p style=\"\" class=\"\"></p>")
+    snippets_list.set("a_tag", "<a href=\"\" style=\"\"></a>")
+    snippets_list.set("select_tag", `<select style=\"\" class=\"\" id=\"\">
+  <option value=""></option>
+  <option value=""></option>
+  <option value=""></option>
+  <option value=""></option>
+</select>`)
+    snippets_list.set("style_attr", "style=\"\"");
+    snippets_list.set("class_attr", "class=\"\"");
+    snippets_list.set("onclick_attr", "onclick=\"\"");
+    snippets_list.set("title_attr", "title=\"\"");
+    snippets_list.set("id_attr", "id=\"\"");
+    snippets_list.set("src_attr", "src=\"\"");
+    snippets_list.set("onload_attr", "onload=\"\"");
+    snippets_list.set("onbeforeunload_attr", "onbeforeunload=\"\"");
+    //JavaScript Snippets
+    snippets_list.set("js_func", `function name(params) {
+  
+}`);
+    snippets_list.set("js_if", `if () {
+  
+}`);
+    snippets_list.set("js_ifel", `if () {
+  
+} else {
+  
+}`);
+    snippets_list.set("js_elseif", `else if () {
+  
+}`);
+    snippets_list.set("js_while", `while () {
+  
+}`);
+    snippets_list.set("js_for", `for (var i = 0; i < ; i++) {
+  
+}`);
+    snippets_list.set("js_try_catch", `try{
+
+}catch(error){
+
+}`);
+    snippets_list.set("js_conlog", `console.log("")`);
+    snippets_list.set("js_getid", `document.getElementById("")`);
+    snippets_list.set("js_getclass", `document.getElementsByClassName("")`);
+    snippets_list.set("js_gettag", `document.getElementsByTagName("")`);
+    snippets_list.set("js_querysel", `document.querySelector("")`);
+
+    snippets_list.set("py_func", `def name(args):
+  `);
+    snippets_list.set("py_if", `if:
+  `);
+    snippets_list.set("py_ifel", `if:
+
+else:
+  `);
+    snippets_list.set("py_elseif", `elif:
+  `);
+    snippets_list.set("py_while", `while:
+  `);
+    snippets_list.set("py_for", `for x in y:
+  `);
+    snippets_list.set("py_ifnameequalsmain", `if __name__ == "__main__":
+  `);
+    snippets_list.set("py_try_except", `try:
+  
+except Exception as e:
+  `);
+    snippets_list.set("py_class", `class X:
+  def __init__(self):
+    `);
+    var content = "";
+    state_checkbox = "off";
+    function run_code() {
+      var input = document.getElementById("textArea").value;
+      var output = document.getElementById("output");
+      if (file_type == "html") {
+        if (document.getElementById("toggle_checkbox").checked) {
+          output.srcdoc = "";
+          output_window = window.open("", "Output", "left=500, top=500");
+          output_window.document.write(input);
+        } else {
+          if (!(input == "")) {
+            output.srcdoc = input;
+          } else {
+            alert("Please enter something if you want it to be displayed.");
+          }
+        }
+      } else if (file_type == "python") {
+        var python_code = textarea.value;
+        output.srcdoc = "Check Console for output. (Press Ctrl+Shift+I or F12)\n Click the settings icon on the top-right and deselect 'Group Similar Messages in Console' option.";
+        //try{
+        alert("Check Console for output. (Press Ctrl+Shift+I or F12)\n Click the settings icon on the top-right and deselect 'Group Similar Messages in Console' option.");
+        console.clear();
+        eval(__BRYTHON__.python_to_js(python_code));
+        //}catch(err){
+        //output.srcdoc += err;
+        //}
+      } else if (file_type == "plain") {
+        alert("Cannot run a plain text file. Select a valid file type (HTML or Python).")
+      } else {
+        alert("Currently only Python and HTML are supported.")
+      }
+      //update()
+    }
+    window.addEventListener('keydown', function (e) {
+      var num_pressed = (event.which >= 48 && event.which <= 57);
+      if (event.altKey && event.which == 82) {
+        event.preventDefault();
+        run_code();
+      } else if (event.altKey && event.which == 70) {
+        event.preventDefault();
+        toggle_topbar();
+      } else if (event.altKey && event.which == 84) {
+        event.preventDefault();
+        if (topbar.style.display == "block") {
+          toggle_btmbar();
+        }
+      } else if (event.altKey && num_pressed == true) {
+        event.preventDefault();
+        if (document.getElementById("output").style.display != "none" && !(document.getElementById("text_editor_mode").checked)) {
+          switch (event.which) {
+            case 48:
+              textarea_width(0);
+              break;
+            case 49:
+              textarea_width(10);
+              break;
+            case 50:
+              textarea_width(20);
+              break;
+            case 51:
+              textarea_width(30);
+              break;
+            case 52:
+              textarea_width(40);
+              break;
+            case 53:
+              textarea_width(50);
+              break;
+            case 54:
+              textarea_width(60);
+              break;
+            case 55:
+              textarea_width(70);
+              break;
+            case 56:
+              textarea_width(80);
+              break;
+            case 57:
+              textarea_width(90);
+              break;
+          }
+        }
+      } else if (event.altKey && event.shiftKey && event.which == 83) {
+        event.preventDefault();
+        var settings_tab = document.getElementById("settings_tab");
+        var editor = document.getElementById("editor");
+        if (settings_tab.style.display == "none") {
+          editor.style.display = "none";
+          settings_tab.style.display = "block";
+        } else if (settings_tab.style.display == "block") {
+          settings_tab.style.display = "none";
+          editor.style.display = "block";
+        }
+      }
+    });
+    function update() {
+      var input = document.getElementById("textArea").value;
+      localStorage.setItem("textarea_content", input);
+    }
+    setInterval(update, 500);
+    function on_load() {
+      w3CodeColor();
+      content = document.getElementsByTagName("html")[0].innerHTML;
+      content = "<!DOCTYPE html>\n" + "<html>\n" + content + "\n</html>"
+      disp = document.getElementById("source_code_disp");
+      content = document.getElementsByTagName("html")[0].innerHTML;
+      content = "<!DOCTYPE html>\n" + "<html>\n" + content + "\n</html>"
+      disp.innerHTML = content;
+
+      document.getElementById("stats").innerHTML = "<span style='font-size:15px'><b>Stats: </b></span>" + "Characters: " + content.length + ", Lines: " + content.split("\n").length;
+
+      var loc_to_icon = ((window.location.href).slice(0, -16)) + "quickpad.png";
+      document.getElementById("icon_link").href = loc_to_icon;
+
+      document.getElementById("textArea").spellcheck = false;
+
+      if (localStorage.getItem("textarea_content") == "") {
+        document.getElementById("textArea").value = '';
+      } else {
+        document.getElementById("textArea").value = localStorage.getItem("textarea_content");
+      }
+
+      var file_name_selector_val = document.getElementById("file_name_selector").value;
+      if (file_name_selector_val != "") {
+        file_name = file_name_selector_val;
+      }
+
+      line_numbers_on_load();
+
+      document.getElementById("textarea_width").value = 50;
+
+      w3CodeColor();
+    }
+    function textarea_width(val) {
+      if (val == undefined) {
+        var slider = document.getElementById("textarea_width").value;
+      } else {
+        var slider = val;
+      }
+      var textarea_width_val = document.getElementById('textarea_width_val');
+      textarea_width_val.innerHTML = slider + "%";
+      if (slider == 100) {
+        if (line_numbers.style.width == "2%") {
+          textarea.style.width = "98%";
+          textarea.style.display = "block";
+          line_numbers.style.display = "block";
+          document.getElementById("output").style.display = "none";
+        } else if (line_numbers.style.width == "3%") {
+          textarea.style.width = "97%";
+          textarea.style.display = "block";
+          line_numbers.style.display = "block";
+          document.getElementById("output").style.display = "none";
+        }
+      } else if (slider == 0) {
+        textarea.style.display = "none";
+        line_numbers.style.display = "none";
+        document.getElementById("output").style.display = "block";
+        document.getElementById("output").style.width = "100%";
+      } else {
+        textarea.style.display = "block";
+        line_numbers.style.display = "block";
+        document.getElementById("output").style.display = "block";
+        textarea.style.width = slider - ((line_numbers.style.width).slice(0, -1)) + "%";
+        document.getElementById("output").style.width = (100 - slider) + "%";
+      }
+      document.getElementById("textarea_width").value = slider;
+    }
+    function toggle_topbar() {
+      topbar = document.getElementById("topbar");
+      btmbar = document.getElementById("btmbar");
+      hide_topbar_button = document.getElementById("hide_topbar_button");
+      input = document.getElementById("textArea");
+      output = document.getElementById("output");
+      if (topbar.style.display == "block") {
+        topbar.style.display = "none";
+        btmbar.style.display = "none";
+        input.style.height = "100vh";
+        output.style.height = "100vh";
+        line_numbers.style.height = "100vh";
+        //alert("The toolbar will now be invisible. Press Alt+F to show it again.");
+      } else if (topbar.style.display == "none") {
+        topbar.style.display = "block";
+        input.style.height = "93vh";
+        output.style.height = "93vh";
+        line_numbers.style.height = "93vh";
+      }
+    }
+    function snippets(snippet) {
+      var cursor_position = document.getElementById("textArea").selectionStart;
+      var text = document.getElementById("textArea");
+      var snippet_to_insert = snippets_list.get(snippet);
+      text.value = (text.value).slice(0, cursor_position) + snippet_to_insert + (text.value).slice(cursor_position);
+      line_numbers_on_load();
+    }
+    function toggle_btmbar() {
+      btmbar = document.getElementById("btmbar");
+      hide_btmbar_button = document.getElementById("hide_btmbar_button");
+      input = document.getElementById("textArea");
+      output = document.getElementById("output");
+      line_numbers = document.getElementById("line_numbers");
+      if (btmbar.style.display == "block") {
+        btmbar.style.display = "none";
+        input.style.height = "100vh";
+        output.style.height = "100vh";
+        line_numbers.style.height = "100vh";
+        toggle_topbar();
+        toggle_topbar();
+        //alert("The Snippets Bar will now be invisible. Press Alt+T to show it again.");
+      } else if (btmbar.style.display == "none") {
+        btmbar.style.display = "block";
+        input.style.height = "86vh";
+        output.style.height = "86vh";
+        line_numbers.style.height = "86vh";
+      }
+    }
+    function open_settings() {
+      document.getElementById("editor").style.display = "none";
+      document.getElementById("settings_tab").style.display = "block";
+    }
+    function close_settings() {
+      document.getElementById("settings_tab").style.display = "none";
+      document.getElementById("editor").style.display = "block";
+    }
+    function change_editor_bg() {
+      var color_val = document.getElementById("editor_bg_color_picker").value;
+      textarea.style.backgroundColor = color_val;
+    }
+    function change_editor_fg() {
+      var color_val = document.getElementById("editor_fg_color_picker").value;
+      textarea.style.color = color_val;
+    }
+
+    function custom_theme() {
+      var font_color = document.getElementById("custom_theme_font_color").value;
+      var elements_to_be_changed = [];
+      elements_to_be_changed.push(document.getElementById("new_button"));
+      elements_to_be_changed.push(document.getElementById("file_input_label"));
+      elements_to_be_changed.push(document.getElementById("download_btn"));
+      elements_to_be_changed.push(document.getElementById("run_code_btn"));
+      elements_to_be_changed.push(document.getElementById("hide_topbar_button"));
+      elements_to_be_changed.push(document.getElementById("open_settings_button"));
+      elements_to_be_changed.push(document.getElementById("HTML_Snippet_Button"));
+      elements_to_be_changed.push(document.getElementById("JavaScript_Snippet_Button"));
+      elements_to_be_changed.push(document.getElementById("hide_btmbar_button"));
+      elements_to_be_changed.push(document.getElementById("hide_btmbar_button"));
+      elements_to_be_changed.push(document.getElementById("hide_btmbar_button"));
+      elements_to_be_changed.push(document.getElementById("file_name_selector"));
+      elements_to_be_changed.push(document.getElementById("file_type_selector"));
+      elements_to_be_changed.push(document.getElementById("font_size_selector"));
+      elements_to_be_changed.push(document.getElementById("font_family_selector"));
+      elements_to_be_changed.push(document.getElementById("settings_close_btn"));
+      var color = document.getElementById("custom_theme_picker").value;
+      var r = parseInt(color.substr(1, 2), 16);
+      r = r + 20
+      var g = parseInt(color.substr(3, 2), 16);
+      g = g + 20
+      var b = parseInt(color.substr(5, 2), 16);
+      b = b + 20
+      var new_color = "rgb(R, G, B)";
+      new_color = new_color.replace("R", r);
+      new_color = new_color.replace("G", g);
+      new_color = new_color.replace("B", b);
+      for (var x = 0; x < elements_to_be_changed.length; x++) {
+        elements_to_be_changed[x].style.backgroundColor = new_color;
+        elements_to_be_changed[x].style.color = font_color;
+      }
+      elements_to_be_changed_dark = [textarea, line_numbers, document.getElementById("topbar"), document.getElementById("btmbar"), document.getElementById("Snippets_Button")];
+      elements_to_be_changed_dark[2].classList.remove("w3-dark-grey");
+      //elements_to_be_changed[2].style.borderBottom = "1px solid grey";
+      elements_to_be_changed_dark[2].style.borderTop = "1px solid grey";
+      elements_to_be_changed_dark[3].style.borderTop = "1px solid grey";
+      elements_to_be_changed_dark[3].classList.remove("w3-dark-grey");
+      document.getElementById("settings_tab").classList.remove("w3-dark-grey");
+      document.getElementsByTagName("body")[0].classList.remove("w3-dark-grey");
+      document.getElementsByTagName("body")[0].style.backgroundColor = color;
+      document.getElementsByTagName("body")[0].style.color = font_color;
+      textarea.style.borderTop = "1px solid grey";
+      for (var x = 0; x < elements_to_be_changed_dark.length; x++) {
+        elements_to_be_changed_dark[x].style.backgroundColor = color;
+        elements_to_be_changed_dark[x].style.color = font_color;
+      }
+    }
+
+    function change_theme(theme_name) {
+      var elements_to_be_changed = [];
+      elements_to_be_changed.push(document.getElementById("new_button"));
+      elements_to_be_changed.push(document.getElementById("file_input_label"));
+      elements_to_be_changed.push(document.getElementById("download_btn"));
+      elements_to_be_changed.push(document.getElementById("run_code_btn"));
+      elements_to_be_changed.push(document.getElementById("hide_topbar_button"));
+      elements_to_be_changed.push(document.getElementById("open_settings_button"));
+      elements_to_be_changed.push(document.getElementById("HTML_Snippet_Button"));
+      elements_to_be_changed.push(document.getElementById("JavaScript_Snippet_Button"));
+      elements_to_be_changed.push(document.getElementById("Python_Snippet_Button"));
+      elements_to_be_changed.push(document.getElementById("hide_btmbar_button"));
+      elements_to_be_changed.push(document.getElementById("file_name_selector"));
+      elements_to_be_changed.push(document.getElementById("file_type_selector"));
+      elements_to_be_changed.push(document.getElementById("font_size_selector"));
+      elements_to_be_changed.push(document.getElementById("font_family_selector"));
+      elements_to_be_changed.push(document.getElementById("settings_close_btn"));
+      if (theme_name == "black") {
+        document.getElementById("custom_theme").style.display = "none";
+        for (var x = 0; x < elements_to_be_changed.length; x++) {
+          console.log(elements_to_be_changed[x]);
+          elements_to_be_changed[x].style.backgroundColor = "#101010";
+          elements_to_be_changed[x].style.color = "white";
+        }
+        elements_to_be_changed_dark = [textarea, line_numbers, document.getElementById("topbar"), document.getElementById("btmbar"), document.getElementById("Snippets_Button")];
+        elements_to_be_changed_dark[2].classList.remove("w3-dark-grey");
+        //elements_to_be_changed[2].style.borderBottom = "1px solid grey";
+        elements_to_be_changed_dark[2].style.borderTop = "1px solid grey";
+        elements_to_be_changed_dark[3].style.borderTop = "1px solid grey";
+        elements_to_be_changed_dark[3].classList.remove("w3-dark-grey");
+        document.getElementById("settings_tab").classList.remove("w3-dark-grey");
+        document.getElementsByTagName("body")[0].classList.remove("w3-dark-grey");
+        document.getElementsByTagName("body")[0].style.backgroundColor = "#000";
+        document.getElementsByTagName("body")[0].style.color = "white";
+        textarea.style.borderTop = "1px solid grey";
+        for (var x = 0; x < elements_to_be_changed_dark.length; x++) {
+          elements_to_be_changed_dark[x].style.backgroundColor = "#000";
+          elements_to_be_changed_dark[x].style.color = "white";
+        }
+      }/*else if(theme_name == "white"){
+    for (var x = 0; x < elements_to_be_changed.length; x++){
+      elements_to_be_changed[x].style.backgroundColor = "rgb(255,255,255)";
+      elements_to_be_changed[x].style.color = "black";
+    }
+    elements_to_be_changed_dark = [document.getElementById("topbar"), document.getElementById("btmbar"), document.getElementById("Snippets_Button")];
+    elements_to_be_changed_dark[0].classList.remove("w3-dark-grey");
+    //elements_to_be_changed[2].style.borderBottom = "1px solid grey";
+    elements_to_be_changed_dark[0].style.borderTop = "1px solid grey";
+    elements_to_be_changed_dark[1].style.borderTop = "1px solid grey";
+    elements_to_be_changed_dark[1].classList.remove("w3-dark-grey");
+    //elements_to_be_changed_dark.push(document.getElementsByTagName("p"))
+    document.getElementsByTagName("body")[0].classList.remove("w3-dark-grey");
+    document.getElementsByTagName("body")[0].style.backgroundColor = "#eee";
+    document.getElementsByTagName("body")[0].style.color = "black !important";
+    textarea.classList.remove("w3-dark-grey");
+    textarea.style.backgroundColor = "#ddd";
+    line_numbers.classList.remove("w3-dark-grey");
+    line_numbers.style.backgroundColor = "#ddd";
+    document.getElementById("settings_tab").style.backgroundColor = "#eee"
+    document.getElementById("settings_tab").style.color = "black !important";
+    textarea.style.borderTop = "1px solid grey";
+    for (var x = 0; x < elements_to_be_changed_dark.length; x++){
+      elements_to_be_changed_dark[x].style.backgroundColor = "#eee";
+      elements_to_be_changed_dark[x].style.color = "black !important";
+    }
+  }*/else if (theme_name == "blue") {
+        document.getElementById("custom_theme").style.display = "none";
+        for (var x = 0; x < elements_to_be_changed.length; x++) {
+          elements_to_be_changed[x].style.backgroundColor = "#000050";
+          elements_to_be_changed[x].style.color = "white";
+        }
+        elements_to_be_changed_dark = [textarea, line_numbers, document.getElementById("topbar"), document.getElementById("btmbar"), document.getElementById("Snippets_Button")];
+        elements_to_be_changed_dark[2].classList.remove("w3-dark-grey");
+        //elements_to_be_changed[2].style.borderBottom = "1px solid grey";
+        elements_to_be_changed_dark[2].style.borderTop = "1px solid #0000ff";
+        elements_to_be_changed_dark[3].style.borderTop = "1px solid #0000ff";
+        elements_to_be_changed_dark[3].classList.remove("w3-dark-grey");
+        document.getElementsByTagName("body")[0].classList.remove("w3-dark-grey");
+        document.getElementsByTagName("body")[0].style.backgroundColor = "#000030";
+        document.getElementsByTagName("body")[0].style.color = "white";
+        document.getElementById("settings_tab").classList.remove("w3-dark-grey");
+        textarea.style.borderTop = "1px solid #0000ff";
+        for (var x = 0; x < elements_to_be_changed_dark.length; x++) {
+          elements_to_be_changed_dark[x].style.backgroundColor = "#000030";
+          elements_to_be_changed_dark[x].style.color = "white";
+        }
+      } else if (theme_name == "grey") {
+        document.getElementById("custom_theme").style.display = "none";
+        for (var x = 0; x < elements_to_be_changed.length; x++) {
+          elements_to_be_changed[x].style.backgroundColor = "#454545";
+          elements_to_be_changed[x].style.color = "white";
+        }
+        elements_to_be_changed_dark = [document.getElementById("topbar"), document.getElementById("btmbar"), document.getElementById("Snippets_Button")];
+        elements_to_be_changed_dark[0].classList.remove("w3-dark-grey");
+        //elements_to_be_changed[2].style.borderBottom = "1px solid grey";
+        elements_to_be_changed_dark[0].style.borderTop = "1px solid grey";
+        elements_to_be_changed_dark[1].style.borderTop = "1px solid grey";
+        elements_to_be_changed_dark[1].classList.remove("w3-dark-grey");
+        document.getElementById("settings_tab").classList.remove("w3-dark-grey");
+        document.getElementsByTagName("body")[0].classList.remove("w3-dark-grey");
+        document.getElementsByTagName("body")[0].style.backgroundColor = "#454545";
+        textarea.classList.remove("w3-dark-grey");
+        textarea.style.backgroundColor = "#303030";
+        line_numbers.classList.remove("w3-dark-grey");
+        line_numbers.style.backgroundColor = "#303030";
+        document.getElementsByTagName("body")[0].style.color = "white";
+        textarea.style.borderTop = "1px solid grey";
+        for (var x = 0; x < elements_to_be_changed_dark.length; x++) {
+          elements_to_be_changed_dark[x].style.backgroundColor = "#555555";
+          elements_to_be_changed_dark[x].style.color = "white";
+        }
+      } else if (theme_name == "red") {
+        document.getElementById("custom_theme").style.display = "none";
+        for (var x = 0; x < elements_to_be_changed.length; x++) {
+          elements_to_be_changed[x].style.backgroundColor = "#500000";
+          elements_to_be_changed[x].style.color = "white";
+        }
+        elements_to_be_changed_dark = [textarea, line_numbers, document.getElementById("topbar"), document.getElementById("btmbar"), document.getElementById("Snippets_Button")];
+        elements_to_be_changed_dark[2].classList.remove("w3-dark-grey");
+        //elements_to_be_changed[2].style.borderBottom = "1px solid grey";
+        elements_to_be_changed_dark[2].style.borderTop = "1px solid #ff0000";
+        elements_to_be_changed_dark[3].style.borderTop = "1px solid #ff0000";
+        elements_to_be_changed_dark[3].classList.remove("w3-dark-grey");
+        document.getElementById("settings_tab").classList.remove("w3-dark-grey");
+        document.getElementsByTagName("body")[0].classList.remove("w3-dark-grey");
+        document.getElementsByTagName("body")[0].style.backgroundColor = "#400000";
+        document.getElementsByTagName("body")[0].style.color = "white";
+        textarea.style.borderTop = "1px solid #ff0000";
+        for (var x = 0; x < elements_to_be_changed_dark.length; x++) {
+          elements_to_be_changed_dark[x].style.backgroundColor = "#400000";
+          elements_to_be_changed_dark[x].style.color = "white";
+        }
+      } else if (theme_name == "custom") {
+        document.getElementById("custom_theme").style.display = "block";
+      }
+    }
+    function copy_source_code() {
+      navigator.clipboard.writeText(content);
+    }
+  </script>
 </head>
-<body>
-<body onload="noti()">
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-      <img src="image.png" alt="" style="width:140px;height:45px;">
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html">chrome://</a></li>
-        <li><a href="search.html">Search Browser</a></li>
-        <div class="dropdown">
-        <body onload="otherfunc()">
-        <li><a><button  id="others" class="dropbtn">Others</button></a></li>
-  <div class="dropdown-content">
-            <li><a><norm  class="dropdown-item">Dark Mode   </norm><input type="checkbox" class="form-check-input" id="darkSwitch"></a></li>
-  <hr>
-  <li><h5 class="dropdown-header">Chrome C/S</h5></li>
-  <li><a class="dropdown-item" href="server.html">CC/S Server</a></li>
-  <li><a class="dropdown-item" href="buglist.html">CC/S Bug List</a></li>
-    <li><a class="dropdown-item" href="maintenance.html">CC/S Info</a></li>
-        <li><a class="dropdown-item" href="updateinfo.html">CC/S Update Info</a></li>
-  <hr>
-  <li><h5 class="dropdown-header">Miscellaneous</h5></li>
-  <li><a class="dropdown-item" href="ceditor.html">Code Editor</a></li>
-  <li><a class="dropdown-item" href="bookmarks.html">JS Bookmarks</a></li>
-  <li><a href="code.html">Binary Code</a></li>
-    <li><a class="dropdown-item" href="ks.html">Keyboard Shortcuts</a></li>
-  <li><a class="dropdown-item" href="cs.html">Character Sets</a></li>
-  <li><a class="dropdown-item" href="errorcodes.html">Error Codes</a></li>
-  <li><a class="dropdown-item" href="chromeplugins.html">Plug-ins</a></li>
-  <hr>
-  </div>
-</div>
-</ul>
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="sl.html" id="lang" data-toggle="tooltip" data-placement="bottom" title="System Lang"></a></li>
-<li><a href="wc.html" id="code" data-toggle="tooltip" data-placement="bottom" title="Web Code"></a></li>
 
-<script>
-document.getElementById("code").innerHTML = 
-"" + navigator.appCodeName;
-</script>
-
-<li><a href="na.html" id="app" data-toggle="tooltip" data-placement="bottom" title="Nav App"></a></li>
-<script>
-document.getElementById("app").innerHTML = 
-"" + navigator.appName;
-</script>
-
-<script>
-document.getElementById("lang").innerHTML =
-"" + navigator.language;
-</script></li></a>
-</a></li>
-
-<li><a href="nb.html" id="browser" data-toggle="tooltip" data-placement="bottom" title="Nav Browser "></a></li>
-<script>
-document.getElementById("browser").innerHTML =
-"" + navigator.product;
-</script>
-<li><a href="ud.html" id="device" data-toggle="tooltip" data-placement="bottom" title="User Device"></a></li>
-<script>
-document.getElementById("device").innerHTML = 
-"" + navigator.platform;
-</script>
-
-<li><a href="tz.html" id="clock" data-toggle="tooltip" data-placement="bottom" title="System Clock">JavaScript Is Not Enabled</a></li>
-        <div id="clock"></div>
-<script type="text/javascript">
-function updateclock(){
-    ourDate = new Date();
-    document.getElementById("clock").innerHTML = ourDate.toLocaleString();
-}
-
-function startclock() {
-    updateclock();
-    setInterval(updateclock, 1000); 
-}
-startclock();
-    </script>
-    </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  <div class="container">
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Chrome C/S</h4>
-                    <h6>Version: what ever the version is</h6>
-        </div>
-        <div class="modal-body">
-          <h4>Added</h4>
-                    <p><norm>A new page to hopefully log all of the features that where added from past to present, giving it its own code.</norm></p>
-                    <p><norm>Added a feature that better lists what has been changed/fixed/changed/and known bugs, to every page</norm></p>
-                    <p><norm></norm></p>
-                    <p><norm></norm></p>
-                    <hr>
-                    <h4>Fixed</h4>
-                    <p><norm>No Known Fixes</norm></p>
-                    <hr>
-                    <h4>Changed</h4>
-                    <p><norm>Custom Message to show up instead of a notification on our device.</norm></p>
-                    <p><norm>Major Nav bar improvements</norm></p>
-                    <p><norm>Removed paint.html & pixelart.html</norm></p>
-                    <hr>
-                    <h4>Known Bugs</h4>
-                    <p><norm>No New Bugs</norm></p>
-                    <p><norm><a herf="buglist.html">View All Known Bugs</a></norm></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+<body class="" onload="on_load()" style="min-width: 600px;background-color:#222222;" onbeforeunload="update()">
+  <div id="editor" style="display:block;" class="w3-animate-left">
+    <div class="w3-bar" id="topbar"
+      style="height:7vh;display: block;width:100%; border-bottom: 1px solid #222222; ">
+      <div class="w3-center unselectable">
+ <a class="w3-bar-item w3-button" href="https://spiritxiv.github.io/Chrome-Hidden-Files/www/index.html"
+          style="background-color:#222222;font-size:18px;height:7vh;border-right:1px solid #303030;"
+          title="New File(Alt+N)"><span style="color:#e0e0e0;">Chrome C/S</span></a>
+        <button id="new_button" class="w3-bar-item w3-button" onclick="new_file()"
+          style="background-color:#222222;font-size:18px;height:7vh;border-right:0px solid grey;"
+          title="New File(Alt+N)"><span style="color:#e0e0e0;"><i class="fa fa-file"></i></span></button>
+        <label for="file_input" id="file_input_label" class="w3-bar-item w3-small w3-button "
+          style="width:40px;padding-left: 8px;padding-top:2vh;background-color:#222222;font-size:18px;height:7vh;border-right:0px solid grey;"
+          title="Open File(Alt+O)"><span style="color:#e0e0e0;"><i style="font-size: 22px;" class="fa fa-folder-open"></span></i></label>
+        <input type="file" id="file_input" onchange="open_file()" class="w3-bar-item"
+          style="width:10%; padding-left:0px; display:none" />
+        <button class="w3-bar-item w3-button " onclick="download_file()" id="download_btn"
+          style="background-color:#222222;font-size:18px;height:7vh;border-right:0px solid grey;"
+          title="Save/Download File(Alt+S)"><span style="color:#e0e0e0;"><i class="fa fa-download"></i></span></button>
+        <button class="w3-bar-item w3-button " onclick="run_code()" id="run_code_btn"
+          style="background-color:#222222;height:7vh;border-right:0px solid grey;"
+          title="Run - Only HTML and Python(Alt+R)"><span style="color:#e0e0e0;"><i style='font-size:15px' class='fas'>&#xf04b;</i></span></button>
+        <input type="text" class="w3-text-white  w3-bar-item" id="file_name_selector" placeholder="File Name"
+          style="height:7vh;width:14%; background-color:#222222;border-right:0px solid grey;"
+          onchange="file_name_init()" title="File Name">
+        <select class=" w3-text-white w3-select  w3-bar-item" id="file_type_selector"
+          style="height:7vh;width:14%; background-color:#222222; padding-right:20px;border-right:0px solid grey;"
+          onchange="file_type_init()" title="File Type">
+          <option value="plain">Plain Text</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="xml">XML</option>
+          <option value="javascript">Javascript</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+          <option value="c">C</option>
+          <option value="cpp">C++</option>
+          <option value="cs">C#</option>
+        </select>
+        <select class="w3-text-white w3-select  w3-bar-item" id="font_size_selector"
+          style="height:7vh;width:14%; background-color:#222222;border-right:0px solid grey;"
+          onchange="font_size_init()" title="Font Size">
+          <option value="15">15(Default)</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="22">22</option>
+          <option value="24">24</option>
+          <option value="26">26</option>
+          <option value="28">28</option>
+          <option value="32">32</option>
+          <option value="36">36</option>
+          <option value="40">40</option>
+          <option value="46">46</option>
+          <option value="52">52</option>
+          <option value="58">58</option>
+          <option value="66">66</option>
+          <option value="72">72</option>
+          <option value="80">80</option>
+          <option value="88">88</option>
+          <option value="96">96</option>
+        </select>
+        <input type="text" list="fonts" class="w3-select w3-text-white  w3-bar-item" id="font_family_selector"
+          style="border-right:0px solid grey;background-color:#222222; height:7vh; width:14%; padding-left:10px"
+          onchange="font_family_init()" placeholder="Font Family"
+          title="Font Family - Enter a font name or pick one of the default ones">
+        <datalist id="fonts">
+          <option value="Arial">Arial</option>
+          <option value="Carlito">Carlito</option>
+          <option value="Nimbus Roman">Nimbus Roman</option>
+          <option value="Abyssinica SIL">Abyssinica SIL</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Helvetica">Helvetica</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Ubuntu">Ubuntu</option>
+          <option value="Ubuntu Mono">Ubuntu Mono</option>
+          <option value="DejaVu Serif">DejaVu Serif</option>
+          <option value="Noto Mono">Noto Mono</option>
+          <option value="FreeMono">FreeMono</option>
+          <option value="Monospace">Monospace</option>
+        </datalist>
+        </input>
+        <span id="popup_window">
+          <label for="toggle_checkbox" class="w3-bar-item" style="width:4px;">
+</label>
+          <input type="checkbox" class="w3-check w3-bar-item w3-large" style="outline:none; border:none"
+            id="toggle_checkbox" />
+        </span>
+        <button class="w3-bar-item w3-button " onclick="toggle_topbar()"
+          style="float:right;background-color:#222222;font-size:15px;height:7vh;border:0px solid grey;width:3.5%"
+          title="Hide the topbar(Alt+F)" id="hide_topbar_button"><span style="color:#e0e0e0;"><i class="fa fa-chevron-up"></i></span></button>
+        <button class="w3-bar-item w3-button " onclick="open_settings()"
+          style="float:right;background-color:#222222;font-size:15px;height:7vh;border:0px solid grey;width:3.5%"
+          title="Open Settings(Alt+Shift+S)" id="open_settings_button"><span style="color:#e0e0e0;"><i class='fas'>&#xf085;</i></span></button>
       </div>
     </div>
-  </div>
-</div>
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
+    <div class="w3-bar unselectable" id="btmbar"
+      style="height:7vh; display: block; width:100%; border-bottom: 1px solid #222222; border-top: 1px solid #303030; top:7vh;">
+      <span style="color:#e0e0e0; font-size:18px;padding-top:1.65vh; float:left;background-color:#222222;" class="w3-bar-item"
+        onclick="alert('Keyboard Shortcuts:\nSave:Alt+S\nNew:Alt+N\nOpen:Alt+O\nRun(HTML and Python):Alt+R\nToggle Toolbar:Alt+F\nTogglt Snippets Bar:Alt+T\nOpen/Close Settings Tab:Alt+Shift+S\nChange Textarea to Output ratio:\n  Alt+[0-9] changes ratio to [number]*10\n  Ex: Alt+3 Changes ratio to 30:70')"
+        title="Click one to add the respective code to the editor" id="Snippets_Button">Snippets:</span>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button" id="HTML_Snippet_Button"
+          style="float:right;background-color:#222222;font-size:18px;height:7vh;border:0px solid grey;"><span style="color:#e0e0e0;">HTML</span></button>
+        <div class="w3-dropdown-content w3-bar-block"
+          style="color: white;background-color: #404040;overflow-y: scroll; width:200; height: 300px;top:14vh">
+          <div class="">
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('html')">HTML Body</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('w3css')">W3.CSS Link</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('style_tag')">&lt;style&gt;</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('div_tag')">&lt;div&gt;</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('span_tag')">&lt;span&gt;</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('button_tag')">&lt;button&gt;</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('p_tag')">&lt;p&gt;</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('a_tag')">&lt;a&gt;</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('select_tag')">&lt;select&gt;</button>
+          </div>
+          <hr>
+          <div class="">
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('style_attr')">style=''</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('class_attr')">class=''</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('onclick_attr')">onclick=''</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('title_attr')">title=''</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('id_attr')">id=''</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('src_attr')">src=''</button>
+            <button class="unselectable w3-bar-item w3-button" onclick="snippets('onload_attr')">onload=''</button>
+            <button class="unselectable w3-bar-item w3-button"
+              onclick="snippets('onbeforeunload_attr')">onbeforeunload=''</button>
+          </div>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button" id="JavaScript_Snippet_Button"
+          style="float:right;background-color:#222222;font-size:18px;height:7vh;border:0px solid grey;"><span style="color:#e0e0e0;">Javascript</span></button>
+        <div class="w3-dropdown-content w3-bar-block"
+          style="color: white;background-color: #404040;overflow-y: scroll; width:100; height: 300px;top:14vh">
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('js_func')">function</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('js_if')">if</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('js_ifel')">if/else</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('js_elseif')">elseif</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('js_while')">while</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('js_for')">for</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('js_try_catch')">try...catch</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('js_conlog')">console.log()</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('js_getid')">getElementById</button>
+          <button class="unselectable w3-bar-item w3-button"
+            onclick="snippets('js_getclass')">getElementsByClassName</button>
+          <button class="unselectable w3-bar-item w3-button"
+            onclick="snippets('js_gettag')">getElementsByTagName</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('js_querysel')">querySelector</button>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button" id="Python_Snippet_Button"
+          style="float:right;background-color:#222222;font-size:18px;height:7vh;border:0px solid #404040;"><span style="color:#e0e0e0;">Python</span></button>
+        <div class="w3-dropdown-content w3-bar-block"
+          style="color: white;background-color: #404040;overflow-y: scroll; width:100; height: 300px;top:14vh">
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('py_func')">function</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('py_if')">if</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('py_ifel')">if/else</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('py_elseif')">elseif</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('py_while')">while</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('py_for')">for</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('py_try_except')">try...except</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('py_class')">class</button>
+          <button class="unselectable w3-bar-item w3-button" onclick="snippets('py_ifnameequalsmain')">if __name__ ==
+            "__main__"</button>
+        </div>
+      </div>
+      <button class="w3-bar-item w3-button " onclick="toggle_btmbar()"
+        style="float:right;background-color:#222222;font-size:15px;height:7vh;border:0px solid grey;width:3.5%"
+        title="Hide the Snippets Bar(Alt+T)" id="hide_btmbar_button"><span style="color:#e0e0e0;"><i class="fa fa-chevron-up"></i></span></button>
     </div>
-    <div class="col-sm-8 text-left"> 
-      <h1><b>Chrome Commands/Scripts:</b></h1>
-      <style>
- /*!
- * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
- * Copyright 2021 C.Oliff
- * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
- */
+    <div id="line_numbers"
+      style="border-right: 1px solid #404040;text-align:right;overflow: hidden;float:left;background-color:#222222; width:2%; height:86vh; resize:none; padding-right:1px;"
+      class="unselectable w3-text-gray">
+      1
+    </div>
+    <div>
+      <textarea
+        style="width:49%;height:86vh;float:left; background-color:#303030;text-align:left;padding:2px; solid #202020"
+        class="w3-text-light-gray" id="textArea" placeholder="Save:Alt+S
+New:Alt+N
+Open:Alt+O
+Run(HTML and Python):Alt+R
+Toggle Toolbar:Alt+F
+Toggle Snippets Bar:Alt+T
+Open/Close Settings Tab:Alt+Shift+S
+Change Textarea to Output ratio:
+  Alt+[0-9] changes ratio to [number]*10
+  Ex: Alt+3 Changes ratio to 30:70')">
+          </textarea>
+      <iframe id="output"
+        style="height:86vh; width:49%; float:left; top:7%; background-color:white; outline:1px ridge #202020;"></iframe>
+    </div>
+  </div>
+  <div class="w3-container w3-animate-right w3-display-container #222222" style="display:none;" id="settings_tab">
+    <div class="w3-bar">
+      <button class="w3-bar-item w3-display-topleft w3-button" onclick="close_settings()" id="settings_close_btn"
+        style="background-color:#222222;font-size:13px;height:7vh;border:0px solid grey;"
+        title="Go back to the editor(Alt+Shift+S)"><span style="color:#e0e0e0;"><i class="material-icons">arrow_back</i></span></button>
+    </div>
+    <br><br>
+    <p style="font-size:30px;"><span style="color:#e0e0e0;">General</p>
+    <div id="textarea_width_container">
+      <p style="font-size: 20px;"><span style="color:#e0e0e0;">Editor Width</p>
+      <label for="textarea_width" style="padding-right:3px" class="w3-bar-item"><span style="color:#e0e0e0;">Select the width of the editor:</label>
+      <span id="textarea_width_val" class="w3-bar-item" style="padding-left:3px; padding-right:4px"><span style="color:#e0e0e0;"></span>
+      <span style="padding-top:10px;">
+        <input type="range" id="textarea_width" max="100" min="0" step="5" class="w3-bar-item" style="width:150px;"
+          onchange="textarea_width()" title="Control the ratio of the editor and the output window" />
+      </span>
+    </div>
+    <p style="font-size:20px;"><span style="color:#e0e0e0;">Text Editor Mode</p>
+    <p style="font-size:15px;"><input type="checkbox" class="w3-check" id="text_editor_mode"
+        onchange="if(this.checked){textarea_width(100);document.getElementById('textarea_width_container').style.display = 'none';}else{textarea_width(50);document.getElementById('textarea_width_container').style.display = 'block';}"
+        name="text_editor_mode" /><label for="text_editor_mode"> <span style="color:#e0e0e0;">Hides output window to make more space for you to
+        type.</label></p>
+    <p style="font-size:20px;"><span style="color:#e0e0e0;">Turn Off Line Numbers</p>
+    <p style="font-size:15px;"><input type="checkbox" class="w3-check" id="turn_off_line_numbers"
+        onchange="if(this.checked){turn_off_line_numbers = true; line_numbers.innerHTML = '';}else{turn_off_line_numbers = false;}"
+        name="turn_off_line_numbers" /><label for="turn_off_line_numbers"> <span style="color:#e0e0e0;">The webpage can get really slow when handling
+        large files. Turn off line numbers to prevent this.</label></p>
+    <hr style="width:50%">
+    <p style="font-size:30px;"><span style="color:#e0e0e0;">Theme</p>
+    <p style="font-size:20px;"><span style="color:#e0e0e0;">
+      <select class="w3-select w3-black" id="theme" onchange="change_theme(this.value)"
+        style="width:50%; font-size:15px;">
+        <option value="grey" selected>Chrome C/S (default)</option>
+        <option value="black">Black</option>
+        <option value="white" disabled>White</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="custom">Custom</option>
+      </select>
+    <div id="custom_theme" style="display:none;">
+      <p style="font-size:20px">Custom Theme:</p>
+      <p style="font-size:14px"><span style="color:#ffff00;">Warning:</span> Do not choose a light background color
+        because it will clash with the font color of the editor which is always white. (Font colors of textareas cannot
+        be changed)</p>
+      <label for="custom_theme_picker"><span style="color:#e0e0e0;">Background Color: </label>
+      <input type="color" id="custom_theme_picker" onchange="custom_theme()" /><br><br>
+      <label for="custom_theme_font_color"><span style="color:#e0e0e0;">Font Color: </label>
+      <input type="color" id="custom_theme_font_color" onchange="custom_theme()" />
+    </div>
+    </p>
+    <br>
+    <hr style="width:50%">
+    <p style="font-size:30px;"><span style="color:#e0e0e0;">Keyboard Shortcuts</p>
+    <p style="font-size:15px;"><span style="color:#e0e0e0;">New File:Alt+N<br>
+      Open File:Alt+O<br>
+      Run(Only HTML and Python Files):Alt+R<br>
+      Toggle Toolbar:Alt+F<br>
+      Toggle Snippets Bar:Alt+T<br>
+      Open/Close Settings:Alt+Shift+S</br>
+      Change Textarea to Output ratio:<br>
+      Alt+[0-9] changes ratio to [number]*10<br>
+      Ex: Alt+3 Changes ratio to 30:70
+    </p>
+    <br>
+    <hr style="width:50%">
+    <div class="w3-panel w3-card w3-light-black w3-display-container w3-container w3-round"
+      style="height: 725px;width:80%; padding-top:7px; padding-right:7px; padding-bottom:0px"
+      id="source_code_disp_container">
+      <span style="font-size:25px"><span style="color:#e0e0e0;">Chrom C/S Editor Source Code</span>
+      <br>
+      <span style="color:#e0e0e0;font-size:15px"><p id="stats"></p>
+      <p style="padding-top:0px;">
+        <code type='text/html tag start' style="background-color:#222222;">
+            <xmp id="source_code_disp" class="w3-code htmlHigh notranslate" style="height:80%; width:99%;background-color:#222222; overflow:auto;"></xmp>
+          </code>
+      </p>
+    </div>
+    <br>
+    <br>
+    <!--
+      <p style="font-size:30px; color:white;">Editor</p>
+      <p style="font-size:20px; color:white;">Editor Background Color</p>
+      <p style="font-size:15px; color:white;">Choose a background color for the editor:</p>
+      <p style="font-size:10px; color:white;"><span style="color:yellow;">Warning:</span> Do not choose a light color. The font color will clash with the background color (the font color cannot be changed).</p>
+      <input type="color" id="editor_bg_color_picker" width="100px;"/>
+      <br><br>
+      <button class="w3-button" style="background-color:#222222;font-size:13px;height:7vh;border:1px solid grey;" onclick="change_editor_bg()">Submit</button>
+      -->
 
-[data-theme="dark"] {
-  background-color: #111 !important;
-  color: #909090;
-}
-
-[data-theme="dark"] .bg-black {
-  background-color: #fff !important;
-}
-
-[data-theme="dark"] .bg-dark {
-  background-color: #eee !important;
-}
-
-[data-theme="dark"] .bg-light {
-  background-color: #222 !important;
-}
-
-[data-theme="dark"] .bg-white {
-  background-color: #000 !important;
-}
-[data-theme="dark"] .sidenav {
-  background-color: #101010 !important;
-}
-[data-theme="dark"] .dropdown-content {
-  background-color: #202020 !important;
-}
-[data-theme="dark"] .dropdown-content a:hover {
-  background-color: #696969 !important;
-}
-
-[data-theme="dark"] .dropdown-content a {
-  color: #909090 !important;
-}
-
-</style>
-      <script>
-/*!
- * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
- * Copyright 2021 C.Oliff
- * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
- */
-
-var darkSwitch = document.getElementById("darkSwitch");
-window.addEventListener("load", function () {
-  if (darkSwitch) {
-    initTheme();
-    darkSwitch.addEventListener("change", function () {
-      resetTheme();
+  </div>
+  <script>
+    var textarea = document.getElementById("textArea");
+    var line_numbers = document.getElementById("line_numbers");
+    var file_type = "plain";
+    var file_name = "File";
+    var old_val;
+    var reader = new FileReader();
+    var turn_off_line_numbers = false;
+    var word;
+    window.addEventListener('keydown', function (e) {
+      if (event.altKey && !(event.shiftKey) && event.which == 83) {
+        event.preventDefault();
+        download_file();
+      } else if (event.altKey && event.which == 78) {
+        event.preventDefault();
+        new_file();
+      } else if (event.altKey && event.which == 79) {
+        event.preventDefault();
+        open_file();
+      }
     });
-  }
-});
+    window.onbeforeunload = function () {
+      return "Do you really want to leave the page? You will lose any unsaved work.";
+    };
 
-/**
- * Summary: function that adds or removes the attribute 'data-theme' depending if
- * the switch is 'on' or 'off'.
- *
- * Description: initTheme is a function that uses localStorage from JavaScript DOM,
- * to store the value of the HTML switch. If the switch was already switched to
- * 'on' it will set an HTML attribute to the body named: 'data-theme' to a 'dark'
- * value. If it is the first time opening the page, or if the switch was off the
- * 'data-theme' attribute will not be set.
- * @return {void}
- */
-function initTheme() {
-  var darkThemeSelected =
-    localStorage.getItem("darkSwitch") !== null &&
-    localStorage.getItem("darkSwitch") === "dark";
-  darkSwitch.checked = darkThemeSelected;
-  darkThemeSelected
-    ? document.body.setAttribute("data-theme", "dark")
-    : document.body.removeAttribute("data-theme");
-}
+    textarea.addEventListener('keydown', function (e) {
+      if (!(turn_off_line_numbers) && old_val != textarea.value) {
+        var content = (textarea.value).split("\n");
+        var slider = document.getElementById("textarea_width").value;
+        line_numbers.innerHTML = "";
+        if (event.keyCode == 8) {
+          if ((content.lenth != 1) && content.at(-1) == "") {
+            content.pop();
+          }
+        } else if (event.shiftKey || event.altKey || event.ctrlKey) {
+          1 + 1
+        } else {
+          content.push("\n")
+        }
+        for (var x = 0; x < content.length; x++) {
+          line_numbers.innerHTML += x + 1 + '</br>';
+          if (x > 99) {
+            line_numbers.style.width = "3%";
+            textarea.style.width = slider - ((line_numbers.style.width).slice(0, -1)) + "%";
+            document.getElementById("output").style.width = (100 - slider) + "%";
+          } else if (x < 99) {
+            line_numbers.style.width = "2%";
+            textarea.style.width = slider - ((line_numbers.style.width).slice(0, -1)) + "%";;
+            document.getElementById("output").style.width = (100 - slider) + "%";
+          }
+        }
+        line_numbers.scrollTop = textarea.scrollTop;
+        old_val = textarea.value;
+      }
+    });
+    textarea.addEventListener('input', function (e) {
+      if (!(turn_off_line_numbers) && old_val != textarea.value) {
+        var content = (textarea.value).split("\n");
+        var slider = document.getElementById("textarea_width").value;
+        line_numbers.innerHTML = "";
+        for (var x = 0; x < content.length; x++) {
+          line_numbers.innerHTML += x + 1 + '</br>';
+          if (x > 99) {
+            line_numbers.style.width = "3%";
+            textarea.style.width = slider - ((line_numbers.style.width).slice(0, -1)) + "%";
+            document.getElementById("output").style.width = (100 - slider) + "%";
+          } else if (x < 99) {
+            line_numbers.style.width = "2%";
+            textarea.style.width = slider - ((line_numbers.style.width).slice(0, -1)) + "%";;
+            document.getElementById("output").style.width = (100 - slider) + "%";
+          }
+        }
+        line_numbers.scrollTop = textarea.scrollTop;
+      }
+    });
+    textarea.onpaste = function () {
+      if (!(turn_off_line_numbers)) {
+        var text_pasted = String((event.clipboardData || window.clipboardData).getData('text'));
+        console.log(text_pasted.length);
+        if (text_pasted.length > 10000) {
+          alert("The text you have pasted seems large. The webpage may get unresponsive and slow. Go to Settings(Alt+Shift+S) and turn on \"Turn off Line Numbers.\"");
+        }
+        var content = ((event.clipboardData || window.clipboardData).getData('text')).split("\n");
+        line_numbers.innerHTML = "";
+        for (var x = 0; x < content.length; x++) {
+          line_numbers.innerHTML += x + 1 + '</br>';
+          if (x > 99) {
+            line_numbers.style.width = "3%";
+            textarea.style.width = "48.5%";
+            document.getElementById("output").style.width = "48.5%";
+          } else if (x < 99) {
+            line_numbers.style.width = "2%";
+            textarea.style.width = "49";
+            document.getElementById("output").style.width = "49%";
+          }
+        }
+        line_numbers.scrollTop = textarea.scrollTop;
+      }
+    };
+    function line_numbers_on_load() {
+      if (!(turn_off_line_numbers)) {
+        var content = (textarea.value).split("\n");
+        line_numbers.innerHTML = "";
+        for (var x = 0; x < content.length; x++) {
+          line_numbers.innerHTML += x + 1 + '</br>';
+          if (x > 99) {
+            line_numbers.style.width = "3%";
+            textarea.style.width = "48.5%";
+            document.getElementById("output").style.width = "48.5%";
+          } else if (x < 99) {
+            line_numbers.style.width = "2%";
+            textarea.style.width = "49";
+            document.getElementById("output").style.width = "49%";
+          }
+        }
+        line_numbers.scrollTop = textarea.scrollTop;
+      }
+    }
+    function line_numbers_open_file(text) {
+      if (!(turn_off_line_numbers)) {
+        var content = text.split("\n");
+        line_numbers.innerHTML = "";
+        for (var x = 0; x < content.length; x++) {
+          line_numbers.innerHTML += x + 1 + '</br>';
+          if (x > 99) {
+            line_numbers.style.width = "3%";
+            textarea.style.width = "48.5%";
+            document.getElementById("output").style.width = "48.5%";
+          } else if (x < 99) {
+            line_numbers.style.width = "2%";
+            textarea.style.width = "49";
+            document.getElementById("output").style.width = "49%";
+          }
+        }
+        line_numbers.scrollTop = textarea.scrollTop;
+      }
+    }
+    function scroll_sync_textarea() {
+      var content = (textarea.value).split("\n");
+      line_numbers.scrollTop = textarea.scrollTop;
+      if (!(line_numbers.scrollTop == textarea.scrollTop)) {
+        line_numbers.scrollTop = textarea.scrollTop;
+      }
+    }
+    textarea.addEventListener('scroll', scroll_sync_textarea);
+    function new_file() {
+      textarea.value = "";
+      document.getElementById("file_name_selector").value = "";
+      file_name = "File";
+      line_numbers.innerHTML = "1";
+    }
+    function open_file() {
+      var input = document.getElementById("file_input");
+      if (typeof (input.files[0]) == 'undefined') {
+        input.click();
+        return;
+      }
+      var file_name_selector_val = document.getElementById("file_name_selector");
+      reader.onload = function () {
+        document.title = input.files[0].name + " - " + "Code Editor";
+        textarea.value = reader.result;
+        line_numbers_open_file(reader.result);
+        if (((reader.result).split("\n")).length > 300) {
+          if (!(turn_off_line_numbers)) {
+            alert("The file you have opened seems large. The webpage may get unresponsive and slow. Go to Settings(Alt+Shift+S) and turn on \"Turn off Line Numbers.\"");
+          }
+        }
+      }
+      reader.readAsText(input.files[0]);
+      file_name_without_extension = (input.files[0].name).slice(0, (input.files[0].name).lastIndexOf("."));
+      file_name_selector_val.value = input.files[0].name;
+      file_name = file_name_without_extension;
+    }
+    function download(content, filename, contentType) {
+      if (!contentType) contentType = 'application/octet-stream';
+      var a = document.createElement('a');
+      var blob = new Blob([content], { 'type': contentType });
+      a.href = window.URL.createObjectURL(blob);
+      a.download = filename;
+      a.click();
+    }
+    function download_file() {
+      var temp = file_name;
+      //file_name_without_extension = (file_name).slice(0, (file_name).lastIndexOf("."));
+      //file_name = file_name_without_extension;
+      var content = textarea.value;
+      content = content.replace(/\n/g, "\r\n");
+      var file_name_final;
+      var file_type_final;
+      if (file_type == "plain") {
+        file_name_final = file_name + ".txt";
+        file_type_final = "text/plain";
+      } else if (file_type == "html") {
+        file_name_final = file_name + ".html";
+        file_type_final = "text/html";
+      } else if (file_type == "css") {
+        file_name_final = file_name + ".css";
+        file_type_final = "text/css";
+      } else if (file_type == "javascript") {
+        file_name_final = file_name + ".js";
+        file_type_final = "text/javascript";
+      } else if (file_type == "xml") {
+        file_name_final = file_name + ".xml";
+        file_type_final = "text/xml";
+      } else if (file_type == "python") {
+        file_name_final = file_name + ".py";
+        file_type_final = "text/plain";
+      } else if (file_type == "java") {
+        file_name_final = file_name + ".java";
+        file_type_final = "text/plain";
+      } else if (file_type == "c") {
+        file_name_final = file_name + ".c";
+        file_type_final = "text/plain";
+      } else if (file_type == "cpp") {
+        file_name_final = file_name + ".cpp";
+        file_type_final = "text/plain";
+      } else if (file_type == "cs") {
+        file_name_final = file_name + ".cs";
+        file_type_final = "text/plain";
+      }
+      download(content, file_name_final, file_type_final);
+      file_name = temp;
+    }
+    function font_size_init() {
+      var font_size_select_val = document.getElementById("font_size_selector").value;
+      textarea.style.fontSize = font_size_select_val + "px";
+      line_numbers.style.fontSize = font_size_select_val + "px";
+    }
+    function font_family_init() {
+      var font_family_select_val = document.getElementById("font_family_selector").value;
+      textarea.style.fontFamily = font_family_select_val;
+    }
+    function file_type_init() {
+      var file_type_selector_val = document.getElementById("file_type_selector").value;
+      file_type = file_type_selector_val;
+      if (file_type_selector_val != "plain") {
+        textarea.spellcheck = false;
+      } else {
+        textarea.spellcheck = true;
+      }
+      if (file_type == "html") {
+        document.getElementById('popup_window').style.display = "block";
+      } else {
+        document.getElementById('popup_window').style.display = "none";
+      }
+    }
+    setInterval(file_type_init, 10);
+    function file_name_init() {
+      var file_name_selector_val = document.getElementById("file_name_selector").value;
+      file_name = file_name_selector_val;
+    }
+    document.getElementById('textArea').addEventListener('keydown', function (e) {
+      var file_type_for_keydown = document.getElementById("file_type_selector").value;
+      if (e.key == 'Tab') {
+        e.preventDefault();
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+        this.value = this.value.substring(0, start) + "  " + this.value.substring(end);
+        this.selectionStart = this.selectionEnd = start + 2;
+      }/*else if(e.which == 8) {
+	  var end = this.selectionEnd;
+	  var start = this.selectionStart;
+	  console.log(this.value.at(start+1));
+		switch (this.value.at(start)) {
+			case 57:
+				this.value.pop(start+1);
+				break;
+		
+			default:
+				break;
+		}
+	}*/
+      // if (file_type_for_keydown != "plain") {
+      //   if (e.which == 57) {
+      //     e.preventDefault();
+      //     var start = this.selectionStart;
+      //     var end = this.selectionEnd;
+      //     this.value = this.value.substring(0, start) + "()" + this.value.substring(end);
+      //     while (this.value.at(this.selectionStart) != ")") {
+      //       this.selectionStart = this.selectionStart - 1;
+      //       this.selectionEnd = this.selectionStart;
+      //     }
+      //   } else if (e.which == 219 && !(e.shiftKey)) {
+      //     e.preventDefault();
+      //     var start = this.selectionStart;
+      //     var end = this.selectionEnd;
+      //     this.value = this.value.substring(0, start) + "[]" + this.value.substring(end);
+      //     while (this.value.at(this.selectionStart) != "]") {
+      //       this.selectionStart = this.selectionStart - 1;
+      //       this.selectionEnd = this.selectionStart;
+      //     }
+      //   } else if (e.which == 219 && e.shiftKey) {
+      //     e.preventDefault();
+      //     var start = this.selectionStart;
+      //     var end = this.selectionEnd;
+      //     this.value = this.value.substring(0, start) + "{}" + this.value.substring(end);
+      //     while (this.value.at(this.selectionStart) != "}") {
+      //       this.selectionStart = this.selectionStart - 1;
+      //       this.selectionEnd = this.selectionStart;
+      //     }
+      //   } else if (e.which == 222 && e.shiftKey) {
+      //     e.preventDefault();
+      //     var start = this.selectionStart;
+      //     var end = this.selectionEnd;
+      //     this.value = this.value.substring(0, start) + "\"\"" + this.value.substring(end);
+      //     while (this.value.at(this.selectionStart) != "\"") {
+      //       this.selectionStart = this.selectionStart - 1;
+      //       this.selectionEnd = this.selectionStart;
+      //     }
+      //   } else if (e.which == 222) {
+      //     e.preventDefault();
+      //     var start = this.selectionStart;
+      //     var end = this.selectionEnd;
+      //     this.value = this.value.substring(0, start) + "''" + this.value.substring(end);
+      //     this.selectionStart = this.selectionStart - 1;
+      //     this.selectionEnd = this.selectionStart;
+      //     while (this.value.at(this.selectionStart) != "'") {
+      //       this.selectionStart = this.selectionStart - 1;
+      //       this.selectionEnd = this.selectionStart;
+      //     }
+      //   } else if (e.which == 188 && e.shiftKey && file_type_for_keydown == "html") {
+      //     e.preventDefault();
+      //     var start = this.selectionStart;
+      //     var end = this.selectionEnd;
+      //     this.value = this.value.substring(0, start) + "<>" + this.value.substring(end);
+      //     this.selectionStart = this.selectionStart - 1;
+      //     this.selectionEnd = this.selectionStart;
+      //     while (this.value.at(this.selectionStart) != ">") {
+      //       this.selectionStart = this.selectionStart - 1;
+      //       this.selectionEnd = this.selectionStart;
+      //     }
 
-/**
- * Summary: resetTheme checks if the switch is 'on' or 'off' and if it is toggled
- * on it will set the HTML attribute 'data-theme' to dark so the dark-theme CSS is
- * applied.
- * @return {void}
- */
-function resetTheme() {
-  if (darkSwitch.checked) {
-    document.body.setAttribute("data-theme", "dark");
-    localStorage.setItem("darkSwitch", "dark");
-  } else {
-    document.body.removeAttribute("data-theme");
-    localStorage.removeItem("darkSwitch");
-  }
-}
-</script>
-  <!-- IE 11 polyfill for CSS and Custom Properties -->
-  <script
-    nomodule>window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-ie11@5/css/bootstrap-ie11.min.css"><script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@4/ie11CustomProperties.min.js"><\/script>');</script>
-<script>
-/*!
- * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
- * Copyright 2021 C.Oliff
- * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
- */
-var darkSwitch=document.getElementById("darkSwitch");window.addEventListener("load",(function(){if(darkSwitch){initTheme();darkSwitch.addEventListener("change",(function(){resetTheme()}))}}));function initTheme(){var darkThemeSelected=localStorage.getItem("darkSwitch")!==null&&localStorage.getItem("darkSwitch")==="dark";darkSwitch.checked=darkThemeSelected;darkThemeSelected?document.body.setAttribute("data-theme","dark"):document.body.removeAttribute("data-theme")}function resetTheme(){if(darkSwitch.checked){document.body.setAttribute("data-theme","dark");localStorage.setItem("darkSwitch","dark")}else{document.body.removeAttribute("data-theme");localStorage.removeItem("darkSwitch")}}
-</script>
-      </body>
-      <body>
-          <div class="cursor"></div>
-      </body>
-      <script>
-                const cursor = document.querySelector('.cursor');
-      
-              document.addEventListener('mousemove', e => {
-                  cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-              })
-      
-              document.addEventListener('click', () => {
-                  cursor.classList.add("expand");
-      
-                  setTimeout(() => {
-                      cursor.classList.remove("expand");
-                  }, 500)
-              })
-      </script>
-      <body>
-  <hr>
-<h1>Currently Being Made</h1>
-<p>just wait...</p>
+      //   }
+      // }
+    });
+  </script>
 </body>
-</html>
-<script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();   
-});
-</script>
-<hr>
 
+</html>
