@@ -426,6 +426,7 @@ var darkSwitch=document.getElementById("darkSwitch");window.addEventListener("lo
 <h3><b>C/CS Advanced Browsers</h3></b>
 <norm><b>Package Version: 1.2.7 (The Extensive Servers)</b></norm>
 <h1></h1>
+
 <hr>
 <p><bad><b><i style='font-size:14px' class='fas'>&#xf071;</i>
    Important:</b></bad></p>
@@ -440,11 +441,125 @@ var darkSwitch=document.getElementById("darkSwitch");window.addEventListener("lo
              <DT><A data-toggle="tooltip" title="Bookmarlet" type="button" class="btn" HREF="javascript:((function()%7Bvar a,b,c;c=&quot;https://spiritxiv.github.io/Chrome-Hidden-Files/www/search.html&quot;,b=document.createElement(&quot;iframe&quot;),b.setAttribute(&quot;src&quot;,c),b.setAttribute(&quot;id&quot;,&quot;rusic-modal&quot;),b.setAttribute(&quot;style&quot;,&quot;position: fixed; z-index: 999999; width: 1522px; height: 768px; right: 0px; top: 0px; border: 2px solid #696969;%20overflow:%20hidden;%20background-color:%20#fff;%22),a=document.getElementsByTagName(%22body%22)%5B0%5D,a.appendChild(b)%7D)).call(this)" ADD_DATE="1614802964"><norm><i style='font-size:14px' class='fas'>&#xf02e;</i></norm></A>
         <a data-toggle="tooltip" title="Download Package" type="button"  class="btn" style='font-size:14px' href="https://github.com/SpiritXIV/Chrome-Hidden-Files/raw/main/www/package/Advert-Browser-V1.2.zip" download><norm><i class='fas fa-download'></i></norm></a></script></li>
 <a data-toggle="modal" data-target="#myModal" class="btn"><norm>Continue to Browser   <i style='font-size:14px' class='fas'>&#xf0ac;</i></norm></a>
+<hr>
+<p><norm><b><i style='font-size:14px' class='fas'>&#xf188;</i>   Troubleshooting:</b></norm></p>
+<p>Post an Issue on the github repository about the search browser and if its a constant issue it'll show up here.</p>
+
+<br>
+<p>#1 <b> Servers taking too long to load.</b></p>
+<p><b>Issue:</b></p>
+<p>If the servers take an abnormally amount of time to load, the issue is you either cleared you cookies from the runners, or you're not binded to the runners.</p>
+<p><b>Solution:</b></p>
+<p>You need to reconnect to the servers. You can do that by pressing a button below that you think can help you.</p>
+<body>
+<a><norm class="btn" onclick="connectServer();setTimeout(closeser, 10000);" id="servertext"><i style='font-size:14px' class='fas'>&#xf233;</i>   Connect to Servers</norm></a>
+<body>
+<a><norm class="btn" onclick="reconnectServer();setTimeout(closeserr, 10000);" id="reservertext"><i style='font-size:14px' class='fas'>&#xf233;</i>   Reconnect to Servers</norm></a>
 <script>
-function noti() {
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+let myWindow;
+
+function reconnectServer() {
+  remyWindow = window.open("https://ccsbbandiwinthsyoucantstopme.cyclic.app/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F", "_blank", "width=200,height=1");
+    
+  reserver2 = window.open("https://mountain-savory-humerus.glitch.me/service/go/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F", "_blank", "width=200,height=1");
+  
+  reserver3 = window.open("https://betterbrowserthatisyes.herokuapp.com/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F", "_blank", "width=200,height=1");
+  
+  reserver4 = window.open("https://embarrassed-cowboy-hat-bear.cyclic.app/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F", "_blank", "width=200,height=1");
+  
+  reserver5 = window.open("https://better-browser-but-more.onrender.com/service/go/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F%3D%26%60ij%3D487%26%60iu%3D3537%24hn%3Dgn", "_blank", "width=200,height=1");
+  
+  reserver6 = window.open("https://utahs-luna-proxy.herokuapp.com/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F%3D%26%60ij%3D487%26%60iu%3D3537%24hn%3Dgn", "_blank", "width=200,height=1");
+  
+  reserver7 = window.open("https://luna-proxy-reworked.vercel.app/service/go/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F%3D%26%60ij%3D487%26%60iu%3D3537%24hn%3Dgn", "_blank", "width=200,height=1");
+
+  reextra = window.open("https://spiritxiv.github.io/Chrome-Hidden-Files/www/reconnecting.html", "_blank", "width=200,height=1");
+  
+  let text = "";
+if (!remyWindow) {
+  text = "Failed to reconnect to Servers";
+} else {
+  if (remyWindow.closed) { 
+    text = "<i style='font-size:14px' class='fas'>&#xf233;</i>   Reconnected to Servers";
+  } else {
+    text = "<i style='font-size:14px' class='fas'>&#xf233;</i>   Reconnecting to Servers";
+  }
+}
+document.getElementById("reservertext").innerHTML = text;
+}
+function closeserr() {
+    remyWindow.close();
+    reserver2.close();
+    reserver3.close();
+    reserver4.close();
+    reserver5.close();
+    reserver6.close();
+    reserver7.close();
+    reextra.close();
+
+  let text = "";
+if (!remyWindow) {
+  text = "Failed to reconnect to Servers";
+} else {
+  if (remyWindow.closed) { 
+    text = "<i style='font-size:14px' class='fas'>&#xf233;</i>   Reconnected to Servers";
+  } else {
+    text = "<i style='font-size:14px' class='fas'>&#xf233;</i>   Reconnecting to Servers";
+  }
+}
+document.getElementById("reservertext").innerHTML = text;
+}
+
+function connectServer() {
+  myWindow = window.open("https://ccsbbandiwinthsyoucantstopme.cyclic.app/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F", "_blank", "width=200,height=1");
+    
+  server2 = window.open("https://mountain-savory-humerus.glitch.me/service/go/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F", "_blank", "width=200,height=1");
+  
+  server3 = window.open("https://betterbrowserthatisyes.herokuapp.com/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F", "_blank", "width=200,height=1");
+  
+  server4 = window.open("https://embarrassed-cowboy-hat-bear.cyclic.app/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F", "_blank", "width=200,height=1");
+  
+  server5 = window.open("https://better-browser-but-more.onrender.com/service/go/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F%3D%26%60ij%3D487%26%60iu%3D3537%24hn%3Dgn", "_blank", "width=200,height=1");
+  
+  server6 = window.open("https://utahs-luna-proxy.herokuapp.com/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F%3D%26%60ij%3D487%26%60iu%3D3537%24hn%3Dgn", "_blank", "width=200,height=1");
+  
+  server7 = window.open("https://luna-proxy-reworked.vercel.app/service/go/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F%3D%26%60ij%3D487%26%60iu%3D3537%24hn%3Dgn", "_blank", "width=200,height=1");
+  
+  extra = window.open("https://spiritxiv.github.io/Chrome-Hidden-Files/www/connecting.html", "_blank", "width=200,height=1");
+
+  let text = "";
+if (!myWindow) {
+  text = "Failed to connect to Servers";
+} else {
+  if (myWindow.closed) { 
+    text = "<i style='font-size:14px' class='fas'>&#xf233;</i>   Connected to Servers";
+  } else {
+    text = "<i style='font-size:14px' class='fas'>&#xf233;</i>   Connecting to Servers";
+  }
+}
+document.getElementById("servertext").innerHTML = text;
+}
+function closeser() {
+    myWindow.close();
+    server2.close();
+    server3.close();
+    server4.close();
+    server5.close();
+    server6.close();
+    server7.close();
+    extra.close();
+
+  let text = "";
+if (!myWindow) {
+  text = "Failed to connect to Servers";
+} else {
+  if (myWindow.closed) { 
+    text = "<i style='font-size:14px' class='fas'>&#xf233;</i>   Connected to Servers";
+  } else {
+    text = "<i style='font-size:14px' class='fas'>&#xf233;</i>   Connecting to Servers";
+  }
+}
+document.getElementById("servertext").innerHTML = text;
 }
 </script>
 <body>
