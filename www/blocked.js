@@ -12,7 +12,7 @@ function block_blacklist_middle_lat() {
     const blacklist_middle_lat = [
         "43.980", // tms
         "43.981", // ths
-        "43.97",  // ths/tms/tab
+        "43.970",  // ths/tms/tab
         "43.972", //tab 
         "43.99075", //test
     ]
@@ -39,7 +39,7 @@ function allow_whitelist_middle_lat() {
     const whitelist_middle_lat = [
         "43.980", // tms
         "43.981", // ths
-        "43.97",  // ths/tms/tab
+        "43.970",  // ths/tms/tab
         "43.972", //tab
         "43.99", //test
     ]
@@ -79,7 +79,7 @@ function block_blacklist_countries() {
     // Blacklist countries
     const blacklist_countries = [
         "DE", // Germany
-        
+        "US", // United States
         "GB", // United Kingdom
         "UA", // Ukraine
         "AR", // Argentina
