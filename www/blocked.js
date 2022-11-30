@@ -72,7 +72,7 @@ function display_access_denied_error() {
 function block_blacklist_ip() {
     // Blacklist ip
     const blacklist_ip = [
-        "2600:6c44:417f:ff1a:f443:fcf6:b244:da9", // test
+        "2600:6c44:417f:ff1a:f443:fcf6:b244:daa9", // test
     ]
 
     // Detecting the users country
