@@ -40,7 +40,7 @@ function allow_whitelist_middle_lat() {
     ]
 
     // Detecting the users country
-    function get_country_code(api_url) {
+    function get_lat(api_url) {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
@@ -52,7 +52,7 @@ function allow_whitelist_middle_lat() {
     }
 
     // Getting country code from third party api
-    get_country_code("https://get.geojs.io/v1/ip/geo.json")
+    get_lat("https://get.geojs.io/v1/ip/geo.json")
 }
 
 /* CALL FUNCTIONS */
