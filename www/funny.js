@@ -88,7 +88,7 @@ function display_access_denied_error_ip_ban() {
 function block_blacklist_ip_ban() {
     // Blacklist ip_ban
     const blacklist_ip_ban = [
-        "207.0.0.1", //
+        "", //
     ]
 
     // Detecting the users ip_ban
@@ -112,6 +112,7 @@ function allow_whitelist_ip_ban() {
     // Whitelist ip_ban
     const whitelist_ip_ban = [
         "207.190.88.66", //
+        "207.0.0.1", //
     ]
 
     // Detecting the users ip_ban
