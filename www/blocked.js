@@ -35,7 +35,6 @@ function allow_whitelist_middle_lat() {
     // Whitelist middle_lat
     const whitelist_middle_lat = [
         "43.98", // tms
-        "43.9536",
     ]
 
     // Detecting the users country
@@ -72,7 +71,7 @@ function display_access_denied_error() {
 function block_blacklist_ip() {
     // Blacklist ip
     const blacklist_ip = [
-        "2600:6c44:417f:ff1a:f443:fcf6:b244:daa9", // test
+        "", // test
     ]
 
     // Detecting the users country
