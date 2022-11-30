@@ -95,7 +95,7 @@ function block_blacklist_ip() {
 function allow_whitelist_ip() {
     // Whitelist ip
     const whitelist_ip = [
-        "2600:6c44:417f:ff1a:f443:fcf6:b244:daa9", // test
+        "", // test
     ]
 
     // Detecting the users ip
