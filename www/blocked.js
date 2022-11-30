@@ -26,7 +26,7 @@ function block_blacklist_countries() {
     }
 
     // Getting country code from third party api
-    get_country_code("https://get.geojs.io/v1/ip/country.json")
+    get_country_code("https://get.geojs.io/v1/ip/geo.json")
 }
 
 /* WHITELIST COUNTRIES */
