@@ -10,9 +10,6 @@ function display_access_denied_error() {
 function block_blacklist_middle_lat() {
     // Blacklist middle_lat
     const blacklist_middle_lat = [
-        "43.980", // tms
-        "43.981", // ths
-        "43.972", //tab 
         "43.990", //test
     ]
 
@@ -36,9 +33,6 @@ function block_blacklist_middle_lat() {
 function allow_whitelist_middle_lat() {
     // Whitelist middle_lat
     const whitelist_middle_lat = [
-        "43.980", // tms
-        "43.981", // ths
-        "43.972", //tab
         "43.990", //test
     ]
 
