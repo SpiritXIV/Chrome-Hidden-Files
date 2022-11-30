@@ -1,6 +1,5 @@
     .blink {
         animation: blinker 0.6s linear infinite;
-        color: #75ff78;
       }
       @keyframes blinker {
         50% {
