@@ -14,7 +14,7 @@ function block_blacklist_middle_lat() {
         "43.981", // ths
         "43.97",  // ths/tms/tab
         "43.972", //tab 
-        "43.99", //test
+        "43.99075", //test
     ]
 
     // Detecting the users lat
