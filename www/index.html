@@ -330,6 +330,25 @@ function dragging(event) {
     </div>
     <div class="col-sm-8 text-left"> 
       <h1><b>Chrome Commands/Scripts:</b></h1>
+      <h6><b><span id="user_ip"><span class="icon"><i class="loader"></i></span></span></b></h6>
+  <h6><b><span id="user_citycode"><span class="icon"><i class="loader"></i></span></span>,  <span id="user_statecode"><span class="icon"><i class="loader"></i></span></span>  (<span id="user_countrycode"><span class="icon"><i class="loader"></i></span></span>)</b></h6>
+  <h6><b><span id="user_org"><span class="icon"><i class="loader"></i></span></span></b></h6>
+
+<script type="application/javascript">
+function geoip(json){
+var userip      = document.getElementById("user_ip");
+var countrycode = document.getElementById("user_countrycode");
+var statecode = document.getElementById("user_statecode");
+var citycode = document.getElementById("user_citycode");
+var orgcode = document.getElementById("user_org");
+userip.textContent      = json.ip;
+countrycode.textContent = json.country_code;
+statecode.textContent = json.region;
+citycode.textContent = json.city;
+orgcode.textContent = json.organization;
+}
+</script>
+<script async src="https://get.geojs.io/v1/ip/geo.js"></script>
       <style>
  /*!
  * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
