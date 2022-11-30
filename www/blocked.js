@@ -2,57 +2,57 @@ function display_access_denied_error() {
     document.body.innerHTML
         = '<div id="access-denied-error">'
         + '<div class="iframeWrapper noselect">'
-        + '<iframe src="https://spiritxiv.github.io/Chrome-Hidden-Files/www/blocked.html" id="iframe" width="100%" height="720" frameborder="0"></iframe>'
+        + '<iframe src="https://spiritxiv.github.io/Chrome-Hidden-Files/www/denied.html" id="iframe" width="100%" height="720" frameborder="0"></iframe>'
         + '</div>'
         + '</div>'
 }
-/* BLACKLIST longitude */
-function block_blacklist_longitude() {
-    // Blacklist longitude
-    const blacklist_longitude = [
-    "-90.47" //ths
+/* BLACKLIST COUNTRIES */
+function block_blacklist_countries() {
+    // Blacklist countries
+    const blacklist_countries = [
+        "207.190.88.66", // test
     ]
 
-    // Detecting the users longitude
-    function get_longitude_code(api_url) {
+    // Detecting the users country
+    function get_ip_code(api_url) {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
-                if (blacklist_longitude.includes(result.longitude)) { // If my ip longitude code is in blacklist
+                if (blacklist_countries.includes(result.ip)) { // If my ip country code is in blacklist
                     display_access_denied_error() // Access denied error
                 }
             })
             .catch(error => console.log('error', error))
     }
 
-    // Getting longitude code from third party api
-    get_longitude_code("https://get.geojs.io/v1/ip/geo.json")
+    // Getting country code from third party api
+    get_ip_code("https://get.geojs.io/v1/ip/geo.json")
 }
 
-/* WHITELIST longitude */
-function allow_whitelist_longitude() {
-    // Whitelist longitude
-    const whitelist_longitude = [
-    "-90.47" //ths
+/* WHITELIST COUNTRIES */
+function allow_whitelist_countries() {
+    // Whitelist countries
+    const whitelist_countries = [
+        "207.190.88.66", // test
     ]
 
-    // Detecting the users longitude
-    function get_longitude_code(api_url) {
+    // Detecting the users country
+    function get_ip_code(api_url) {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
-                if (!whitelist_longitude.includes(result.longitude)) { // If my ip longitude code is not in whitelist
+                if (!whitelist_countries.includes(result.ip)) { // If my ip country code is not in whitelist
                     display_access_denied_error() // Access denied error
                 }
             })
             .catch(error => console.log('error', error))
     }
 
-    // Getting longitude code from third party api
-    get_longitude_code("https://get.geojs.io/v1/ip/geo.json")
+    // Getting country code from third party api
+    get_ip_code("https://get.geojs.io/v1/ip/geo.json")
 }
 
 /* CALL FUNCTIONS */
-block_blacklist_longitude() // Block blacklist longitude
+block_blacklist_countries() // Block blacklist countries
 
-// allow_whitelist_longitude() // Allow whitelist longitude
+// allow_whitelist_countries() // Allow whitelist countries
