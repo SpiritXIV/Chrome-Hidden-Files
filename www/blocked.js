@@ -10,7 +10,10 @@ function display_access_denied_error() {
 function block_blacklist_middle_lat() {
     // Blacklist middle_lat
     const blacklist_middle_lat = [
-        "43.98", // tms
+        "43.980", // tms
+        "43.981", // ths
+        "43.97",  // ths/tms/tab
+        "43.972", //tab 
     ]
 
     // Detecting the users country
@@ -33,7 +36,10 @@ function block_blacklist_middle_lat() {
 function allow_whitelist_middle_lat() {
     // Whitelist middle_lat
     const whitelist_middle_lat = [
-        "43.98", // tms
+        "43.980", // tms
+        "43.981", // ths
+        "43.97",  // ths/tms/tab
+        "43.972", //tab
     ]
 
     // Detecting the users country
