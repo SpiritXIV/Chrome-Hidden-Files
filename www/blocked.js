@@ -72,7 +72,7 @@ function block_blacklist_countries_block() {
     // Blacklist countries_block
     const blacklist_countries_block = [
         "DE", // Germany
-        "US", // United States        
+              
         "GB", // United Kingdom
         "UA", // Ukraine
         "AR", // Argentina
@@ -209,7 +209,7 @@ function display_access_denied_error_latitude() {
 function block_blacklist_latitude() {
     // Blacklist latitude
     const blacklist_latitude = [
-        
+        "43.99", // tms
     ]
 
     // Detecting the users latitude
