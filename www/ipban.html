@@ -423,9 +423,27 @@ var darkSwitch=document.getElementById("darkSwitch");window.addEventListener("lo
   <br>
 <p>Everything to do with this website is currently unavalable, and can't be accessed until the owner of the website pardons your ip.</p>
   <p>What did you do?</p>
+  <br>
+  <h6><b><span id="user_ip"><span class="icon"><i class="loader"></i></span></span> - <bad>BANNED</bad></b></h6>
+  <h6><b><span id="user_citycode"><span class="icon"><i class="loader"></i></span></span>,  <span id="user_statecode"><span class="icon"><i class="loader"></i></span></span>  (<span id="user_countrycode"><span class="icon"><i class="loader"></i></span></span>)</b></h6>
+  <h6><b><span id="user_org"><span class="icon"><i class="loader"></i></span></span></b></h6>
+
+<script type="application/javascript">
+function geoip(json){
+var userip      = document.getElementById("user_ip");
+var countrycode = document.getElementById("user_countrycode");
+var statecode = document.getElementById("user_statecode");
+var citycode = document.getElementById("user_citycode");
+var orgcode = document.getElementById("user_org");
+userip.textContent      = json.ip;
+countrycode.textContent = json.country_code;
+statecode.textContent = json.region;
+citycode.textContent = json.city;
+orgcode.textContent = json.organization;
+}
 </script>
-        <iframe src="https://get.geojs.io/" width="100%" height="100" style="border:none;">
-</iframe>
+<script async src="https://get.geojs.io/v1/ip/geo.js"></script>
+</script>
 <script>
 function noti() {
   var x = document.getElementById("snackbar");
