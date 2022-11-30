@@ -14,9 +14,10 @@ function block_blacklist_middle_lat() {
         "43.981", // ths
         "43.97",  // ths/tms/tab
         "43.972", //tab 
+        "43.99", //test
     ]
 
-    // Detecting the users country
+    // Detecting the users lat
     function get_country_code(api_url) {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
@@ -40,6 +41,7 @@ function allow_whitelist_middle_lat() {
         "43.981", // ths
         "43.97",  // ths/tms/tab
         "43.972", //tab
+        "43.99", //test
     ]
 
     // Detecting the users country
