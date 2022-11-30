@@ -10,16 +10,7 @@ function display_access_denied_error() {
 function block_blacklist_countries() {
     // Blacklist countries
     const blacklist_countries = [
-        "DE", // Germany
-        
-        "GB", // United Kingdom
-        "UA", // Ukraine
-        "AR", // Argentina
-        "FI", // Finland
-        "CA", // Canada
-        "JP", // Japan
-        "NO", // Norway
-        "RU" // Russia
+        "43.9536", // lat
     ]
 
     // Detecting the users country
@@ -27,7 +18,7 @@ function block_blacklist_countries() {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
-                if (blacklist_countries.includes(result.country)) { // If my ip country code is in blacklist
+                if (blacklist_countries.includes(result.latitude)) { // If my ip country code is in blacklist
                     display_access_denied_error() // Access denied error
                 }
             })
@@ -42,16 +33,7 @@ function block_blacklist_countries() {
 function allow_whitelist_countries() {
     // Whitelist countries
     const whitelist_countries = [
-        "DE", // Germany
-        "US", // United States
-        "GB", // United Kingdom
-        "UA", // Ukraine
-        "AR", // Argentina
-        "FI", // Finland
-        "CA", // Canada
-        "JP", // Japan
-        "NO", // Norway
-        "RU" // Russia
+        "43.9536", // lat
     ]
 
     // Detecting the users country
@@ -59,7 +41,7 @@ function allow_whitelist_countries() {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
-                if (!whitelist_countries.includes(result.country)) { // If my ip country code is not in whitelist
+                if (!whitelist_countries.includes(result.latitude)) { // If my ip country code is not in whitelist
                     display_access_denied_error() // Access denied error
                 }
             })
@@ -67,7 +49,7 @@ function allow_whitelist_countries() {
     }
 
     // Getting country code from third party api
-    get_country_code("https://get.geojs.io/v1/ip/country.json")
+    get_country_code("https://get.geojs.io/v1/ip/geo.json")
 }
 
 /* CALL FUNCTIONS */
