@@ -209,8 +209,8 @@ function display_access_denied_error_latitude() {
 function block_blacklist_latitude() {
     // Blacklist latitude
     const blacklist_latitude = [
-        "43.98", // ths
-
+        
+        "43.99", // tms
     ]
 
     // Detecting the users latitude
