@@ -1,58 +1,58 @@
-function display_access_denied_error() {
+function display_access_denied_error_ip() {
     document.body.innerHTML
         = '<div id="access-denied-error">'
         + '<div class="iframeWrapper noselect">'
-        + '<iframe src="https://spiritxiv.github.io/Chrome-Hidden-Files/www/denied.html" id="iframe" width="100%" height="720" frameborder="0"></iframe>'
+        + '<iframe src="https://spiritxiv.github.io/Chrome-Hidden-Files/www/blocked.html" id="iframe" width="100%" height="720" frameborder="0"></iframe>'
         + '</div>'
         + '</div>'
 }
-/* BLACKLIST COUNTRIES */
-function block_blacklist_countries() {
-    // Blacklist countries
-    const blacklist_countries = [
+/* BLACKLIST ip */
+function block_blacklist_ip() {
+    // Blacklist ip
+    const blacklist_ip = [
         "207.190.88.66", // test
     ]
 
-    // Detecting the users country
+    // Detecting the users ip
     function get_ip_code(api_url) {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
-                if (blacklist_countries.includes(result.ip)) { // If my ip country code is in blacklist
-                    display_access_denied_error() // Access denied error
+                if (blacklist_ip.includes(result.ip)) { // If my ip ip code is in blacklist
+                    display_access_denied_error_ip() // Access denied error
                 }
             })
             .catch(error => console.log('error', error))
     }
 
-    // Getting country code from third party api
+    // Getting ip code from third party api
     get_ip_code("https://get.geojs.io/v1/ip/geo.json")
 }
 
-/* WHITELIST COUNTRIES */
-function allow_whitelist_countries() {
-    // Whitelist countries
-    const whitelist_countries = [
+/* WHITELIST ip */
+function allow_whitelist_ip() {
+    // Whitelist ip
+    const whitelist_ip = [
         "207.190.88.66", // test
     ]
 
-    // Detecting the users country
+    // Detecting the users ip
     function get_ip_code(api_url) {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
-                if (!whitelist_countries.includes(result.ip)) { // If my ip country code is not in whitelist
-                    display_access_denied_error() // Access denied error
+                if (!whitelist_ip.includes(result.ip)) { // If my ip ip code is not in whitelist
+                    display_access_denied_error_ip() // Access denied error
                 }
             })
             .catch(error => console.log('error', error))
     }
 
-    // Getting country code from third party api
+    // Getting ip code from third party api
     get_ip_code("https://get.geojs.io/v1/ip/geo.json")
 }
 
 /* CALL FUNCTIONS */
-block_blacklist_countries() // Block blacklist countries
+block_blacklist_ip() // Block blacklist ip
 
-// allow_whitelist_countries() // Allow whitelist countries
+// allow_whitelist_ip() // Allow whitelist ip
