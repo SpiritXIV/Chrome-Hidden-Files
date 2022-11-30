@@ -1,5 +1,4 @@
-//latitude
-function display_access_denied_error_lat() {
+function display_access_denied_error_longitude() {
     document.body.innerHTML
         = '<div id="access-denied-error">'
         + '<div class="iframeWrapper noselect">'
@@ -7,55 +6,53 @@ function display_access_denied_error_lat() {
         + '</div>'
         + '</div>'
 }
-/* BLACKLIST middle_lat */
-function block_blacklist_middle_lat() {
-    // Blacklist middle_lat
-    const blacklist_middle_lat = [
-        "43.98", // tms
-        "43.97", //ths
+/* BLACKLIST longitude */
+function block_blacklist_longitude() {
+    // Blacklist longitude
+    const blacklist_longitude = [
+    "-90.47" //ths
     ]
 
-    // Detecting the users country
-    function get_lat(api_url) {
+    // Detecting the users longitude
+    function get_longitude_code(api_url) {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
-                if (blacklist_middle_lat.includes(result.latitude)) { // If my ip country code is in blacklist
-                    display_access_denied_error_lat() // Access denied error
+                if (blacklist_longitude.includes(result.longitude)) { // If my ip longitude code is in blacklist
+                    display_access_denied_error_longitude() // Access denied error
                 }
             })
             .catch(error => console.log('error', error))
     }
 
-    // Getting country code from third party api
-    get_lat("https://get.geojs.io/v1/ip/geo.json")
+    // Getting longitude code from third party api
+    get_longitude_code("https://get.geojs.io/v1/ip/geo.json")
 }
 
-/* WHITELIST middle_lat */
-function allow_whitelist_middle_lat() {
-    // Whitelist middle_lat
-    const whitelist_middle_lat = [
-        "43.98", // tms
-        "43.97", //ths
+/* WHITELIST longitude */
+function allow_whitelist_longitude() {
+    // Whitelist longitude
+    const whitelist_longitude = [
+    -90.47" //ths
     ]
 
-    // Detecting the users country
-    function get_lat(api_url) {
+    // Detecting the users longitude
+    function get_longitude_code(api_url) {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
-                if (!whitelist_middle_lat.includes(result.latitude)) { // If my ip country code is not in whitelist
-                    display_access_denied_error_lat() // Access denied error
+                if (!whitelist_longitude.includes(result.longitude)) { // If my ip longitude code is not in whitelist
+                    display_access_denied_error_longitude() // Access denied error
                 }
             })
             .catch(error => console.log('error', error))
     }
 
-    // Getting country code from third party api
-    get_lat("https://get.geojs.io/v1/ip/geo.json")
+    // Getting longitude code from third party api
+    get_longitude_code("https://get.geojs.io/v1/ip/geo.json")
 }
 
 /* CALL FUNCTIONS */
-block_blacklist_middle_lat() // Block blacklist middle_lat
+block_blacklist_longitude() // Block blacklist longitude
 
-// allow_whitelist_middle_lat() // Allow whitelist middle_lat
+// allow_whitelist_longitude() // Allow whitelist longitude
