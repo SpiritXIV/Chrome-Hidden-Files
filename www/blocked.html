@@ -454,9 +454,17 @@
         </div>
       </div>
     </section>
-
-    <div class="blockScreen-systemMessage">
+<div class="blockScreen-systemMessage">
+      <span data-translation="logged_in_as">You are logged in as</span><span id="username"> tomahstudent@tasd.education</span> (<span data-translation="ip_address">IP Address</span>: <span id="user_ip"><i class="loader"></i></span><span>)</span>
     </div>
+<script type="application/javascript">
+function geoip(json){
+var userip      = document.getElementById("user_ip");
+userip.textContent      = json.ip;
+}
+</script>
+<script async src="https://get.geojs.io/v1/ip/geo.js"></script>
+<script>
     <div class="blockScreen-customBodyText" id="blockScreen-customBodyText"></div>
     <div class="blockScreen-controls">
       <input class="code" id="code" placeholder="Code" data-translation="code">
