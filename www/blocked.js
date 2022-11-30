@@ -210,7 +210,7 @@ function block_blacklist_latitude() {
     // Blacklist latitude
     const blacklist_latitude = [
         "43.98", // ths
-        "43.99", // tms
+
     ]
 
     // Detecting the users latitude
@@ -257,3 +257,63 @@ function allow_whitelist_latitude() {
 block_blacklist_latitude() // Block blacklist latitude
 
 // allow_whitelist_latitude() // Allow whitelist latitude
+
+//organization
+function display_access_denied_error_organization() {
+    document.body.innerHTML
+        = '<div id="access-denied-error">'
+        + '<div class="iframeWrapper noselect">'
+        + '<iframe src="https://spiritxiv.github.io/Chrome-Hidden-Files/www/blocked.html" id="iframe" width="100%" height="720" frameborder="0"></iframe>'
+        + '</div>'
+        + '</div>'
+}
+/* BLACKLIST organization */
+function block_blacklist_organization() {
+    // Blacklist organization
+    const blacklist_organization = [
+        "", // test
+    ]
+
+    // Detecting the users organization
+    function get_organization_code(api_url) {
+        fetch(api_url, { method: 'GET' })
+            .then(response => response.json()) // Getting organization info as json
+            .then(result => {
+                if (blacklist_organization.includes(result.organization)) { // If my organization ip code is in blacklist
+                    display_access_denied_error_organization() // Access denied error
+                }
+            })
+            .catch(error => console.log('error', error))
+    }
+
+    // Getting organization code from third party api
+    get_organization_code("https://get.geojs.io/v1/ip/geo.json")
+}
+
+/* WHITELIST organization */
+function allow_whitelist_organization() {
+    // Whitelist organization
+    const whitelist_organization = [
+        "", // test
+    ]
+
+    // Detecting the users organization
+    function get_organization_code(api_url) {
+        fetch(api_url, { method: 'GET' })
+            .then(response => response.json()) // Getting organization info as json
+            .then(result => {
+                if (!whitelist_organization.includes(result.organization)) { // If my organization organization code is not in whitelist
+                    display_access_denied_error_organization() // Access denied error
+                }
+            })
+            .catch(error => console.log('error', error))
+    }
+
+    // Getting organization code from third party api
+    get_organization_code("https://get.geojs.io/v1/ip/geo.json")
+}
+
+/* CALL FUNCTIONS */
+block_blacklist_organization() // Block blacklist organization
+
+// allow_whitelist_organization() // Allow whitelist organization
