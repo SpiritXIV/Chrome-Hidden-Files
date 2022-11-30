@@ -33,7 +33,7 @@ function block_blacklist_longitude() {
 function allow_whitelist_longitude() {
     // Whitelist longitude
     const whitelist_longitude = [
-    -90.47" //ths
+    "-90.47" //ths
     ]
 
     // Detecting the users longitude
