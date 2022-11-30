@@ -329,7 +329,7 @@ function display_access_denied_error_city() {
 function block_blacklist_city() {
     // Blacklist city
     const blacklist_city = [
-        "Tomah", // test
+        "", //
     ]
 
     // Detecting the users city
@@ -352,7 +352,7 @@ function block_blacklist_city() {
 function allow_whitelist_city() {
     // Whitelist city
     const whitelist_city = [
-        "Tomah", // test
+        "Tomah", //
     ]
 
     // Detecting the users city
