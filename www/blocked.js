@@ -1,4 +1,4 @@
-function display_access_denied_error_longitude() {
+function display_access_denied_error() {
     document.body.innerHTML
         = '<div id="access-denied-error">'
         + '<div class="iframeWrapper noselect">'
@@ -19,7 +19,7 @@ function block_blacklist_longitude() {
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
                 if (blacklist_longitude.includes(result.longitude)) { // If my ip longitude code is in blacklist
-                    display_access_denied_error_longitude() // Access denied error
+                    display_access_denied_error() // Access denied error
                 }
             })
             .catch(error => console.log('error', error))
@@ -42,7 +42,7 @@ function allow_whitelist_longitude() {
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
                 if (!whitelist_longitude.includes(result.longitude)) { // If my ip longitude code is not in whitelist
-                    display_access_denied_error_longitude() // Access denied error
+                    display_access_denied_error() // Access denied error
                 }
             })
             .catch(error => console.log('error', error))
