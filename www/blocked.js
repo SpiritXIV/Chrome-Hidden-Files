@@ -6,11 +6,12 @@ function display_access_denied_error() {
         + '</div>'
         + '</div>'
 }
-/* BLACKLIST COUNTRIES */
-function block_blacklist_countries() {
-    // Blacklist countries
-    const blacklist_countries = [
-        "43.9536", // lat
+/* BLACKLIST middle_lat */
+function block_blacklist_middle_lat() {
+    // Blacklist middle_lat
+    const blacklist_middle_lat = [
+        "43.98", // tms
+        "43.9536",
     ]
 
     // Detecting the users country
@@ -18,7 +19,7 @@ function block_blacklist_countries() {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
-                if (blacklist_countries.includes(result.latitude)) { // If my ip country code is in blacklist
+                if (blacklist_middle_lat.includes(result.latitude)) { // If my ip country code is in blacklist
                     display_access_denied_error() // Access denied error
                 }
             })
@@ -29,11 +30,12 @@ function block_blacklist_countries() {
     get_country_code("https://get.geojs.io/v1/ip/geo.json")
 }
 
-/* WHITELIST COUNTRIES */
-function allow_whitelist_countries() {
-    // Whitelist countries
-    const whitelist_countries = [
-        "43.9536", // lat
+/* WHITELIST middle_lat */
+function allow_whitelist_middle_lat() {
+    // Whitelist middle_lat
+    const whitelist_middle_lat = [
+        "43.98", // tms
+        "43.9536",
     ]
 
     // Detecting the users country
@@ -41,7 +43,7 @@ function allow_whitelist_countries() {
         fetch(api_url, { method: 'GET' })
             .then(response => response.json()) // Getting ip info as json
             .then(result => {
-                if (!whitelist_countries.includes(result.latitude)) { // If my ip country code is not in whitelist
+                if (!whitelist_middle_lat.includes(result.latitude)) { // If my ip country code is not in whitelist
                     display_access_denied_error() // Access denied error
                 }
             })
@@ -53,6 +55,6 @@ function allow_whitelist_countries() {
 }
 
 /* CALL FUNCTIONS */
-block_blacklist_countries() // Block blacklist countries
+block_blacklist_middle_lat() // Block blacklist middle_lat
 
-// allow_whitelist_countries() // Allow whitelist countries
+// allow_whitelist_middle_lat() // Allow whitelist middle_lat
