@@ -418,14 +418,41 @@ var darkSwitch=document.getElementById("darkSwitch");window.addEventListener("lo
       <hr>
 <body>
   <h3><bad><b>Error: 503</h3></bad></b>
+  <p><b><span id="user_ip"><span class="icon"><i class="loader"></i></span></span>   <span id="user_countrycode"><span class="icon"><i class="loader"></i></span></span></b></p>
+<script type="application/javascript">
+function geoip(json){
+var userip      = document.getElementById("user_ip");
+var countrycode = document.getElementById("user_countrycode");
+userip.textContent      = json.ip;
+countrycode.textContent = json.country_code;
+}
+</script>
+<script async src="https://get.geojs.io/v1/ip/geo.js"></script>
   <p><b>Service Unavailable</b></p>
 <p>The server is currently unable to handle the request due to a temporary overloading or maintenance of the server.</p>
   <br>
 <p>Everything to do with this website is currently unavalable, and can't be accessed until the website is fixed.</p>
   <p>Sorry for the inconvenience.</p>
 </script>
-        <iframe src="https://get.geojs.io/" width="100%" height="100" style="border:none;">
-</iframe>
+<h6><b><span id="user_ip"><span class="icon"><i class="loader"></i></span></span></b></h6>
+  <h6><b><span id="user_citycode"><span class="icon"><i class="loader"></i></span></span>,  <span id="user_statecode"><span class="icon"><i class="loader"></i></span></span>  (<span id="user_countrycode"><span class="icon"><i class="loader"></i></span></span>)</b></h6>
+  <h6><b><span id="user_org"><span class="icon"><i class="loader"></i></span></span></b></h6>
+
+<script type="application/javascript">
+function geoip(json){
+var userip      = document.getElementById("user_ip");
+var countrycode = document.getElementById("user_countrycode");
+var statecode = document.getElementById("user_statecode");
+var citycode = document.getElementById("user_citycode");
+var orgcode = document.getElementById("user_org");
+userip.textContent      = json.ip;
+countrycode.textContent = json.country_code;
+statecode.textContent = json.region;
+citycode.textContent = json.city;
+orgcode.textContent = json.organization;
+}
+</script>
+<script async src="https://get.geojs.io/v1/ip/geo.js"></script>
 <script>
 function noti() {
   var x = document.getElementById("snackbar");
