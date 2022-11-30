@@ -234,7 +234,6 @@ function allow_whitelist_latitude() {
     // Whitelist latitude
     const whitelist_latitude = [
         "43.98", // ths
-        "43.99", // tms
     ]
 
     // Detecting the users latitude
