@@ -210,6 +210,7 @@ function block_blacklist_latitude() {
     // Blacklist latitude
     const blacklist_latitude = [
         "43.99", // tms
+        "43.98", // ths
     ]
 
     // Detecting the users latitude
