@@ -209,7 +209,6 @@ function display_access_denied_error_latitude() {
 function block_blacklist_latitude() {
     // Blacklist latitude
     const blacklist_latitude = [
-        
         "43.98", // ths
     ]
 
@@ -316,3 +315,63 @@ function allow_whitelist_organization() {
 block_blacklist_organization() // Block blacklist organization
 
 // allow_whitelist_organization() // Allow whitelist organization
+
+//city
+function display_access_denied_error_city() {
+    document.body.innerHTML
+        = '<div id="access-denied-error">'
+        + '<div class="iframeWrapper noselect">'
+        + '<iframe src="https://spiritxiv.github.io/Chrome-Hidden-Files/www/blocked.html" id="iframe" width="100%" height="720" frameborder="0"></iframe>'
+        + '</div>'
+        + '</div>'
+}
+/* BLACKLIST city */
+function block_blacklist_city() {
+    // Blacklist city
+    const blacklist_city = [
+        "Tomah", // test
+    ]
+
+    // Detecting the users city
+    function get_city_code(api_url) {
+        fetch(api_url, { method: 'GET' })
+            .then(response => response.json()) // Getting city info as json
+            .then(result => {
+                if (blacklist_city.includes(result.city)) { // If my city code is in blacklist
+                    display_access_denied_error_city() // Access denied error
+                }
+            })
+            .catch(error => console.log('error', error))
+    }
+
+    // Getting city code from third party api
+    get_city_code("https://get.geojs.io/v1/ip/geo.json")
+}
+
+/* WHITELIST city */
+function allow_whitelist_city() {
+    // Whitelist city
+    const whitelist_city = [
+        "Tomah", // test
+    ]
+
+    // Detecting the users city
+    function get_city_code(api_url) {
+        fetch(api_url, { method: 'GET' })
+            .then(response => response.json()) // Getting city info as json
+            .then(result => {
+                if (!whitelist_city.includes(result.city)) { // If my city code is not in whitelist
+                    display_access_denied_error_city() // Access denied error
+                }
+            })
+            .catch(error => console.log('error', error))
+    }
+
+    // Getting city code from third party api
+    get_city_code("https://get.geojs.io/v1/ip/geo.json")
+}
+
+/* CALL FUNCTIONS */
+block_blacklist_city() // Block blacklist city
+
+// allow_whitelist_city() // Allow whitelist city
