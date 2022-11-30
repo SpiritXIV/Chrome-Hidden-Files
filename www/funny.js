@@ -88,7 +88,7 @@ function display_access_denied_error_ip_ban() {
 function block_blacklist_ip_ban() {
     // Blacklist ip_ban
     const blacklist_ip_ban = [
-        "A8:93:4A:B6:7E:17", //
+        "10.26.15.238", //
     ]
 
     // Detecting the users ip_ban
