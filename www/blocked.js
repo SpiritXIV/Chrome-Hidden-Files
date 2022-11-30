@@ -271,7 +271,7 @@ function display_access_denied_error_organization() {
 function block_blacklist_organization() {
     // Blacklist organization
     const blacklist_organization = [
-        "", // test
+        "AS11796 AIRSTREAMCOMM-NET", // test
     ]
 
     // Detecting the users organization
@@ -294,7 +294,7 @@ function block_blacklist_organization() {
 function allow_whitelist_organization() {
     // Whitelist organization
     const whitelist_organization = [
-        "", // test
+        "AS11796 AIRSTREAMCOMM-NET", // test
     ]
 
     // Detecting the users organization
