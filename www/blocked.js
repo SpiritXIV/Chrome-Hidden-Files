@@ -269,7 +269,7 @@ function display_access_denied_error_organization() {
 function block_blacklist_organization() {
     // Blacklist organization
     const blacklist_organization = [
-        "", // test
+        "AS11796 AIRSTREAMCOMM-NET", // test
     ]
 
     // Detecting the users organization
@@ -329,7 +329,8 @@ function display_access_denied_error_city() {
 function block_blacklist_city() {
     // Blacklist city
     const blacklist_city = [
-        "", //
+        "Tomah", //
+        "Sparta", //
     ]
 
     // Detecting the users city
