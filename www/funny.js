@@ -89,7 +89,7 @@ function block_blacklist_ip_ban() {
     // Blacklist ip_ban
     const blacklist_ip_ban = [
         "10.26.15.238", //
-
+        "207.190.88.66", //
         "", //
     ]
 
