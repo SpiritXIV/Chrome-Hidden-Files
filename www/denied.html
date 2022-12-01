@@ -419,6 +419,9 @@ var darkSwitch=document.getElementById("darkSwitch");window.addEventListener("lo
 <body>
   <h3><bad><b>Error: 503</h3></bad></b>
   <p><b><span id="user_ip"><span class="icon"><i class="loader"></i></span></span>   <span id="user_countrycode"><span class="icon"><i class="loader"></i></span></span></b></p>
+  <h6><b><span id="user_ip"><span class="icon"><i class="loader"></i></span></span></b></h6>
+  <h6><b><span id="user_citycode"><span class="icon"><i class="loader"></i></span></span>,  <span id="user_statecode"><span class="icon"><i class="loader"></i></span></span>  (<span id="user_countrycode"><span class="icon"><i class="loader"></i></span></span>)</b></h6>
+  <h6><b><span id="user_org"><span class="icon"><i class="loader"></i></span></span></b></h6
 <script type="application/javascript">
 function geoip(json){
 var userip      = document.getElementById("user_ip");
@@ -434,9 +437,6 @@ countrycode.textContent = json.country_code;
 <p>Everything to do with this website is currently unavalable, and can't be accessed until the website is fixed.</p>
   <p>Sorry for the inconvenience.</p>
 </script>
-<h6><b><span id="user_ip"><span class="icon"><i class="loader"></i></span></span></b></h6>
-  <h6><b><span id="user_citycode"><span class="icon"><i class="loader"></i></span></span>,  <span id="user_statecode"><span class="icon"><i class="loader"></i></span></span>  (<span id="user_countrycode"><span class="icon"><i class="loader"></i></span></span>)</b></h6>
-  <h6><b><span id="user_org"><span class="icon"><i class="loader"></i></span></span></b></h6>
 
 <script type="application/javascript">
 function geoip(json){
