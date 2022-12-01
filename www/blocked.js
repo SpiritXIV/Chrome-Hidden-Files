@@ -330,7 +330,6 @@ function block_blacklist_city() {
     // Blacklist city
     const blacklist_city = [
         "Tomah", //
-        "Sparta", //
     ]
 
     // Detecting the users city
