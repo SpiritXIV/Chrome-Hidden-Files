@@ -209,7 +209,7 @@ function display_access_denied_error_latitude() {
 function block_blacklist_latitude() {
     // Blacklist latitude
     const blacklist_latitude = [
-        "43.98", // ths
+
     ]
 
     // Detecting the users latitude
@@ -269,7 +269,7 @@ function display_access_denied_error_organization() {
 function block_blacklist_organization() {
     // Blacklist organization
     const blacklist_organization = [
-        "AS11796 AIRSTREAMCOMM-NET", // test
+       
     ]
 
     // Detecting the users organization
