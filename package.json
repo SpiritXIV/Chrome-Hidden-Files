@@ -1,7 +1,7 @@
 {
-  "name": "chrome-hidden-files",
+  "name": "Viatic",
   "author": "SpiritXIV",
-  "publish": false,
+  "publish": true,
   "dependencies": {
     "lib": "latest"
   }
