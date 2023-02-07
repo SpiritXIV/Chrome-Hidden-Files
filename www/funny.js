@@ -11,7 +11,7 @@ function block_blacklist_countries() {
     // Blacklist countries
     const blacklist_countries = [
         "DE", // Germany
-        
+        "US", // US
         "GB", // United Kingdom
         "UA", // Ukraine
         "AR", // Argentina
